@@ -20,6 +20,20 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
 
 # Virtual Environment
 venv/
@@ -29,6 +43,8 @@ ENV/
 .venv
 env.bak/
 venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
 
 # IDE
 .idea/
@@ -40,6 +56,12 @@ venv.bak/
 .settings/
 *.sublime-workspace
 *.sublime-project
+*.ropeproject
+.spyderproject
+.spydata
+.ipynb_checkpoints
+*.ipynb
+*.ipynb_metadata
 
 # OS
 .DS_Store
@@ -48,9 +70,63 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
+*.bak
+*.tmp
+*.temp
+*.log
+*.pid
+*.seed
+*.pid.lock
 
 # Project specific
 history.json
+secant_history.json
+user_preferences.json
+settings.json
 *.log
 *.pdf
-!docs/*.pdf 
+!docs/*.pdf
+backups/
+logs/
+data/
+*.db
+*.sqlite3
+*.sqlite
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST 
