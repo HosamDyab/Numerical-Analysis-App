@@ -2,7 +2,6 @@
 
 A comprehensive Python application for solving numerical analysis problems, featuring multiple root-finding methods with a modern GUI interface.
 
-![Application Screenshot](docs/images/screenshot.png)
 
 ## Features
 
@@ -30,7 +29,7 @@ A comprehensive Python application for solving numerical analysis problems, feat
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/NumericalAnalysisApp.git
+git clone https://github.com/HosamDyab/NumericalAnalysisApp.git
 cd NumericalAnalysisApp
 ```
 
