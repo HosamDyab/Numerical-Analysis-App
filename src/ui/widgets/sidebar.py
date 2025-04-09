@@ -20,8 +20,18 @@ class Sidebar:
         self.theme = theme
         
         try:
-            self.widget = ctk.CTkFrame(parent, width=200, fg_color=theme["fg"])
-            self.widget.pack(side="left", fill="y", padx=(0, 10))
+            # Create sidebar with a slightly elevated appearance
+            self.widget = ctk.CTkFrame(parent, width=200, fg_color=theme["fg"], corner_radius=10)
+            self.widget.pack(side="left", fill="y", padx=(10, 10), pady=10)
+            
+            # Add a title label at the top
+            title_label = ctk.CTkLabel(
+                self.widget, 
+                text="Numerical Analysis", 
+                font=("Helvetica", 16, "bold"),
+                text_color=theme["text"]
+            )
+            title_label.pack(pady=(20, 30))
             
             # Navigation buttons with consistent styling
             buttons = [
@@ -38,11 +48,13 @@ class Sidebar:
                     command=command,
                     fg_color=theme["button"],
                     hover_color=theme["button_hover"],
-                    font=("Helvetica", 14),
+                    text_color="#FFFFFF",  # White text for better contrast
+                    font=("Helvetica", 14, "bold"),
                     width=160,
-                    height=40
+                    height=40,
+                    corner_radius=8  # Rounded corners for modern look
                 )
-                btn.pack(pady=15, padx=20)
+                btn.pack(pady=10, padx=20)
                 
         except Exception as e:
             self.logger.error(f"Error initializing sidebar: {str(e)}")
@@ -58,12 +70,17 @@ class Sidebar:
         try:
             self.theme = theme
             self.widget.configure(fg_color=theme["fg"])
-            for btn in self.widget.winfo_children():
-                if isinstance(btn, ctk.CTkButton):
-                    btn.configure(
+            
+            # Update all widgets in the sidebar
+            for widget in self.widget.winfo_children():
+                if isinstance(widget, ctk.CTkButton):
+                    widget.configure(
                         fg_color=theme["button"],
-                        hover_color=theme["button_hover"]
+                        hover_color=theme["button_hover"],
+                        text_color="#FFFFFF"  # White text for better contrast
                     )
+                elif isinstance(widget, ctk.CTkLabel):
+                    widget.configure(text_color=theme["text"])
         except Exception as e:
             self.logger.error(f"Error updating sidebar theme: {str(e)}")
             raise

@@ -1,0 +1,3480 @@
+[
+  {
+    "function": "x**3-8",
+    "method": "Bisection",
+    "root": 1.953125,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": -10,
+        "Xu": 10,
+        "f(Xl)": -1008,
+        "f(Xu)": 992,
+        "Xr": 0,
+        "f(Xr)": -8,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 0,
+        "Xu": 10,
+        "f(Xl)": -8,
+        "f(Xu)": 992,
+        "Xr": 5,
+        "f(Xr)": 117,
+        "Error": "100%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 0,
+        "Xu": 5,
+        "f(Xl)": -8,
+        "f(Xu)": 117,
+        "Xr": 2.5,
+        "f(Xr)": 7.625,
+        "Error": "100%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 0,
+        "Xu": 2.5,
+        "f(Xl)": -8,
+        "f(Xu)": 7.625,
+        "Xr": 1.25,
+        "f(Xr)": -6.047,
+        "Error": "100%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 1.25,
+        "Xu": 2.5,
+        "f(Xl)": -6.047,
+        "f(Xu)": 7.625,
+        "Xr": 1.875,
+        "f(Xr)": -1.408,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 1.875,
+        "Xu": 2.5,
+        "f(Xl)": -1.408,
+        "f(Xu)": 7.625,
+        "Xr": 2.188,
+        "f(Xr)": 2.468,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 1.875,
+        "Xu": 2.188,
+        "f(Xl)": -1.408,
+        "f(Xu)": 2.468,
+        "Xr": 2.031,
+        "f(Xr)": 0.381,
+        "Error": "7.692%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 1.875,
+        "Xu": 2.031,
+        "f(Xl)": -1.408,
+        "f(Xu)": 0.381,
+        "Xr": 1.953,
+        "f(Xr)": -0.549,
+        "Error": "4%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:24:12.568299"
+  },
+  {
+    "function": "x**4-8*x**3-35*x**2+450*x-1001",
+    "method": "False Position",
+    "root": 5.5061687457157795,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 4.5,
+        "Xu": 6,
+        "f(Xl)": -3.688,
+        "f(Xu)": 7,
+        "Xr": 5.018,
+        "f(Xr)": -1.001,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5.018,
+        "Xu": 6,
+        "f(Xl)": -1.001,
+        "f(Xu)": 7,
+        "Xr": 5.141,
+        "f(Xr)": -1.065,
+        "Error": "2.392%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5.141,
+        "Xu": 6,
+        "f(Xl)": -1.065,
+        "f(Xu)": 7,
+        "Xr": 5.254,
+        "f(Xr)": -1.122,
+        "Error": "2.16%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.254,
+        "Xu": 6,
+        "f(Xl)": -1.122,
+        "f(Xu)": 7,
+        "Xr": 5.357,
+        "f(Xr)": -1.075,
+        "Error": "1.923%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.357,
+        "Xu": 6,
+        "f(Xl)": -1.075,
+        "f(Xu)": 7,
+        "Xr": 5.443,
+        "f(Xr)": -0.901,
+        "Error": "1.573%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.443,
+        "Xu": 6,
+        "f(Xl)": -0.901,
+        "f(Xu)": 7,
+        "Xr": 5.506,
+        "f(Xr)": -0.659,
+        "Error": "1.154%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:26:54.332909"
+  },
+  {
+    "function": "x**4-8*x**3-35*x**2+450*x-1001",
+    "method": "Bisection",
+    "root": 5.6103515625,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 4.5,
+        "Xu": 6,
+        "f(Xl)": -3.688,
+        "f(Xu)": 7,
+        "Xr": 5.25,
+        "f(Xr)": -1.121,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5.25,
+        "Xu": 6,
+        "f(Xl)": -1.121,
+        "f(Xu)": 7,
+        "Xr": 5.625,
+        "f(Xr)": 0.129,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5.25,
+        "Xu": 5.625,
+        "f(Xl)": -1.121,
+        "f(Xu)": 0.129,
+        "Xr": 5.438,
+        "f(Xr)": -0.916,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.438,
+        "Xu": 5.625,
+        "f(Xl)": -0.916,
+        "f(Xu)": 0.129,
+        "Xr": 5.531,
+        "f(Xr)": -0.532,
+        "Error": "1.695%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.531,
+        "Xu": 5.625,
+        "f(Xl)": -0.532,
+        "f(Xu)": 0.129,
+        "Xr": 5.578,
+        "f(Xr)": -0.241,
+        "Error": "0.84%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.578,
+        "Xu": 5.625,
+        "f(Xl)": -0.241,
+        "f(Xu)": 0.129,
+        "Xr": 5.602,
+        "f(Xr)": -0.066,
+        "Error": "0.418%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.602,
+        "Xu": 5.625,
+        "f(Xl)": -0.066,
+        "f(Xu)": 0.129,
+        "Xr": 5.613,
+        "f(Xr)": 0.029,
+        "Error": "0.209%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.602,
+        "Xu": 5.613,
+        "f(Xl)": -0.066,
+        "f(Xu)": 0.029,
+        "Xr": 5.607,
+        "f(Xr)": -0.019,
+        "Error": "0.104%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": 5.607,
+        "Xu": 5.613,
+        "f(Xl)": -0.019,
+        "f(Xu)": 0.029,
+        "Xr": 5.61,
+        "f(Xr)": 0.005,
+        "Error": "0.052%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:27:31.598859"
+  },
+  {
+    "function": "x**4-8*x**3-35*x**2+450*x-1001",
+    "method": "Bisection",
+    "root": 5.6103515625,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 4.5,
+        "Xu": 6,
+        "f(Xl)": -3.6875,
+        "f(Xu)": 7,
+        "Xr": 5.25,
+        "f(Xr)": -1.1211,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5.25,
+        "Xu": 6,
+        "f(Xl)": -1.1211,
+        "f(Xu)": 7,
+        "Xr": 5.625,
+        "f(Xr)": 0.1292,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5.25,
+        "Xu": 5.625,
+        "f(Xl)": -1.1211,
+        "f(Xu)": 0.1292,
+        "Xr": 5.4375,
+        "f(Xr)": -0.9155,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.4375,
+        "Xu": 5.625,
+        "f(Xl)": -0.9155,
+        "f(Xu)": 0.1292,
+        "Xr": 5.5312,
+        "f(Xr)": -0.5323,
+        "Error": "1.695%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.5312,
+        "Xu": 5.625,
+        "f(Xl)": -0.5323,
+        "f(Xu)": 0.1292,
+        "Xr": 5.5781,
+        "f(Xr)": -0.2407,
+        "Error": "0.84%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.5781,
+        "Xu": 5.625,
+        "f(Xl)": -0.2407,
+        "f(Xu)": 0.1292,
+        "Xr": 5.6016,
+        "f(Xr)": -0.0661,
+        "Error": "0.418%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.6016,
+        "Xu": 5.625,
+        "f(Xl)": -0.0661,
+        "f(Xu)": 0.1292,
+        "Xr": 5.6133,
+        "f(Xr)": 0.0289,
+        "Error": "0.209%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.6016,
+        "Xu": 5.6133,
+        "f(Xl)": -0.0661,
+        "f(Xu)": 0.0289,
+        "Xr": 5.6074,
+        "f(Xr)": -0.0193,
+        "Error": "0.104%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": 5.6074,
+        "Xu": 5.6133,
+        "f(Xl)": -0.0193,
+        "f(Xu)": 0.0289,
+        "Xr": 5.6104,
+        "f(Xr)": 0.0046,
+        "Error": "0.052%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:27:41.858563"
+  },
+  {
+    "function": "x**4-8*x**3-35*x**2+450*x-1001",
+    "method": "False Position",
+    "root": 5.60390635009407,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 4.5,
+        "f(Xl)": -3.688,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.018,
+        "f(Xr)": -1.001,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5.018,
+        "f(Xl)": -1.001,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.141,
+        "f(Xr)": -1.065,
+        "Error %": "2.392%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5.141,
+        "f(Xl)": -1.065,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.254,
+        "f(Xr)": -1.122,
+        "Error %": "2.16%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.254,
+        "f(Xl)": -1.122,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.357,
+        "f(Xr)": -1.075,
+        "Error %": "1.923%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.357,
+        "f(Xl)": -1.075,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.443,
+        "f(Xr)": -0.901,
+        "Error %": "1.573%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.443,
+        "f(Xl)": -0.901,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.506,
+        "f(Xr)": -0.659,
+        "Error %": "1.154%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.506,
+        "f(Xl)": -0.659,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.549,
+        "f(Xr)": -0.433,
+        "Error %": "0.766%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.549,
+        "f(Xl)": -0.433,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.575,
+        "f(Xr)": -0.263,
+        "Error %": "0.471%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": 5.575,
+        "f(Xl)": -0.263,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.59,
+        "f(Xr)": -0.152,
+        "Error %": "0.275%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": 5.59,
+        "f(Xl)": -0.152,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.599,
+        "f(Xr)": -0.086,
+        "Error %": "0.156%"
+      },
+      {
+        "Iteration": 10,
+        "Xl": 5.599,
+        "f(Xl)": -0.086,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.604,
+        "f(Xr)": -0.048,
+        "Error %": "0.087%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:29:40.179795"
+  },
+  {
+    "function": "x**4-8*x**3-35*x**2+450*x-1001",
+    "method": "False Position",
+    "root": 5.60390635009407,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 4.5,
+        "f(Xl)": -3.6875,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.017544,
+        "f(Xr)": -1.001474,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5.017544,
+        "f(Xl)": -1.001474,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.140509,
+        "f(Xr)": -1.065036,
+        "Error %": "2.392%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5.140509,
+        "f(Xl)": -1.065036,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.25401,
+        "f(Xr)": -1.121774,
+        "Error %": "2.16%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.25401,
+        "f(Xl)": -1.121774,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.357046,
+        "f(Xr)": -1.074955,
+        "Error %": "1.923%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.357046,
+        "f(Xl)": -1.074955,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.442637,
+        "f(Xr)": -0.900552,
+        "Error %": "1.573%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.442637,
+        "f(Xl)": -0.900552,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.506169,
+        "f(Xr)": -0.659186,
+        "Error %": "1.154%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.506169,
+        "f(Xl)": -0.659186,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.54867,
+        "f(Xr)": -0.432517,
+        "Error %": "0.766%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.54867,
+        "f(Xl)": -0.432517,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.574934,
+        "f(Xr)": -0.262954,
+        "Error %": "0.471%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": 5.574934,
+        "f(Xl)": -0.262954,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.590324,
+        "f(Xr)": -0.152364,
+        "Error %": "0.275%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": 5.590324,
+        "f(Xl)": -0.152364,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.599051,
+        "f(Xr)": -0.085809,
+        "Error %": "0.156%"
+      },
+      {
+        "Iteration": 10,
+        "Xl": 5.599051,
+        "f(Xl)": -0.085809,
+        "Xu": 6,
+        "f(Xu)": 7,
+        "Xr": 5.603906,
+        "f(Xr)": -0.04755,
+        "Error %": "0.087%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:31:37.508872"
+  },
+  {
+    "function": "x * log(x) - 1.2",
+    "method": "False Position",
+    "root": 1.88833675730911,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 2,
+        "f(Xl)": 0.186,
+        "Xu": 3,
+        "f(Xu)": 2.096,
+        "Xr": 1.902,
+        "f(Xr)": 0.024,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 1.902,
+        "f(Xl)": 0.024,
+        "Xu": 3,
+        "f(Xu)": 2.096,
+        "Xr": 1.89,
+        "f(Xr)": 0.003,
+        "Error %": "0.659%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 1.89,
+        "f(Xl)": 0.003,
+        "Xu": 3,
+        "f(Xu)": 2.096,
+        "Xr": 1.888,
+        "f(Xr)": 0,
+        "Error %": "0.087%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:32:32.631035"
+  },
+  {
+    "function": "-26+82.3*x-88*x**2+45.4*x**3-9*x**4+0.65*x**5",
+    "method": "False Position",
+    "root": 0.5793733940911409,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 1,
+        "f(Xu)": 5.35,
+        "Xr": 0.621,
+        "f(Xr)": 0.775,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.621,
+        "f(Xu)": 0.775,
+        "Xr": 0.584,
+        "f(Xr)": 0.085,
+        "Error %": "6.469%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.584,
+        "f(Xu)": 0.085,
+        "Xr": 0.58,
+        "f(Xr)": 0.009,
+        "Error %": "0.681%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.58,
+        "f(Xu)": 0.009,
+        "Xr": 0.579,
+        "f(Xr)": 0.001,
+        "Error %": "0.07%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:33:56.834049"
+  },
+  {
+    "function": "-26+82.3*x-88*x**2+45.4*x**3-9*x**4+0.65*x**5",
+    "method": "False Position",
+    "root": 0.5793733940911409,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 0.5,
+        "f(Xl)": -1.717188,
+        "Xu": 1,
+        "f(Xu)": 5.35,
+        "Xr": 0.62149,
+        "f(Xr)": 0.774501,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 0.5,
+        "f(Xl)": -1.717188,
+        "Xu": 0.62149,
+        "f(Xu)": 0.774501,
+        "Xr": 0.583727,
+        "f(Xr)": 0.084938,
+        "Error %": "6.469%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 0.5,
+        "f(Xl)": -1.717188,
+        "Xu": 0.583727,
+        "f(Xu)": 0.084938,
+        "Xr": 0.579781,
+        "f(Xr)": 0.008812,
+        "Error %": "0.681%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 0.5,
+        "f(Xl)": -1.717188,
+        "Xu": 0.579781,
+        "f(Xu)": 0.008812,
+        "Xr": 0.579373,
+        "f(Xr)": 0.000909,
+        "Error %": "0.07%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:34:19.206285"
+  },
+  {
+    "function": "-26+82.3*x-88*x**2+45.4*x**3-9*x**4+0.65*x**5",
+    "method": "False Position",
+    "root": 0.5793733940911409,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 1,
+        "f(Xu)": 5.35,
+        "Xr": 0.621,
+        "f(Xr)": 0.775,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.621,
+        "f(Xu)": 0.775,
+        "Xr": 0.584,
+        "f(Xr)": 0.085,
+        "Error %": "6.469%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.584,
+        "f(Xu)": 0.085,
+        "Xr": 0.58,
+        "f(Xr)": 0.009,
+        "Error %": "0.681%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.58,
+        "f(Xu)": 0.009,
+        "Xr": 0.579,
+        "f(Xr)": 0.001,
+        "Error %": "0.07%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:34:24.083411"
+  },
+  {
+    "function": "-26+82.3*x-88*x**2+45.4*x**3-9*x**4+0.65*x**5",
+    "method": "False Position",
+    "root": 0.5793265928619509,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 1,
+        "f(Xu)": 5.35,
+        "Xr": 0.621,
+        "f(Xr)": 0.775,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.621,
+        "f(Xu)": 0.775,
+        "Xr": 0.584,
+        "f(Xr)": 0.085,
+        "Error %": "6.469%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.584,
+        "f(Xu)": 0.085,
+        "Xr": 0.58,
+        "f(Xr)": 0.009,
+        "Error %": "0.681%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.58,
+        "f(Xu)": 0.009,
+        "Xr": 0.579,
+        "f(Xr)": 0.001,
+        "Error %": "0.07%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0.001,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0.007%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0.001%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 10,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 11,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 12,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 13,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 14,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      },
+      {
+        "Iteration": 15,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.579,
+        "f(Xu)": 0,
+        "Xr": 0.579,
+        "f(Xr)": 0,
+        "Error %": "0%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:34:25.361037"
+  },
+  {
+    "function": "-26+82.3*x-88*x**2+45.4*x**3-9*x**4+0.65*x**5",
+    "method": "False Position",
+    "root": 0.5793733940911409,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 1,
+        "f(Xu)": 5.35,
+        "Xr": 0.621,
+        "f(Xr)": 0.775,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.621,
+        "f(Xu)": 0.775,
+        "Xr": 0.584,
+        "f(Xr)": 0.085,
+        "Error %": "6.469%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.584,
+        "f(Xu)": 0.085,
+        "Xr": 0.58,
+        "f(Xr)": 0.009,
+        "Error %": "0.681%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 0.5,
+        "f(Xl)": -1.717,
+        "Xu": 0.58,
+        "f(Xu)": 0.009,
+        "Xr": 0.579,
+        "f(Xr)": 0.001,
+        "Error %": "0.07%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:34:28.843705"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": -Infinity,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": -11.5,
+        "Xi+1": -11.5,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -11.5,
+        "g(Xi)": -136.075,
+        "Xi+1": -136.075,
+        "Error %": "103.674%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": -136.075,
+        "g(Xi)": -16893.593,
+        "Xi+1": -16893.593,
+        "Error %": "99.932%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": -16893.593,
+        "g(Xi)": -256882839.308,
+        "Xi+1": -256882839.308,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": -256882839.308,
+        "g(Xi)": -59389914254702000,
+        "Xi+1": -59389914254702000,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": -59389914254702000,
+        "g(Xi)": -3174445723662770457580053353988096,
+        "Xi+1": -3174445723662770457580053353988096,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": -3174445723662770457580053353988096,
+        "g(Xi)": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Xi+1": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "g(Xi)": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Xi+1": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "g(Xi)": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Xi+1": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:36:04.025986"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": -Infinity,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": -11.5,
+        "Xi+1": -11.5,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -11.5,
+        "g(Xi)": -136.075,
+        "Xi+1": -136.075,
+        "Error %": "103.674%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": -136.075,
+        "g(Xi)": -16893.593,
+        "Xi+1": -16893.593,
+        "Error %": "99.932%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": -16893.593,
+        "g(Xi)": -256882839.308,
+        "Xi+1": -256882839.308,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": -256882839.308,
+        "g(Xi)": -59389914254702000,
+        "Xi+1": -59389914254702000,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": -59389914254702000,
+        "g(Xi)": -3174445723662770457580053353988096,
+        "Xi+1": -3174445723662770457580053353988096,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": -3174445723662770457580053353988096,
+        "g(Xi)": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Xi+1": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "g(Xi)": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Xi+1": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "g(Xi)": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Xi+1": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:36:18.528952"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": -Infinity,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": -11.5,
+        "Xi+1": -11.5,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -11.5,
+        "g(Xi)": -136.075,
+        "Xi+1": -136.075,
+        "Error %": "103.674%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": -136.075,
+        "g(Xi)": -16893.593,
+        "Xi+1": -16893.593,
+        "Error %": "99.932%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": -16893.593,
+        "g(Xi)": -256882839.308,
+        "Xi+1": -256882839.308,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": -256882839.308,
+        "g(Xi)": -59389914254702000,
+        "Xi+1": -59389914254702000,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": -59389914254702000,
+        "g(Xi)": -3174445723662770457580053353988096,
+        "Xi+1": -3174445723662770457580053353988096,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": -3174445723662770457580053353988096,
+        "g(Xi)": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Xi+1": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "g(Xi)": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Xi+1": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "g(Xi)": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Xi+1": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:36:44.091251"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": -Infinity,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": -11.5,
+        "Xi+1": -11.5,
+        "Error %": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -11.5,
+        "g(Xi)": -136.075,
+        "Xi+1": -136.075,
+        "Error %": "91.549%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": -136.075,
+        "g(Xi)": -16893.593,
+        "Xi+1": -16893.593,
+        "Error %": "99.195%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": -16893.593,
+        "g(Xi)": -256882839.308,
+        "Xi+1": -256882839.308,
+        "Error %": "99.993%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": -256882839.308,
+        "g(Xi)": -59389914254702000,
+        "Xi+1": -59389914254702000,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": -59389914254702000,
+        "g(Xi)": -3174445723662770457580053353988096,
+        "Xi+1": -3174445723662770457580053353988096,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": -3174445723662770457580053353988096,
+        "g(Xi)": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Xi+1": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "g(Xi)": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Xi+1": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "g(Xi)": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Xi+1": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": -Infinity,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:37:59.696417"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": -Infinity,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": -11.5,
+        "Xi+1": -11.5,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -11.5,
+        "g(Xi)": -136.075,
+        "Xi+1": -136.075,
+        "Error %": "91.549%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": -136.075,
+        "g(Xi)": -16893.593,
+        "Xi+1": -16893.593,
+        "Error %": "99.195%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": -16893.593,
+        "g(Xi)": -256882839.308,
+        "Xi+1": -256882839.308,
+        "Error %": "99.993%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": -256882839.308,
+        "g(Xi)": -59389914254702000,
+        "Xi+1": -59389914254702000,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": -59389914254702000,
+        "g(Xi)": -3174445723662770457580053353988096,
+        "Xi+1": -3174445723662770457580053353988096,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": -3174445723662770457580053353988096,
+        "g(Xi)": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Xi+1": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": -9069395087232766276620274597983329516520458213904430252276116881408,
+        "g(Xi)": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Xi+1": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": -74028534523489660010496992834578950836357182395613743236248418195973881519984849069042015187361728983826861093008876868964569304793088,
+        "g(Xi)": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Xi+1": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": -4932201531325949870128721574812833818828555740580171231051942779824185538193036610569641261061995048560878856191803896536118108009081922685034296890691659691858654935573702304480667620653192082262956850899948230103620323848165320520632385505503834390630840572225519616,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:39:39.165869"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": -Infinity,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": -6.5,
+        "Xi+1": -6.5,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -6.5,
+        "g(Xi)": -53.075,
+        "Xi+1": -53.075,
+        "Error %": "87.753%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": -53.075,
+        "g(Xi)": -2676.063,
+        "Xi+1": -2676.063,
+        "Error %": "98.017%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": -2676.063,
+        "g(Xi)": -6452402.623,
+        "Xi+1": -6452402.623,
+        "Error %": "99.959%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": -6452402.623,
+        "g(Xi)": -37470167075559.55,
+        "Xi+1": -37470167075559.55,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": -37470167075559.55,
+        "g(Xi)": -1263612078603413207436492800,
+        "Xi+1": -1263612078603413207436492800,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": -1263612078603413207436492800,
+        "g(Xi)": -1437043936673194662714810938922435109118793255009386496,
+        "Xi+1": -1437043936673194662714810938922435109118793255009386496,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": -1437043936673194662714810938922435109118793255009386496,
+        "g(Xi)": -1858585748336273550969133035273569636749584671864329625946584929727943370963384732175305896365571404719980544,
+        "Xi+1": -1858585748336273550969133035273569636749584671864329625946584929727943370963384732175305896365571404719980544,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": -1858585748336273550969133035273569636749584671864329625946584929727943370963384732175305896365571404719980544,
+        "g(Xi)": -3108906885526835272765677341846558513717999267334093973432743826446712333546899500281481866934017318202474262437270998258065843052755377413833845631658004009925500988782988123159409204178581118136339963876216225660928,
+        "Xi+1": -3108906885526835272765677341846558513717999267334093973432743826446712333546899500281481866934017318202474262437270998258065843052755377413833845631658004009925500988782988123159409204178581118136339963876216225660928,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": -3108906885526835272765677341846558513717999267334093973432743826446712333546899500281481866934017318202474262437270998258065843052755377413833845631658004009925500988782988123159409204178581118136339963876216225660928,
+        "g(Xi)": -Infinity,
+        "Xi+1": -Infinity,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:44:06.631509"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": 524981460317490.25,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": 12.222,
+        "Xi+1": 12.222,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": 12.222,
+        "g(Xi)": 25.864,
+        "Xi+1": 25.864,
+        "Error %": "52.745%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": 25.864,
+        "g(Xi)": 51.632,
+        "Xi+1": 51.632,
+        "Error %": "49.907%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": 51.632,
+        "g(Xi)": 100.306,
+        "Xi+1": 100.306,
+        "Error %": "48.525%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": 100.306,
+        "g(Xi)": 192.244,
+        "Xi+1": 192.244,
+        "Error %": "47.824%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": 192.244,
+        "g(Xi)": 365.905,
+        "Xi+1": 365.905,
+        "Error %": "47.461%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": 365.905,
+        "g(Xi)": 693.932,
+        "Xi+1": 693.932,
+        "Error %": "47.271%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": 693.932,
+        "g(Xi)": 1313.538,
+        "Xi+1": 1313.538,
+        "Error %": "47.171%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": 1313.538,
+        "g(Xi)": 2483.905,
+        "Xi+1": 2483.905,
+        "Error %": "47.118%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": 2483.905,
+        "g(Xi)": 4694.599,
+        "Xi+1": 4694.599,
+        "Error %": "47.09%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": 4694.599,
+        "g(Xi)": 8870.353,
+        "Xi+1": 8870.353,
+        "Error %": "47.075%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": 8870.353,
+        "g(Xi)": 16757.89,
+        "Xi+1": 16757.89,
+        "Error %": "47.068%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": 16757.89,
+        "g(Xi)": 31656.57,
+        "Xi+1": 31656.57,
+        "Error %": "47.063%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": 31656.57,
+        "g(Xi)": 59798.521,
+        "Xi+1": 59798.521,
+        "Error %": "47.061%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": 59798.521,
+        "g(Xi)": 112955.539,
+        "Xi+1": 112955.539,
+        "Error %": "47.06%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": 112955.539,
+        "g(Xi)": 213363.241,
+        "Xi+1": 213363.241,
+        "Error %": "47.06%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": 213363.241,
+        "g(Xi)": 403022.233,
+        "Xi+1": 403022.233,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": 403022.233,
+        "g(Xi)": 761266.996,
+        "Xi+1": 761266.996,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": 761266.996,
+        "g(Xi)": 1437951.548,
+        "Xi+1": 1437951.548,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": 1437951.548,
+        "g(Xi)": 2716133.48,
+        "Xi+1": 2716133.48,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": 2716133.48,
+        "g(Xi)": 5130477.128,
+        "Xi+1": 5130477.128,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": 5130477.128,
+        "g(Xi)": 9690904.02,
+        "Xi+1": 9690904.02,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": 9690904.02,
+        "g(Xi)": 18305043.704,
+        "Xi+1": 18305043.704,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": 18305043.704,
+        "g(Xi)": 34576196.44,
+        "Xi+1": 34576196.44,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": 34576196.44,
+        "g(Xi)": 65310596.054,
+        "Xi+1": 65310596.054,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": 65310596.054,
+        "g(Xi)": 123364461.99,
+        "Xi+1": 123364461.99,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": 123364461.99,
+        "g(Xi)": 233021764.315,
+        "Xi+1": 233021764.315,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": 233021764.315,
+        "g(Xi)": 440152224.262,
+        "Xi+1": 440152224.262,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": 440152224.262,
+        "g(Xi)": 831398648.605,
+        "Xi+1": 831398648.605,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": 831398648.605,
+        "g(Xi)": 1570419672.366,
+        "Xi+1": 1570419672.366,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": 1570419672.366,
+        "g(Xi)": 2966348272.802,
+        "Xi+1": 2966348272.802,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": 2966348272.802,
+        "g(Xi)": 5603102295.849,
+        "Xi+1": 5603102295.849,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": 5603102295.849,
+        "g(Xi)": 10583637672.714,
+        "Xi+1": 10583637672.714,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": 10583637672.714,
+        "g(Xi)": 19991315606.793,
+        "Xi+1": 19991315606.793,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": 19991315606.793,
+        "g(Xi)": 37761373926.72,
+        "Xi+1": 37761373926.72,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": 37761373926.72,
+        "g(Xi)": 71327039642.138,
+        "Xi+1": 71327039642.138,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": 71327039642.138,
+        "g(Xi)": 134728852660.149,
+        "Xi+1": 134728852660.149,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": 134728852660.149,
+        "g(Xi)": 254487832805.281,
+        "Xi+1": 254487832805.281,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": 254487832805.281,
+        "g(Xi)": 480699239746.087,
+        "Xi+1": 480699239746.087,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": 480699239746.087,
+        "g(Xi)": 907987452856.499,
+        "Xi+1": 907987452856.499,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": 907987452856.499,
+        "g(Xi)": 1715087410953.943,
+        "Xi+1": 1715087410953.943,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": 1715087410953.943,
+        "g(Xi)": 3239609554026.895,
+        "Xi+1": 3239609554026.895,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": 3239609554026.895,
+        "g(Xi)": 6119262490942.472,
+        "Xi+1": 6119262490942.472,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": 6119262490942.472,
+        "g(Xi)": 11558606927338.564,
+        "Xi+1": 11558606927338.564,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": 11558606927338.564,
+        "g(Xi)": 21832924196086.746,
+        "Xi+1": 21832924196086.746,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": 21832924196086.746,
+        "g(Xi)": 41239967925944.44,
+        "Xi+1": 41239967925944.44,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": 41239967925944.44,
+        "g(Xi)": 77897717193453.42,
+        "Xi+1": 77897717193453.42,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": 77897717193453.42,
+        "g(Xi)": 147140132476526,
+        "Xi+1": 147140132476526,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": 147140132476526,
+        "g(Xi)": 277931361344552.06,
+        "Xi+1": 277931361344552.06,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": 277931361344552.06,
+        "g(Xi)": 524981460317490.25,
+        "Xi+1": 524981460317490.25,
+        "Error %": "47.059%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:53:21.416604"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": 524981460317490.25,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": 12.222,
+        "Xi+1": 12.222,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": 12.222,
+        "g(Xi)": 25.864,
+        "Xi+1": 25.864,
+        "Error %": "52.745%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": 25.864,
+        "g(Xi)": 51.632,
+        "Xi+1": 51.632,
+        "Error %": "49.907%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": 51.632,
+        "g(Xi)": 100.306,
+        "Xi+1": 100.306,
+        "Error %": "48.525%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": 100.306,
+        "g(Xi)": 192.244,
+        "Xi+1": 192.244,
+        "Error %": "47.824%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": 192.244,
+        "g(Xi)": 365.905,
+        "Xi+1": 365.905,
+        "Error %": "47.461%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": 365.905,
+        "g(Xi)": 693.932,
+        "Xi+1": 693.932,
+        "Error %": "47.271%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": 693.932,
+        "g(Xi)": 1313.538,
+        "Xi+1": 1313.538,
+        "Error %": "47.171%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": 1313.538,
+        "g(Xi)": 2483.905,
+        "Xi+1": 2483.905,
+        "Error %": "47.118%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": 2483.905,
+        "g(Xi)": 4694.599,
+        "Xi+1": 4694.599,
+        "Error %": "47.09%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": 4694.599,
+        "g(Xi)": 8870.353,
+        "Xi+1": 8870.353,
+        "Error %": "47.075%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": 8870.353,
+        "g(Xi)": 16757.89,
+        "Xi+1": 16757.89,
+        "Error %": "47.068%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": 16757.89,
+        "g(Xi)": 31656.57,
+        "Xi+1": 31656.57,
+        "Error %": "47.063%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": 31656.57,
+        "g(Xi)": 59798.521,
+        "Xi+1": 59798.521,
+        "Error %": "47.061%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": 59798.521,
+        "g(Xi)": 112955.539,
+        "Xi+1": 112955.539,
+        "Error %": "47.06%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": 112955.539,
+        "g(Xi)": 213363.241,
+        "Xi+1": 213363.241,
+        "Error %": "47.06%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": 213363.241,
+        "g(Xi)": 403022.233,
+        "Xi+1": 403022.233,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": 403022.233,
+        "g(Xi)": 761266.996,
+        "Xi+1": 761266.996,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": 761266.996,
+        "g(Xi)": 1437951.548,
+        "Xi+1": 1437951.548,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": 1437951.548,
+        "g(Xi)": 2716133.48,
+        "Xi+1": 2716133.48,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": 2716133.48,
+        "g(Xi)": 5130477.128,
+        "Xi+1": 5130477.128,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": 5130477.128,
+        "g(Xi)": 9690904.02,
+        "Xi+1": 9690904.02,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": 9690904.02,
+        "g(Xi)": 18305043.704,
+        "Xi+1": 18305043.704,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": 18305043.704,
+        "g(Xi)": 34576196.44,
+        "Xi+1": 34576196.44,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": 34576196.44,
+        "g(Xi)": 65310596.054,
+        "Xi+1": 65310596.054,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": 65310596.054,
+        "g(Xi)": 123364461.99,
+        "Xi+1": 123364461.99,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": 123364461.99,
+        "g(Xi)": 233021764.315,
+        "Xi+1": 233021764.315,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": 233021764.315,
+        "g(Xi)": 440152224.262,
+        "Xi+1": 440152224.262,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": 440152224.262,
+        "g(Xi)": 831398648.605,
+        "Xi+1": 831398648.605,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": 831398648.605,
+        "g(Xi)": 1570419672.366,
+        "Xi+1": 1570419672.366,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": 1570419672.366,
+        "g(Xi)": 2966348272.802,
+        "Xi+1": 2966348272.802,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": 2966348272.802,
+        "g(Xi)": 5603102295.849,
+        "Xi+1": 5603102295.849,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": 5603102295.849,
+        "g(Xi)": 10583637672.714,
+        "Xi+1": 10583637672.714,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": 10583637672.714,
+        "g(Xi)": 19991315606.793,
+        "Xi+1": 19991315606.793,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": 19991315606.793,
+        "g(Xi)": 37761373926.72,
+        "Xi+1": 37761373926.72,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": 37761373926.72,
+        "g(Xi)": 71327039642.138,
+        "Xi+1": 71327039642.138,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": 71327039642.138,
+        "g(Xi)": 134728852660.149,
+        "Xi+1": 134728852660.149,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": 134728852660.149,
+        "g(Xi)": 254487832805.281,
+        "Xi+1": 254487832805.281,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": 254487832805.281,
+        "g(Xi)": 480699239746.087,
+        "Xi+1": 480699239746.087,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": 480699239746.087,
+        "g(Xi)": 907987452856.499,
+        "Xi+1": 907987452856.499,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": 907987452856.499,
+        "g(Xi)": 1715087410953.943,
+        "Xi+1": 1715087410953.943,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": 1715087410953.943,
+        "g(Xi)": 3239609554026.895,
+        "Xi+1": 3239609554026.895,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": 3239609554026.895,
+        "g(Xi)": 6119262490942.472,
+        "Xi+1": 6119262490942.472,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": 6119262490942.472,
+        "g(Xi)": 11558606927338.564,
+        "Xi+1": 11558606927338.564,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": 11558606927338.564,
+        "g(Xi)": 21832924196086.746,
+        "Xi+1": 21832924196086.746,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": 21832924196086.746,
+        "g(Xi)": 41239967925944.44,
+        "Xi+1": 41239967925944.44,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": 41239967925944.44,
+        "g(Xi)": 77897717193453.42,
+        "Xi+1": 77897717193453.42,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": 77897717193453.42,
+        "g(Xi)": 147140132476526,
+        "Xi+1": 147140132476526,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": 147140132476526,
+        "g(Xi)": 277931361344552.06,
+        "Xi+1": 277931361344552.06,
+        "Error %": "47.059%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": 277931361344552.06,
+        "g(Xi)": 524981460317490.25,
+        "Xi+1": 524981460317490.25,
+        "Error %": "47.059%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:55:25.592409"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": 4694.598907578138,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": 12.222,
+        "Xi+1": 12.222,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": 12.222,
+        "g(Xi)": 25.864,
+        "Xi+1": 25.864,
+        "Error %": "52.745%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": 25.864,
+        "g(Xi)": 51.632,
+        "Xi+1": 51.632,
+        "Error %": "49.907%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": 51.632,
+        "g(Xi)": 100.306,
+        "Xi+1": 100.306,
+        "Error %": "48.525%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": 100.306,
+        "g(Xi)": 192.244,
+        "Xi+1": 192.244,
+        "Error %": "47.824%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": 192.244,
+        "g(Xi)": 365.905,
+        "Xi+1": 365.905,
+        "Error %": "47.461%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": 365.905,
+        "g(Xi)": 693.932,
+        "Xi+1": 693.932,
+        "Error %": "47.271%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": 693.932,
+        "g(Xi)": 1313.538,
+        "Xi+1": 1313.538,
+        "Error %": "47.171%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": 1313.538,
+        "g(Xi)": 2483.905,
+        "Xi+1": 2483.905,
+        "Error %": "47.118%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": 2483.905,
+        "g(Xi)": 4694.599,
+        "Xi+1": 4694.599,
+        "Error %": "47.09%"
+      }
+    ],
+    "timestamp": "2025-04-09T17:57:21.542238"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": NaN,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": NaN,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T18:02:43.034832"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": NaN,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": NaN,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T18:02:48.687191"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": NaN,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": NaN,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T18:02:49.026251"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": NaN,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": NaN,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T18:04:53.717866"
+  },
+  {
+    "function": "-0.9*x**2+1.7*x+2.5",
+    "method": "Fixed Point",
+    "root": NaN,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 5,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "100%"
+      },
+      {
+        "Iteration": 1,
+        "Xi": NaN,
+        "g(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error %": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T18:04:53.861568"
+  }
+]

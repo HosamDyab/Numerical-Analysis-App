@@ -1,0 +1,7580 @@
+[
+  {
+    "function": "4*x**3 - 6*x**2 + 7*x - 2.3",
+    "method": "Bisection",
+    "root": 0.45013427734375,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 2.0,
+        "f(xu)": 19.7,
+        "xr": 1.0,
+        "f(xr)": 2.7,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 1.0,
+        "f(xu)": 2.7,
+        "xr": 0.5,
+        "f(xr)": 0.2,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.25,
+        "f(xr)": -0.862,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 0.25,
+        "f(xl)": -0.862,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.375,
+        "f(xr)": -0.308,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 0.375,
+        "f(xl)": -0.308,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.438,
+        "f(xr)": -0.051,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.469,
+        "f(xr)": 0.075,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.469,
+        "f(xu)": 0.075,
+        "xr": 0.453,
+        "f(xr)": 0.012,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.445,
+        "f(xr)": -0.019,
+        "Error": "1.754%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 0.445,
+        "f(xl)": -0.019,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.449,
+        "f(xr)": -0.004,
+        "Error": "0.87%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.451,
+        "f(xr)": 0.004,
+        "Error": "0.433%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.451,
+        "f(xu)": 0.004,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.217%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.002,
+        "Error": "0.109%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 0.45,
+        "f(xl)": -0.002,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.001,
+        "Error": "0.054%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 0.45,
+        "f(xl)": -0.001,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.0,
+        "Error": "0.027%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 0.45,
+        "f(xl)": -0.0,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.014%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:20:28.948175"
+  },
+  {
+    "function": "4*x**3 - 6*x**2 + 7*x - 2.3",
+    "method": "Bisection",
+    "root": 0.45013427734375,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 2.0,
+        "f(xu)": 19.7,
+        "xr": 1.0,
+        "f(xr)": 2.7,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 1.0,
+        "f(xu)": 2.7,
+        "xr": 0.5,
+        "f(xr)": 0.2,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.25,
+        "f(xr)": -0.862,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 0.25,
+        "f(xl)": -0.862,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.375,
+        "f(xr)": -0.308,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 0.375,
+        "f(xl)": -0.308,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.438,
+        "f(xr)": -0.051,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.469,
+        "f(xr)": 0.075,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.469,
+        "f(xu)": 0.075,
+        "xr": 0.453,
+        "f(xr)": 0.012,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.445,
+        "f(xr)": -0.019,
+        "Error": "1.754%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 0.445,
+        "f(xl)": -0.019,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.449,
+        "f(xr)": -0.004,
+        "Error": "0.87%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.451,
+        "f(xr)": 0.004,
+        "Error": "0.433%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.451,
+        "f(xu)": 0.004,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.217%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.002,
+        "Error": "0.109%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 0.45,
+        "f(xl)": -0.002,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.001,
+        "Error": "0.054%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 0.45,
+        "f(xl)": -0.001,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.0,
+        "Error": "0.027%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 0.45,
+        "f(xl)": -0.0,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.014%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:28:59.789666"
+  },
+  {
+    "function": "4*x**3 - 6*x**2 + 7*x - 2.3",
+    "method": "Newton-Raphson",
+    "root": 0.450124071767561,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 1.0,
+        "f(Xi)": 2.7,
+        "f'(Xi)": 7.0,
+        "Xi+1": 0.614,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": 0.614,
+        "f(Xi)": 0.663,
+        "f'(Xi)": 4.157,
+        "Xi+1": 0.455,
+        "Error": "35.08%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": 0.455,
+        "f(Xi)": 0.019,
+        "f'(Xi)": 4.025,
+        "Xi+1": 0.45,
+        "Error": "1.03%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": 0.45,
+        "f(Xi)": -0.0,
+        "f'(Xi)": 4.03,
+        "Xi+1": 0.45,
+        "Error": "0.001%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:29:28.446831"
+  },
+  {
+    "function": "4*x**3 - 6*x**2 + 7*x - 2.3",
+    "method": "Bisection",
+    "root": 0.45013427734375,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 2.0,
+        "f(xu)": 19.7,
+        "xr": 1.0,
+        "f(xr)": 2.7,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 1.0,
+        "f(xu)": 2.7,
+        "xr": 0.5,
+        "f(xr)": 0.2,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.25,
+        "f(xr)": -0.862,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 0.25,
+        "f(xl)": -0.862,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.375,
+        "f(xr)": -0.308,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 0.375,
+        "f(xl)": -0.308,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.438,
+        "f(xr)": -0.051,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.469,
+        "f(xr)": 0.075,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.469,
+        "f(xu)": 0.075,
+        "xr": 0.453,
+        "f(xr)": 0.012,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.445,
+        "f(xr)": -0.019,
+        "Error": "1.754%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 0.445,
+        "f(xl)": -0.019,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.449,
+        "f(xr)": -0.004,
+        "Error": "0.87%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.451,
+        "f(xr)": 0.004,
+        "Error": "0.433%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.451,
+        "f(xu)": 0.004,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.217%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.002,
+        "Error": "0.109%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 0.45,
+        "f(xl)": -0.002,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.001,
+        "Error": "0.054%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 0.45,
+        "f(xl)": -0.001,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.0,
+        "Error": "0.027%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 0.45,
+        "f(xl)": -0.0,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.014%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:40:48.992492"
+  },
+  {
+    "function": "4*x**3 - 6*x**2 + 7*x - 2.3",
+    "method": "Bisection",
+    "root": 0.45013427734375,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 2.0,
+        "f(xu)": 19.7,
+        "xr": 1.0,
+        "f(xr)": 2.7,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 1.0,
+        "f(xu)": 2.7,
+        "xr": 0.5,
+        "f(xr)": 0.2,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 0.0,
+        "f(xl)": -2.3,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.25,
+        "f(xr)": -0.862,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 0.25,
+        "f(xl)": -0.862,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.375,
+        "f(xr)": -0.308,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 0.375,
+        "f(xl)": -0.308,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.438,
+        "f(xr)": -0.051,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.5,
+        "f(xu)": 0.2,
+        "xr": 0.469,
+        "f(xr)": 0.075,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.469,
+        "f(xu)": 0.075,
+        "xr": 0.453,
+        "f(xr)": 0.012,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 0.438,
+        "f(xl)": -0.051,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.445,
+        "f(xr)": -0.019,
+        "Error": "1.754%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 0.445,
+        "f(xl)": -0.019,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.449,
+        "f(xr)": -0.004,
+        "Error": "0.87%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.453,
+        "f(xu)": 0.012,
+        "xr": 0.451,
+        "f(xr)": 0.004,
+        "Error": "0.433%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.451,
+        "f(xu)": 0.004,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.217%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 0.449,
+        "f(xl)": -0.004,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.002,
+        "Error": "0.109%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 0.45,
+        "f(xl)": -0.002,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.001,
+        "Error": "0.054%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 0.45,
+        "f(xl)": -0.001,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": -0.0,
+        "Error": "0.027%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 0.45,
+        "f(xl)": -0.0,
+        "xu": 0.45,
+        "f(xu)": 0.0,
+        "xr": 0.45,
+        "f(xr)": 0.0,
+        "Error": "0.014%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:40:59.543182"
+  },
+  {
+    "function": "x**3 - 2*x + 1",
+    "method": "False Position",
+    "root": -1.6179777169736491,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 0.0,
+        "f(xl)": 1.0,
+        "xu": 2.0,
+        "f(xu)": 5.0,
+        "xr": -0.5,
+        "f(xr)": 1.875,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": -0.5,
+        "f(xl)": 1.875,
+        "xu": 2.0,
+        "f(xu)": 5.0,
+        "xr": -2.0,
+        "f(xr)": -3.0,
+        "Error": "75.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": -0.5,
+        "f(xl)": 1.875,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.077,
+        "f(xr)": 1.905,
+        "Error": "85.714%"
+      },
+      {
+        "Iteration": 3,
+        "xl": -1.077,
+        "f(xl)": 1.905,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.435,
+        "f(xr)": 0.913,
+        "Error": "24.975%"
+      },
+      {
+        "Iteration": 4,
+        "xl": -1.435,
+        "f(xl)": 0.913,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.567,
+        "f(xr)": 0.285,
+        "Error": "8.408%"
+      },
+      {
+        "Iteration": 5,
+        "xl": -1.567,
+        "f(xl)": 0.285,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.605,
+        "f(xr)": 0.077,
+        "Error": "2.342%"
+      },
+      {
+        "Iteration": 6,
+        "xl": -1.605,
+        "f(xl)": 0.077,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.615,
+        "f(xr)": 0.02,
+        "Error": "0.611%"
+      },
+      {
+        "Iteration": 7,
+        "xl": -1.615,
+        "f(xl)": 0.02,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.617,
+        "f(xr)": 0.005,
+        "Error": "0.157%"
+      },
+      {
+        "Iteration": 8,
+        "xl": -1.617,
+        "f(xl)": 0.005,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.618,
+        "f(xr)": 0.001,
+        "Error": "0.04%"
+      },
+      {
+        "Iteration": 9,
+        "xl": -1.618,
+        "f(xl)": 0.001,
+        "xu": -2.0,
+        "f(xu)": -3.0,
+        "xr": -1.618,
+        "f(xr)": 0.0,
+        "Error": "0.01%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:49:07.668233"
+  },
+  {
+    "function": "x**7-1.5*x**2+7*x-6",
+    "method": "Secant",
+    "root": 0.9472855907217186,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi-1": 0.0,
+        "f(Xi-1)": -6.0,
+        "Xi": 0.5,
+        "f(Xi)": -2.867,
+        "Xi+1": 0.958,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi-1": 0.5,
+        "f(Xi-1)": -2.867,
+        "Xi": 0.958,
+        "f(Xi)": 0.066,
+        "Xi+1": 0.947,
+        "Error": "1.089%"
+      }
+    ],
+    "timestamp": "2025-04-09T15:54:53.280086"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": NaN,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:26:06.349644"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799274,
+        "f'(Xi)": 0.075148,
+        "Xi+1": -10.135966,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.135966,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:10.094070"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:20.478389"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:22.080025"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:22.814129"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:23.234391"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:23.411813"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:23.559599"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:23.728282"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:23.892696"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:24.039210"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:24.229102"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:24.358737"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:24.579182"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.799,
+        "f'(Xi)": 0.075,
+        "Xi+1": -10.136,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": -10.136,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": NaN,
+        "Error": "nan%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": NaN,
+        "f(Xi)": NaN,
+        "f'(Xi)": NaN,
+        "Xi+1": 15.75,
+        "Error": "nan%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:29:28.639152"
+  },
+  {
+    "function": "2*sin(sqrt(x)) - x",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.5,
+        "f(Xi)": 0.178,
+        "f'(Xi)": 9.658,
+        "Xi+1": 0.482,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": 0.482,
+        "f(Xi)": 0.175,
+        "f'(Xi)": 9.862,
+        "Xi+1": 0.464,
+        "Error": "3.819%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": 0.464,
+        "f(Xi)": 0.172,
+        "f'(Xi)": 10.069,
+        "Xi+1": 0.447,
+        "Error": "3.815%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": 0.447,
+        "f(Xi)": 0.169,
+        "f'(Xi)": 10.28,
+        "Xi+1": 0.43,
+        "Error": "3.81%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": 0.43,
+        "f(Xi)": 0.166,
+        "f'(Xi)": 10.494,
+        "Xi+1": 0.415,
+        "Error": "3.806%"
+      },
+      {
+        "Iteration": 5,
+        "Xi": 0.415,
+        "f(Xi)": 0.163,
+        "f'(Xi)": 10.713,
+        "Xi+1": 0.399,
+        "Error": "3.802%"
+      },
+      {
+        "Iteration": 6,
+        "Xi": 0.399,
+        "f(Xi)": 0.16,
+        "f'(Xi)": 10.935,
+        "Xi+1": 0.385,
+        "Error": "3.798%"
+      },
+      {
+        "Iteration": 7,
+        "Xi": 0.385,
+        "f(Xi)": 0.157,
+        "f'(Xi)": 11.161,
+        "Xi+1": 0.371,
+        "Error": "3.794%"
+      },
+      {
+        "Iteration": 8,
+        "Xi": 0.371,
+        "f(Xi)": 0.154,
+        "f'(Xi)": 11.391,
+        "Xi+1": 0.357,
+        "Error": "3.791%"
+      },
+      {
+        "Iteration": 9,
+        "Xi": 0.357,
+        "f(Xi)": 0.152,
+        "f'(Xi)": 11.625,
+        "Xi+1": 0.344,
+        "Error": "3.787%"
+      },
+      {
+        "Iteration": 10,
+        "Xi": 0.344,
+        "f(Xi)": 0.149,
+        "f'(Xi)": 11.863,
+        "Xi+1": 0.332,
+        "Error": "3.783%"
+      },
+      {
+        "Iteration": 11,
+        "Xi": 0.332,
+        "f(Xi)": 0.146,
+        "f'(Xi)": 12.106,
+        "Xi+1": 0.32,
+        "Error": "3.78%"
+      },
+      {
+        "Iteration": 12,
+        "Xi": 0.32,
+        "f(Xi)": 0.144,
+        "f'(Xi)": 12.353,
+        "Xi+1": 0.308,
+        "Error": "3.776%"
+      },
+      {
+        "Iteration": 13,
+        "Xi": 0.308,
+        "f(Xi)": 0.141,
+        "f'(Xi)": 12.604,
+        "Xi+1": 0.297,
+        "Error": "3.773%"
+      },
+      {
+        "Iteration": 14,
+        "Xi": 0.297,
+        "f(Xi)": 0.139,
+        "f'(Xi)": 12.859,
+        "Xi+1": 0.286,
+        "Error": "3.77%"
+      },
+      {
+        "Iteration": 15,
+        "Xi": 0.286,
+        "f(Xi)": 0.136,
+        "f'(Xi)": 13.12,
+        "Xi+1": 0.276,
+        "Error": "3.767%"
+      },
+      {
+        "Iteration": 16,
+        "Xi": 0.276,
+        "f(Xi)": 0.134,
+        "f'(Xi)": 13.384,
+        "Xi+1": 0.266,
+        "Error": "3.764%"
+      },
+      {
+        "Iteration": 17,
+        "Xi": 0.266,
+        "f(Xi)": 0.131,
+        "f'(Xi)": 13.654,
+        "Xi+1": 0.256,
+        "Error": "3.761%"
+      },
+      {
+        "Iteration": 18,
+        "Xi": 0.256,
+        "f(Xi)": 0.129,
+        "f'(Xi)": 13.928,
+        "Xi+1": 0.247,
+        "Error": "3.758%"
+      },
+      {
+        "Iteration": 19,
+        "Xi": 0.247,
+        "f(Xi)": 0.127,
+        "f'(Xi)": 14.207,
+        "Xi+1": 0.238,
+        "Error": "3.755%"
+      },
+      {
+        "Iteration": 20,
+        "Xi": 0.238,
+        "f(Xi)": 0.125,
+        "f'(Xi)": 14.491,
+        "Xi+1": 0.229,
+        "Error": "3.752%"
+      },
+      {
+        "Iteration": 21,
+        "Xi": 0.229,
+        "f(Xi)": 0.122,
+        "f'(Xi)": 14.78,
+        "Xi+1": 0.221,
+        "Error": "3.749%"
+      },
+      {
+        "Iteration": 22,
+        "Xi": 0.221,
+        "f(Xi)": 0.12,
+        "f'(Xi)": 15.075,
+        "Xi+1": 0.213,
+        "Error": "3.747%"
+      },
+      {
+        "Iteration": 23,
+        "Xi": 0.213,
+        "f(Xi)": 0.118,
+        "f'(Xi)": 15.374,
+        "Xi+1": 0.205,
+        "Error": "3.744%"
+      },
+      {
+        "Iteration": 24,
+        "Xi": 0.205,
+        "f(Xi)": 0.116,
+        "f'(Xi)": 15.679,
+        "Xi+1": 0.198,
+        "Error": "3.741%"
+      },
+      {
+        "Iteration": 25,
+        "Xi": 0.198,
+        "f(Xi)": 0.114,
+        "f'(Xi)": 15.989,
+        "Xi+1": 0.191,
+        "Error": "3.739%"
+      },
+      {
+        "Iteration": 26,
+        "Xi": 0.191,
+        "f(Xi)": 0.112,
+        "f'(Xi)": 16.305,
+        "Xi+1": 0.184,
+        "Error": "3.736%"
+      },
+      {
+        "Iteration": 27,
+        "Xi": 0.184,
+        "f(Xi)": 0.11,
+        "f'(Xi)": 16.626,
+        "Xi+1": 0.177,
+        "Error": "3.734%"
+      },
+      {
+        "Iteration": 28,
+        "Xi": 0.177,
+        "f(Xi)": 0.108,
+        "f'(Xi)": 16.953,
+        "Xi+1": 0.171,
+        "Error": "3.732%"
+      },
+      {
+        "Iteration": 29,
+        "Xi": 0.171,
+        "f(Xi)": 0.106,
+        "f'(Xi)": 17.286,
+        "Xi+1": 0.165,
+        "Error": "3.729%"
+      },
+      {
+        "Iteration": 30,
+        "Xi": 0.165,
+        "f(Xi)": 0.104,
+        "f'(Xi)": 17.625,
+        "Xi+1": 0.159,
+        "Error": "3.727%"
+      },
+      {
+        "Iteration": 31,
+        "Xi": 0.159,
+        "f(Xi)": 0.102,
+        "f'(Xi)": 17.97,
+        "Xi+1": 0.153,
+        "Error": "3.725%"
+      },
+      {
+        "Iteration": 32,
+        "Xi": 0.153,
+        "f(Xi)": 0.101,
+        "f'(Xi)": 18.321,
+        "Xi+1": 0.148,
+        "Error": "3.723%"
+      },
+      {
+        "Iteration": 33,
+        "Xi": 0.148,
+        "f(Xi)": 0.099,
+        "f'(Xi)": 18.678,
+        "Xi+1": 0.142,
+        "Error": "3.721%"
+      },
+      {
+        "Iteration": 34,
+        "Xi": 0.142,
+        "f(Xi)": 0.097,
+        "f'(Xi)": 19.042,
+        "Xi+1": 0.137,
+        "Error": "3.719%"
+      },
+      {
+        "Iteration": 35,
+        "Xi": 0.137,
+        "f(Xi)": 0.095,
+        "f'(Xi)": 19.412,
+        "Xi+1": 0.132,
+        "Error": "3.717%"
+      },
+      {
+        "Iteration": 36,
+        "Xi": 0.132,
+        "f(Xi)": 0.094,
+        "f'(Xi)": 19.789,
+        "Xi+1": 0.128,
+        "Error": "3.715%"
+      },
+      {
+        "Iteration": 37,
+        "Xi": 0.128,
+        "f(Xi)": 0.092,
+        "f'(Xi)": 20.172,
+        "Xi+1": 0.123,
+        "Error": "3.713%"
+      },
+      {
+        "Iteration": 38,
+        "Xi": 0.123,
+        "f(Xi)": 0.09,
+        "f'(Xi)": 20.563,
+        "Xi+1": 0.119,
+        "Error": "3.711%"
+      },
+      {
+        "Iteration": 39,
+        "Xi": 0.119,
+        "f(Xi)": 0.089,
+        "f'(Xi)": 20.96,
+        "Xi+1": 0.114,
+        "Error": "3.709%"
+      },
+      {
+        "Iteration": 40,
+        "Xi": 0.114,
+        "f(Xi)": 0.087,
+        "f'(Xi)": 21.364,
+        "Xi+1": 0.11,
+        "Error": "3.707%"
+      },
+      {
+        "Iteration": 41,
+        "Xi": 0.11,
+        "f(Xi)": 0.086,
+        "f'(Xi)": 21.776,
+        "Xi+1": 0.106,
+        "Error": "3.706%"
+      },
+      {
+        "Iteration": 42,
+        "Xi": 0.106,
+        "f(Xi)": 0.084,
+        "f'(Xi)": 22.195,
+        "Xi+1": 0.103,
+        "Error": "3.704%"
+      },
+      {
+        "Iteration": 43,
+        "Xi": 0.103,
+        "f(Xi)": 0.083,
+        "f'(Xi)": 22.621,
+        "Xi+1": 0.099,
+        "Error": "3.702%"
+      },
+      {
+        "Iteration": 44,
+        "Xi": 0.099,
+        "f(Xi)": 0.081,
+        "f'(Xi)": 23.056,
+        "Xi+1": 0.095,
+        "Error": "3.701%"
+      },
+      {
+        "Iteration": 45,
+        "Xi": 0.095,
+        "f(Xi)": 0.08,
+        "f'(Xi)": 23.497,
+        "Xi+1": 0.092,
+        "Error": "3.699%"
+      },
+      {
+        "Iteration": 46,
+        "Xi": 0.092,
+        "f(Xi)": 0.078,
+        "f'(Xi)": 23.947,
+        "Xi+1": 0.089,
+        "Error": "3.697%"
+      },
+      {
+        "Iteration": 47,
+        "Xi": 0.089,
+        "f(Xi)": 0.077,
+        "f'(Xi)": 24.405,
+        "Xi+1": 0.085,
+        "Error": "3.696%"
+      },
+      {
+        "Iteration": 48,
+        "Xi": 0.085,
+        "f(Xi)": 0.076,
+        "f'(Xi)": 24.871,
+        "Xi+1": 0.082,
+        "Error": "3.694%"
+      },
+      {
+        "Iteration": 49,
+        "Xi": 0.082,
+        "f(Xi)": 0.074,
+        "f'(Xi)": 25.345,
+        "Xi+1": 15.75,
+        "Error": "99.477%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:31:00.606793"
+  },
+  {
+    "function": "exp(-x) - sin(x)",
+    "method": "Newton-Raphson",
+    "root": 15.75,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xi": 0.6,
+        "f(Xi)": 0.979,
+        "f'(Xi)": -1.99,
+        "Xi+1": 1.092,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xi": 1.092,
+        "f(Xi)": 0.962,
+        "f'(Xi)": -1.981,
+        "Xi+1": 1.578,
+        "Error": "30.781%"
+      },
+      {
+        "Iteration": 2,
+        "Xi": 1.578,
+        "f(Xi)": 0.945,
+        "f'(Xi)": -1.972,
+        "Xi+1": 2.057,
+        "Error": "23.298%"
+      },
+      {
+        "Iteration": 3,
+        "Xi": 2.057,
+        "f(Xi)": 0.929,
+        "f'(Xi)": -1.964,
+        "Xi+1": 2.53,
+        "Error": "18.692%"
+      },
+      {
+        "Iteration": 4,
+        "Xi": 2.53,
+        "f(Xi)": 0.913,
+        "f'(Xi)": -1.956,
+        "Xi+1": 15.75,
+        "Error": "83.937%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:32:23.043059"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:35:41.646455"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:35:52.127657"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:36:34.362314"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:36:36.116484"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:36:36.705035"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:36:36.945397"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 10.0,
+        "f(xu)": -30.5,
+        "xr": 7.5,
+        "f(xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 7.5,
+        "f(xu)": -10.25,
+        "xr": 6.25,
+        "f(xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "xl": 5.0,
+        "f(xl)": 2.5,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.625,
+        "f(xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 6.25,
+        "f(xu)": -2.938,
+        "xr": 5.938,
+        "f(xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.938,
+        "f(xu)": -1.402,
+        "xr": 5.781,
+        "f(xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.781,
+        "f(xu)": -0.679,
+        "xr": 5.703,
+        "f(xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.703,
+        "f(xu)": -0.328,
+        "xr": 5.664,
+        "f(xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.664,
+        "f(xu)": -0.155,
+        "xr": 5.645,
+        "f(xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.645,
+        "f(xu)": -0.07,
+        "xr": 5.635,
+        "f(xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.635,
+        "f(xu)": -0.027,
+        "xr": 5.63,
+        "f(xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "xl": 5.625,
+        "f(xl)": 0.016,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.627,
+        "f(xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.63,
+        "f(xu)": -0.006,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "xl": 5.627,
+        "f(xl)": 0.005,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "xl": 5.628,
+        "f(xl)": 0.002,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.628,
+        "f(xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "xl": 5.628,
+        "f(xl)": 0.001,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": 0.0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "xl": 5.629,
+        "f(xl)": 0.0,
+        "xu": 5.629,
+        "f(xu)": -0.0,
+        "xr": 5.629,
+        "f(xr)": -0.0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:36:37.094270"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.628590176179542,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 5,
+        "Xu": 10,
+        "f(Xl)": 2.5,
+        "f(Xu)": -30.5,
+        "Xr": 7.5,
+        "f(Xr)": -10.25,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5,
+        "Xu": 7.5,
+        "f(Xl)": 2.5,
+        "f(Xu)": -10.25,
+        "Xr": 6.25,
+        "f(Xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5,
+        "Xu": 6.25,
+        "f(Xl)": 2.5,
+        "f(Xu)": -2.938,
+        "Xr": 5.625,
+        "f(Xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.625,
+        "Xu": 6.25,
+        "f(Xl)": 0.016,
+        "f(Xu)": -2.938,
+        "Xr": 5.938,
+        "f(Xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.625,
+        "Xu": 5.938,
+        "f(Xl)": 0.016,
+        "f(Xu)": -1.402,
+        "Xr": 5.781,
+        "f(Xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.625,
+        "Xu": 5.781,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.679,
+        "Xr": 5.703,
+        "f(Xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.625,
+        "Xu": 5.703,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.328,
+        "Xr": 5.664,
+        "f(Xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.625,
+        "Xu": 5.664,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.155,
+        "Xr": 5.645,
+        "f(Xr)": -0.07,
+        "Error": "0.346%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": 5.625,
+        "Xu": 5.645,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.07,
+        "Xr": 5.635,
+        "f(Xr)": -0.027,
+        "Error": "0.173%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": 5.625,
+        "Xu": 5.635,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.027,
+        "Xr": 5.63,
+        "f(Xr)": -0.006,
+        "Error": "0.087%"
+      },
+      {
+        "Iteration": 10,
+        "Xl": 5.625,
+        "Xu": 5.63,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.006,
+        "Xr": 5.627,
+        "f(Xr)": 0.005,
+        "Error": "0.043%"
+      },
+      {
+        "Iteration": 11,
+        "Xl": 5.627,
+        "Xu": 5.63,
+        "f(Xl)": 0.005,
+        "f(Xu)": -0.006,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.022%"
+      },
+      {
+        "Iteration": 12,
+        "Xl": 5.627,
+        "Xu": 5.629,
+        "f(Xl)": 0.005,
+        "f(Xu)": 0,
+        "Xr": 5.628,
+        "f(Xr)": 0.002,
+        "Error": "0.011%"
+      },
+      {
+        "Iteration": 13,
+        "Xl": 5.628,
+        "Xu": 5.629,
+        "f(Xl)": 0.002,
+        "f(Xu)": 0,
+        "Xr": 5.628,
+        "f(Xr)": 0.001,
+        "Error": "0.005%"
+      },
+      {
+        "Iteration": 14,
+        "Xl": 5.628,
+        "Xu": 5.629,
+        "f(Xl)": 0.001,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.003%"
+      },
+      {
+        "Iteration": 15,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 16,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.001%"
+      },
+      {
+        "Iteration": 17,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 18,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 19,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 20,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 21,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 22,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 23,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 24,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 25,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 26,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 27,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 28,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 29,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 30,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 31,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 32,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 33,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 34,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 35,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 36,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 37,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 38,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 39,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 40,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 41,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 42,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 43,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 44,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 45,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 46,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 47,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 48,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      },
+      {
+        "Iteration": 49,
+        "Xl": 5.629,
+        "Xu": 5.629,
+        "f(Xl)": 0,
+        "f(Xu)": 0,
+        "Xr": 5.629,
+        "f(Xr)": 0,
+        "Error": "0.0%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:41:50.868475"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.64453125,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 5,
+        "Xu": 10,
+        "f(Xl)": 2.5,
+        "f(Xu)": -30.5,
+        "Xr": 7.5,
+        "f(Xr)": -10.25,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5,
+        "Xu": 7.5,
+        "f(Xl)": 2.5,
+        "f(Xu)": -10.25,
+        "Xr": 6.25,
+        "f(Xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5,
+        "Xu": 6.25,
+        "f(Xl)": 2.5,
+        "f(Xu)": -2.938,
+        "Xr": 5.625,
+        "f(Xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.625,
+        "Xu": 6.25,
+        "f(Xl)": 0.016,
+        "f(Xu)": -2.938,
+        "Xr": 5.938,
+        "f(Xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.625,
+        "Xu": 5.938,
+        "f(Xl)": 0.016,
+        "f(Xu)": -1.402,
+        "Xr": 5.781,
+        "f(Xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.625,
+        "Xu": 5.781,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.679,
+        "Xr": 5.703,
+        "f(Xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.625,
+        "Xu": 5.703,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.328,
+        "Xr": 5.664,
+        "f(Xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.625,
+        "Xu": 5.664,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.155,
+        "Xr": 5.645,
+        "f(Xr)": -0.07,
+        "Error": "0.346%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:43:43.075942"
+  },
+  {
+    "function": "-0.6*x**2+2.4*x+5.5",
+    "method": "Bisection",
+    "root": 5.64453125,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": 5,
+        "Xu": 10,
+        "f(Xl)": 2.5,
+        "f(Xu)": -30.5,
+        "Xr": 7.5,
+        "f(Xr)": -10.25,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": 5,
+        "Xu": 7.5,
+        "f(Xl)": 2.5,
+        "f(Xu)": -10.25,
+        "Xr": 6.25,
+        "f(Xr)": -2.938,
+        "Error": "20.0%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": 5,
+        "Xu": 6.25,
+        "f(Xl)": 2.5,
+        "f(Xu)": -2.938,
+        "Xr": 5.625,
+        "f(Xr)": 0.016,
+        "Error": "11.111%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": 5.625,
+        "Xu": 6.25,
+        "f(Xl)": 0.016,
+        "f(Xu)": -2.938,
+        "Xr": 5.938,
+        "f(Xr)": -1.402,
+        "Error": "5.263%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": 5.625,
+        "Xu": 5.938,
+        "f(Xl)": 0.016,
+        "f(Xu)": -1.402,
+        "Xr": 5.781,
+        "f(Xr)": -0.679,
+        "Error": "2.703%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": 5.625,
+        "Xu": 5.781,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.679,
+        "Xr": 5.703,
+        "f(Xr)": -0.328,
+        "Error": "1.37%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": 5.625,
+        "Xu": 5.703,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.328,
+        "Xr": 5.664,
+        "f(Xr)": -0.155,
+        "Error": "0.69%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": 5.625,
+        "Xu": 5.664,
+        "f(Xl)": 0.016,
+        "f(Xu)": -0.155,
+        "Xr": 5.645,
+        "f(Xr)": -0.07,
+        "Error": "0.346%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:47:07.660780"
+  },
+  {
+    "function": "-13-20*x+19*x**2-3*x**3",
+    "method": "Bisection",
+    "root": -0.4462890625,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": -1,
+        "Xu": 0,
+        "f(Xl)": 29,
+        "f(Xu)": -13,
+        "Xr": -0.5,
+        "f(Xr)": 2.125,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": -0.5,
+        "Xu": 0,
+        "f(Xl)": 2.125,
+        "f(Xu)": -13,
+        "Xr": -0.25,
+        "f(Xr)": -6.766,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": -0.5,
+        "Xu": -0.25,
+        "f(Xl)": 2.125,
+        "f(Xu)": -6.766,
+        "Xr": -0.375,
+        "f(Xr)": -2.67,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": -0.5,
+        "Xu": -0.375,
+        "f(Xl)": 2.125,
+        "f(Xu)": -2.67,
+        "Xr": -0.438,
+        "f(Xr)": -0.362,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": -0.5,
+        "Xu": -0.438,
+        "f(Xl)": 2.125,
+        "f(Xu)": -0.362,
+        "Xr": -0.469,
+        "f(Xr)": 0.859,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": -0.469,
+        "Xu": -0.438,
+        "f(Xl)": 0.859,
+        "f(Xu)": -0.362,
+        "Xr": -0.453,
+        "f(Xr)": 0.243,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": -0.453,
+        "Xu": -0.438,
+        "f(Xl)": 0.243,
+        "f(Xu)": -0.362,
+        "Xr": -0.445,
+        "f(Xr)": -0.061,
+        "Error": "1.754%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": -0.453,
+        "Xu": -0.445,
+        "f(Xl)": 0.243,
+        "f(Xu)": -0.061,
+        "Xr": -0.449,
+        "f(Xr)": 0.09,
+        "Error": "0.87%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": -0.449,
+        "Xu": -0.445,
+        "f(Xl)": 0.09,
+        "f(Xu)": -0.061,
+        "Xr": -0.447,
+        "f(Xr)": 0.015,
+        "Error": "0.437%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": -0.447,
+        "Xu": -0.445,
+        "f(Xl)": 0.015,
+        "f(Xu)": -0.061,
+        "Xr": -0.446,
+        "f(Xr)": -0.023,
+        "Error": "0.219%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:48:35.751932"
+  },
+  {
+    "function": "-13-20*x+19*x**2-3*x**3",
+    "method": "Bisection",
+    "root": -0.4462890625,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": -1,
+        "Xu": 0,
+        "f(Xl)": 29,
+        "f(Xu)": -13,
+        "Xr": -0.5,
+        "f(Xr)": 2.125,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": -0.5,
+        "Xu": 0,
+        "f(Xl)": 2.125,
+        "f(Xu)": -13,
+        "Xr": -0.25,
+        "f(Xr)": -6.765625,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": -0.5,
+        "Xu": -0.25,
+        "f(Xl)": 2.125,
+        "f(Xu)": -6.765625,
+        "Xr": -0.375,
+        "f(Xr)": -2.669921875,
+        "Error": "33.3333333333%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": -0.5,
+        "Xu": -0.375,
+        "f(Xl)": 2.125,
+        "f(Xu)": -2.669921875,
+        "Xr": -0.4375,
+        "f(Xr)": -0.3620605469,
+        "Error": "14.2857142857%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": -0.5,
+        "Xu": -0.4375,
+        "f(Xl)": 2.125,
+        "f(Xu)": -0.3620605469,
+        "Xr": -0.46875,
+        "f(Xr)": 0.858795166,
+        "Error": "6.6666666667%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": -0.46875,
+        "Xu": -0.4375,
+        "f(Xl)": 0.858795166,
+        "f(Xu)": -0.3620605469,
+        "Xr": -0.453125,
+        "f(Xr)": 0.2427330017,
+        "Error": "3.4482758621%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": -0.453125,
+        "Xu": -0.4375,
+        "f(Xl)": 0.2427330017,
+        "f(Xu)": -0.3620605469,
+        "Xr": -0.4453125,
+        "f(Xr)": -0.061068058,
+        "Error": "1.7543859649%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": -0.453125,
+        "Xu": -0.4453125,
+        "f(Xl)": 0.2427330017,
+        "f(Xu)": -0.061068058,
+        "Xr": -0.44921875,
+        "f(Xr)": 0.090480864,
+        "Error": "0.8695652174%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": -0.44921875,
+        "Xu": -0.4453125,
+        "f(Xl)": 0.090480864,
+        "f(Xu)": -0.061068058,
+        "Xr": -0.447265625,
+        "f(Xr)": 0.0146185681,
+        "Error": "0.4366812227%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": -0.447265625,
+        "Xu": -0.4453125,
+        "f(Xl)": 0.0146185681,
+        "f(Xu)": -0.061068058,
+        "Xr": -0.4462890625,
+        "f(Xr)": -0.0232466953,
+        "Error": "0.2188183807%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:48:57.340495"
+  },
+  {
+    "function": "-13-20*x+19*x**2-3*x**3",
+    "method": "Bisection",
+    "root": -0.4462890625,
+    "table": [
+      {
+        "Iteration": 0,
+        "Xl": -1,
+        "Xu": 0,
+        "f(Xl)": 29,
+        "f(Xu)": -13,
+        "Xr": -0.5,
+        "f(Xr)": 2.125,
+        "Error": "---"
+      },
+      {
+        "Iteration": 1,
+        "Xl": -0.5,
+        "Xu": 0,
+        "f(Xl)": 2.125,
+        "f(Xu)": -13,
+        "Xr": -0.25,
+        "f(Xr)": -6.766,
+        "Error": "100.0%"
+      },
+      {
+        "Iteration": 2,
+        "Xl": -0.5,
+        "Xu": -0.25,
+        "f(Xl)": 2.125,
+        "f(Xu)": -6.766,
+        "Xr": -0.375,
+        "f(Xr)": -2.67,
+        "Error": "33.333%"
+      },
+      {
+        "Iteration": 3,
+        "Xl": -0.5,
+        "Xu": -0.375,
+        "f(Xl)": 2.125,
+        "f(Xu)": -2.67,
+        "Xr": -0.438,
+        "f(Xr)": -0.362,
+        "Error": "14.286%"
+      },
+      {
+        "Iteration": 4,
+        "Xl": -0.5,
+        "Xu": -0.438,
+        "f(Xl)": 2.125,
+        "f(Xu)": -0.362,
+        "Xr": -0.469,
+        "f(Xr)": 0.859,
+        "Error": "6.667%"
+      },
+      {
+        "Iteration": 5,
+        "Xl": -0.469,
+        "Xu": -0.438,
+        "f(Xl)": 0.859,
+        "f(Xu)": -0.362,
+        "Xr": -0.453,
+        "f(Xr)": 0.243,
+        "Error": "3.448%"
+      },
+      {
+        "Iteration": 6,
+        "Xl": -0.453,
+        "Xu": -0.438,
+        "f(Xl)": 0.243,
+        "f(Xu)": -0.362,
+        "Xr": -0.445,
+        "f(Xr)": -0.061,
+        "Error": "1.754%"
+      },
+      {
+        "Iteration": 7,
+        "Xl": -0.453,
+        "Xu": -0.445,
+        "f(Xl)": 0.243,
+        "f(Xu)": -0.061,
+        "Xr": -0.449,
+        "f(Xr)": 0.09,
+        "Error": "0.87%"
+      },
+      {
+        "Iteration": 8,
+        "Xl": -0.449,
+        "Xu": -0.445,
+        "f(Xl)": 0.09,
+        "f(Xu)": -0.061,
+        "Xr": -0.447,
+        "f(Xr)": 0.015,
+        "Error": "0.437%"
+      },
+      {
+        "Iteration": 9,
+        "Xl": -0.447,
+        "Xu": -0.445,
+        "f(Xl)": 0.015,
+        "f(Xu)": -0.061,
+        "Xr": -0.446,
+        "f(Xr)": -0.023,
+        "Error": "0.219%"
+      }
+    ],
+    "timestamp": "2025-04-09T16:49:05.868605"
+  }
+]

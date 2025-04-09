@@ -7,25 +7,31 @@ class ThemeManager:
         "bg": "#F0F4F8",       # Soft light gray
         "fg": "#DDE4E6",       # Lighter gray for sidebar
         "text": "#2D3748",     # Dark gray for readability
-        "button": "#A3BFFA",   # Light purple-blue
-        "button_hover": "#7F9CF5",  # Darker purple-blue
+        "button": "#4C51BF",   # Darker blue (changed from light purple-blue)
+        "button_hover": "#2D3748",  # Even darker blue on hover
         "accent": "#4C51BF",   # Deep blue for highlights
         "table_bg": "#FFFFFF", # White for table background
         "table_fg": "#2D3748", # Dark gray for table text
         "table_heading_bg": "#E2E8F0", # Light gray for table headers
-        "table_heading_fg": "#2D3748"  # Dark gray for header text
+        "table_heading_fg": "#2D3748",  # Dark gray for header text
+        "table_odd_row": "#F8FAFC", # Very light gray for odd rows
+        "table_even_row": "#FFFFFF", # White for even rows
+        "table_hover": "#E2E8F0" # Light gray for hover
     }
     DARK_MODE: Dict[str, str] = {
-        "bg": "#1A202C",       # Dark gray-blue
-        "fg": "#2D3748",       # Darker gray for sidebar
-        "text": "#E2E8F0",     # Light gray for readability
-        "button": "#4A5568",   # Medium gray
-        "button_hover": "#718096",  # Lighter gray
-        "accent": "#63B3ED",   # Light blue for highlights
-        "table_bg": "#2D3748", # Dark gray for table background
-        "table_fg": "#E2E8F0", # Light gray for table text
-        "table_heading_bg": "#4A5568", # Medium gray for table headers
-        "table_heading_fg": "#E2E8F0"  # Light gray for header text
+        "bg": "#121212",       # True dark background (Material Design dark theme)
+        "fg": "#1E1E1E",       # Slightly lighter dark for sidebar
+        "text": "#E0E0E0",     # Light gray for better readability
+        "button": "#3A86FF",   # Vibrant blue for buttons
+        "button_hover": "#5A9AFF",  # Lighter blue on hover
+        "accent": "#00B4D8",   # Cyan accent for highlights
+        "table_bg": "#0A0A0A", # Darker background for table
+        "table_fg": "#FFFFFF", # White for table text for better visibility
+        "table_heading_bg": "#1A1A1A", # Darker for table headers
+        "table_heading_fg": "#FFFFFF",  # White for header text
+        "table_odd_row": "#0D0D0D", # Slightly lighter for odd rows
+        "table_even_row": "#0A0A0A", # Darker for even rows
+        "table_hover": "#1E1E1E" # Hover color for rows
     }
     BLUE_MODE: Dict[str, str] = {
         "bg": "#2B6CB0",       # Medium blue
@@ -37,7 +43,10 @@ class ThemeManager:
         "table_bg": "#EBF8FF", # Very light blue for table background
         "table_fg": "#2C5282", # Dark blue for table text
         "table_heading_bg": "#4299E1", # Bright blue for table headers
-        "table_heading_fg": "#FFFFFF"  # White for header text
+        "table_heading_fg": "#FFFFFF",  # White for header text
+        "table_odd_row": "#EBF8FF", # Very light blue for odd rows
+        "table_even_row": "#E6FFFA", # Slightly different light blue for even rows
+        "table_hover": "#BEE3F8" # Light blue for hover
     }
 
     def __init__(self):
@@ -81,7 +90,11 @@ class ThemeManager:
                 raise KeyError(f"Invalid theme name: {theme_name}")
             
             self.current_theme = theme_name
+            # Update the appearance mode for all widgets
             ctk.set_appearance_mode("light" if theme_name == "Light" else "dark")
+            # Force update the default color theme
+            ctk.set_default_color_theme("blue")
+            # Return the new theme dictionary
             return self.themes[theme_name]
         except Exception as e:
             self.logger.error(f"Error setting theme: {str(e)}")
