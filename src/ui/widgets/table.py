@@ -3,6 +3,7 @@ from tkinter import ttk
 import customtkinter as ctk
 from typing import List, Dict, Any
 import logging
+import numpy as np
 
 class ResultTable:
     def __init__(self, parent, theme=None):
@@ -197,6 +198,27 @@ class ResultTable:
             self.logger.error(f"Error updating table theme: {str(e)}")
             # Continue execution even if there's an error
         
+    def _format_matrix(self, matrix: np.ndarray, decimal_places: int) -> str:
+        """Format the matrix for display."""
+        n = matrix.shape[0]
+        formatted = []
+        for i in range(n):
+            row = []
+            for j in range(n):
+                value = self._format_value(matrix[i, j], decimal_places)
+                # Add fixed-width spacing (20 characters) for each number
+                row.append(f"{value:>20}")
+            formatted.append("    ".join(row))  # Add 4 spaces between numbers
+        return "\n\n".join(formatted)  # Add extra line between rows
+
+    def _format_vector(self, vector: np.ndarray, decimal_places: int) -> str:
+        """Format the vector for display."""
+        formatted = []
+        for value in vector:
+            # Add fixed-width spacing (20 characters) for each number
+            formatted.append(f"{self._format_value(value, decimal_places):>20}")
+        return "\n\n".join(formatted)  # Add extra line between rows
+
     def display(self, data: List[Dict]):
         """Display the data in the table."""
         try:
@@ -207,7 +229,7 @@ class ResultTable:
             # Check if we have an error message
             if len(data) == 1 and "Error" in data[0]:
                 self.table["columns"] = ["Error"]
-                self.table.column("Error", anchor="center", width=600)
+                self.table.column("Error", anchor="center", width=800)
                 self.table.heading("Error", text="Error", anchor="center")
                 self.table.insert("", "end", values=(data[0]["Error"],), tags=('oddrow',))
                 return
@@ -223,14 +245,33 @@ class ResultTable:
                 # Calculate column width based on available space
                 available_width = self.table_frame.winfo_width() - self.scrollbar.winfo_width()
                 if available_width <= 0:
-                    available_width = 800  # Default width if not yet available
+                    available_width = 1800  # Increased default width for better display
                     
-                column_width = max(100, available_width // len(columns))
+                # Special handling for Gauss Elimination
+                if "Matrix" in columns or "Vector" in columns:
+                    # Make Matrix and Vector columns wider
+                    column_widths = {}
+                    for col in columns:
+                        if col == "Matrix":
+                            column_widths[col] = 1200  # Much wider for augmented matrix display
+                        elif col == "Step":
+                            column_widths[col] = 200  # Fixed width for step column
+                        elif col == "Operation":
+                            column_widths[col] = 600  # Wider for operation description and error
+                        else:
+                            column_widths[col] = max(100, available_width // len(columns))
+                else:
+                    # Default column widths for other methods
+                    column_widths = {col: max(100, available_width // len(columns)) for col in columns}
                 
-                # Configure columns with calculated width
+                # Configure columns with calculated widths
                 for col in columns:
-                    self.table.column(col, anchor="center", width=column_width)
+                    self.table.column(col, anchor="center", width=column_widths[col])
                     self.table.heading(col, text=col, anchor="center")
+                
+                # Set row height
+                style = ttk.Style()
+                style.configure("Custom.Treeview", rowheight=200)  # Increase row height for better readability
             
             # Add new items
             for i, row in enumerate(data):
@@ -252,7 +293,28 @@ class ResultTable:
                             str_value = str_value.rstrip('0').rstrip('.')
                             values.append(str_value)
                     else:
-                        values.append(str(value))
+                        # Handle matrix and vector strings
+                        if col in ["Matrix", "Vector", "Solution"]:
+                            # Split the string into lines
+                            lines = value.split('\n')
+                            # Format each line to remove trailing zeros
+                            formatted_lines = []
+                            for line in lines:
+                                numbers = line.split()
+                                formatted_numbers = []
+                                for num in numbers:
+                                    try:
+                                        num_float = float(num)
+                                        if num_float.is_integer():
+                                            formatted_numbers.append(f"{int(num_float):>20}")
+                                        else:
+                                            formatted_num = f"{num_float:.6f}".rstrip('0').rstrip('.')
+                                            formatted_numbers.append(f"{formatted_num:>20}")
+                                    except ValueError:
+                                        formatted_numbers.append(f"{num:>20}")
+                                formatted_lines.append("    ".join(formatted_numbers))
+                            value = "\n\n".join(formatted_lines)
+                        values.append(value)
                 
                 item = self.table.insert("", "end", values=values)
                 # Apply alternating row colors
@@ -261,7 +323,7 @@ class ResultTable:
         except Exception as e:
             self.logger.error(f"Error displaying data: {str(e)}")
             self.table["columns"] = ["Error"]
-            self.table.column("Error", anchor="center", width=600)
+            self.table.column("Error", anchor="center", width=800)
             self.table.heading("Error", text="Error", anchor="center")
             self.table.insert("", "end", values=(f"Error displaying data: {str(e)}",), tags=('oddrow',))
             
@@ -340,7 +402,6 @@ class ResultTable:
                 self.table.column("Error", anchor="center", width=600)
                 self.table.heading("Error", text="Error", anchor="center")
                 self.table.insert("", "end", values=(f"Error loading history: {str(e)}",), tags=('oddrow',))
-
     def clear(self):
         """Clear all items from the table."""
         try:
@@ -348,3 +409,4 @@ class ResultTable:
                 self.table.delete(item)
         except Exception as e:
             self.logger.error(f"Error clearing table: {str(e)}")
+

@@ -62,30 +62,103 @@ class NumericalApp:
             self.logger.error(f"Error configuring table style: {str(e)}")
 
     def setup_welcome_screen(self):
-        self.welcome_frame = ctk.CTkFrame(self.root, fg_color=self.theme["bg"])
-        self.welcome_frame.pack(fill="both", expand=True)
-        label = ctk.CTkLabel(self.welcome_frame, text="Numerical Analysis App", font=("Helvetica", 48, "bold"), text_color=self.theme["accent"])
-        label.pack(expand=True)
-        self.root.after(2000, self.show_main_window)
+        """Initialize and display the welcome screen."""
+        try:
+            self.welcome_frame = ctk.CTkFrame(self.root, fg_color=self.theme["bg"])
+            self.welcome_frame.pack(fill="both", expand=True)
+            
+            # Create a container for welcome content
+            welcome_container = ctk.CTkFrame(self.welcome_frame, fg_color=self.theme["bg"])
+            welcome_container.pack(expand=True)
+            
+            # Add application title
+            title_label = ctk.CTkLabel(
+                welcome_container, 
+                text="Numerical Analysis App", 
+                font=("Helvetica", 48, "bold"), 
+                text_color=self.theme["accent"]
+            )
+            title_label.pack(pady=(0, 20))
+            
+            # Add version info
+            version_label = ctk.CTkLabel(
+                welcome_container, 
+                text=f"Version {self.version}", 
+                font=("Helvetica", 16), 
+                text_color=self.theme["text"]
+            )
+            version_label.pack(pady=(0, 40))
+            
+            # Add loading indicator
+            loading_label = ctk.CTkLabel(
+                welcome_container, 
+                text="Loading...", 
+                font=("Helvetica", 14), 
+                text_color=self.theme["text"]
+            )
+            loading_label.pack()
+            
+            # Schedule transition to main window
+            self.root.after(2000, self.show_main_window)
+            
+        except Exception as e:
+            self.logger.error(f"Error setting up welcome screen: {str(e)}")
+            raise
 
     def show_main_window(self):
-        self.welcome_frame.destroy()
-        self.main_frame = ctk.CTkFrame(self.root, fg_color=self.theme["bg"])
-        self.main_frame.pack(fill="both", expand=True)
+        """Transition from welcome screen to main window."""
+        try:
+            # Destroy welcome frame if it exists
+            if hasattr(self, "welcome_frame") and self.welcome_frame.winfo_exists():
+                self.welcome_frame.destroy()
+            
+            # Create main frame
+            self.main_frame = ctk.CTkFrame(self.root, fg_color=self.theme["bg"])
+            self.main_frame.pack(fill="both", expand=True)
 
-        self.header = ctk.CTkFrame(self.main_frame, height=60, fg_color=self.theme["fg"])
-        self.header.pack(fill="x", pady=(0, 10))
-        ctk.CTkLabel(self.header, text="Numerical Analysis", font=("Helvetica", 24, "bold"), text_color=self.theme["accent"]).pack(side="left", padx=20)
-        theme_menu = ctk.CTkOptionMenu(self.header, values=list(self.theme_manager.themes.keys()), 
-                                      command=self.change_theme, fg_color=self.theme["button"], 
-                                      button_color=self.theme["button_hover"], button_hover_color=self.theme["accent"])
-        theme_menu.pack(side="right", padx=20)
+            # Create header
+            self.header = ctk.CTkFrame(self.main_frame, height=60, fg_color=self.theme["fg"])
+            self.header.pack(fill="x", pady=(0, 10))
+            
+            # Add title to header
+            ctk.CTkLabel(
+                self.header, 
+                text="Numerical Analysis", 
+                font=("Helvetica", 24, "bold"), 
+                text_color=self.theme["accent"]
+            ).pack(side="left", padx=20)
+            
+            # Add theme selector
+            theme_menu = ctk.CTkOptionMenu(
+                self.header, 
+                values=list(self.theme_manager.themes.keys()), 
+                command=self.change_theme, 
+                fg_color=self.theme["button"], 
+                button_color=self.theme["button_hover"], 
+                button_hover_color=self.theme["accent"]
+            )
+            theme_menu.pack(side="right", padx=20)
 
-        self.sidebar = Sidebar(self.main_frame, self.theme, self.show_home, self.show_history, 
-                              self.show_settings, self.show_about)
-        self.content_frame = ctk.CTkFrame(self.main_frame, fg_color=self.theme["bg"])
-        self.content_frame.pack(side="left", fill="both", expand=True)
-        self.show_home()
+            # Create sidebar
+            self.sidebar = Sidebar(
+                self.main_frame, 
+                self.theme, 
+                self.show_home, 
+                self.show_history, 
+                self.show_settings, 
+                self.show_about
+            )
+            
+            # Create content frame
+            self.content_frame = ctk.CTkFrame(self.main_frame, fg_color=self.theme["bg"])
+            self.content_frame.pack(side="left", fill="both", expand=True)
+            
+            # Show home screen
+            self.show_home()
+            
+        except Exception as e:
+            self.logger.error(f"Error showing main window: {str(e)}")
+            raise
 
     def change_theme(self, theme_name: str):
         self.theme = self.theme_manager.set_theme(theme_name)
@@ -155,53 +228,124 @@ class NumericalApp:
 
     def show_home(self):
         """Display the home screen with input form and results table."""
-        self.clear_content()
-        
-        # Create a frame for the home screen
-        home_frame = ctk.CTkFrame(self.content_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
-        home_frame.pack(fill="both", expand=True, padx=10, pady=10)
-        
-        # Create a label for the home screen
-        home_label = ctk.CTkLabel(
-            home_frame,
-            text="Numerical Analysis Calculator",
-            font=ctk.CTkFont(size=24, weight="bold"),
-            text_color=self.theme.get("text", "#1E293B")
-        )
-        home_label.pack(pady=(0, 10))
-        
-        # Create the input form with the correct parameters
-        self.input_form = InputForm(home_frame, self.theme, list(self.solver.methods.keys()), self.solve)
-        self.input_form.frame.pack(fill="x", padx=10, pady=10)
-        
-        # Create a container frame for the table to ensure it expands properly
-        table_container = ctk.CTkFrame(home_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
-        table_container.pack(fill="both", expand=True, padx=5, pady=5)
-        
-        # Create the results table
-        self.result_table = ResultTable(table_container, self.theme)
-        self.result_table.table_frame.pack(fill="both", expand=True)
-        
-        # Create a label for displaying the result
-        self.result_label = ctk.CTkLabel(
-            home_frame,
-            text="",
-            font=ctk.CTkFont(size=16),
-            text_color=self.theme.get("text", "#1E293B")
-        )
-        self.result_label.pack(pady=10)
-        
-        # Add an export button
-        export_button = ctk.CTkButton(
-            home_frame,
-            text="Export to PDF",
-            command=self.export_solution,
-            fg_color=self.theme.get("primary", "#3B82F6"),
-            hover_color=self.theme.get("primary_hover", "#2563EB"),
-            text_color="white",
-            font=ctk.CTkFont(size=14, weight="bold")
-        )
-        export_button.pack(pady=10)
+        try:
+            self.clear_content()
+            
+            # Create a canvas and scrollbar for scrolling
+            canvas = ctk.CTkCanvas(self.content_frame, bg=self.theme.get("bg", "#F0F4F8"), highlightthickness=0)
+            scrollbar = ttk.Scrollbar(self.content_frame, orient="vertical", command=canvas.yview)
+            
+            # Create the main frame that will be scrolled
+            home_frame = ctk.CTkFrame(canvas, fg_color=self.theme.get("bg", "#F0F4F8"))
+            
+            # Configure the canvas
+            canvas.configure(yscrollcommand=scrollbar.set)
+            
+            # Pack the scrollbar and canvas
+            scrollbar.pack(side="right", fill="y")
+            canvas.pack(side="left", fill="both", expand=True)
+            
+            # Create a window in the canvas for the frame
+            canvas_window = canvas.create_window((0, 0), window=home_frame, anchor="nw", width=canvas.winfo_width())
+            
+            # Update the scroll region when the frame changes size
+            def configure_scroll_region(event):
+                canvas.configure(scrollregion=canvas.bbox("all"))
+            
+            home_frame.bind("<Configure>", configure_scroll_region)
+            
+            # Update the canvas window width when the canvas is resized
+            def configure_canvas_window(event):
+                canvas.itemconfig(canvas_window, width=event.width)
+            
+            canvas.bind("<Configure>", configure_canvas_window)
+            
+            # Add mousewheel scrolling
+            def _on_mousewheel(event):
+                if event.num == 4 or event.delta > 0:
+                    canvas.yview_scroll(-1, "units")
+                elif event.num == 5 or event.delta < 0:
+                    canvas.yview_scroll(1, "units")
+            
+            # Bind mousewheel events
+            canvas.bind_all("<MouseWheel>", _on_mousewheel)  # Windows
+            canvas.bind_all("<Button-4>", _on_mousewheel)    # Linux up
+            canvas.bind_all("<Button-5>", _on_mousewheel)    # Linux down
+            
+            # Unbind mousewheel events when leaving the window
+            def _unbind_mousewheel(event):
+                canvas.unbind_all("<MouseWheel>")
+                canvas.unbind_all("<Button-4>")
+                canvas.unbind_all("<Button-5>")
+            
+            def _bind_mousewheel(event):
+                canvas.bind_all("<MouseWheel>", _on_mousewheel)
+                canvas.bind_all("<Button-4>", _on_mousewheel)
+                canvas.bind_all("<Button-5>", _on_mousewheel)
+            
+            canvas.bind("<Enter>", _bind_mousewheel)
+            canvas.bind("<Leave>", _unbind_mousewheel)
+            
+            # Create a label for the home screen
+            home_label = ctk.CTkLabel(
+                home_frame,
+                text="Numerical Analysis Calculator",
+                font=ctk.CTkFont(size=24, weight="bold"),
+                text_color=self.theme.get("text", "#1E293B")
+            )
+            home_label.pack(pady=(10, 10))
+            
+            # Create the input form with the correct parameters
+            self.input_form = InputForm(
+                home_frame, 
+                self.theme, 
+                list(self.solver.methods.keys()), 
+                self.solve
+            )
+            self.input_form.frame.pack(fill="x", padx=10, pady=10)
+            
+            # Create a container frame for the table to ensure it expands properly
+            table_container = ctk.CTkFrame(home_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
+            table_container.pack(fill="both", expand=True, padx=5, pady=5)
+            
+            # Create the results table
+            self.result_table = ResultTable(table_container, self.theme)
+            self.result_table.table_frame.pack(fill="both", expand=True)
+            
+            # Create a label for displaying the result
+            self.result_label = ctk.CTkLabel(
+                home_frame,
+                text="",
+                font=ctk.CTkFont(size=16),
+                text_color=self.theme.get("text", "#1E293B")
+            )
+            self.result_label.pack(pady=10)
+            
+            # Add an export button
+            export_button = ctk.CTkButton(
+                home_frame,
+                text="Export to PDF",
+                command=self.export_solution,
+                fg_color=self.theme.get("primary", "#3B82F6"),
+                hover_color=self.theme.get("primary_hover", "#2563EB"),
+                text_color="white",
+                font=ctk.CTkFont(size=14, weight="bold")
+            )
+            export_button.pack(pady=10)
+            
+        except Exception as e:
+            self.logger.error(f"Error showing home screen: {str(e)}")
+            # Create error display
+            error_frame = ctk.CTkFrame(self.content_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
+            error_frame.pack(fill="both", expand=True, padx=10, pady=10)
+            
+            error_label = ctk.CTkLabel(
+                error_frame,
+                text=f"Error loading home screen: {str(e)}",
+                text_color="red",
+                font=ctk.CTkFont(size=14)
+            )
+            error_label.pack(pady=10)
 
     def solve(self, func: str, method: str, params: dict, eps: float, eps_operator: str, max_iter: int, stop_by_eps: bool, decimal_places: int = 6):
         """
@@ -233,12 +377,17 @@ class NumericalApp:
             # Display the results
             self.result_table.display(table_data)
             if root is not None:
-                self.result_label.configure(text=f"Root found: {round(root, decimal_places)}")
+                if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", "LU Decomposition", "LU Decomposition (Partial Pivoting)"]:
+                    # Format the solution vector for display
+                    solution_str = "[" + ", ".join(f"{x:.{decimal_places}f}" for x in root) + "]"
+                    self.result_label.configure(text=f"Solution: {solution_str}")
+                else:
+                    self.result_label.configure(text=f"Root found: {round(root, decimal_places)}")
                 
                 # Save to history
                 self.history_manager.save_solution(func, method, root, table_data)
             else:
-                self.result_label.configure(text="No root found")
+                self.result_label.configure(text="No solution found")
                 
         except Exception as e:
             self.logger.error(f"Error solving problem: {str(e)}")
@@ -257,8 +406,27 @@ class NumericalApp:
                 self.result_label.configure(text=f"Export error: {str(e)}")
 
     def clear_content(self):
-        for widget in self.content_frame.winfo_children():
-            widget.destroy()
+        """Clear all widgets from the content frame."""
+        try:
+            if hasattr(self, "content_frame") and self.content_frame.winfo_exists():
+                # Destroy all widgets in the content frame
+                for widget in self.content_frame.winfo_children():
+                    if widget.winfo_exists():
+                        widget.destroy()
+                        
+                # Reset references to content-specific widgets
+                if hasattr(self, "input_form"):
+                    delattr(self, "input_form")
+                if hasattr(self, "result_table"):
+                    delattr(self, "result_table")
+                if hasattr(self, "result_label"):
+                    delattr(self, "result_label")
+                if hasattr(self, "history_table"):
+                    delattr(self, "history_table")
+                    
+        except Exception as e:
+            self.logger.error(f"Error clearing content: {str(e)}")
+            # Continue execution even if there's an error
 
     def show_history(self):
         """Display the history screen."""

@@ -1,7 +1,7 @@
 import json
 import os
 import shutil
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Union
 import logging
 from datetime import datetime
 
@@ -42,7 +42,7 @@ class HistoryManager:
             self.logger.error(f"Failed to create backup: {str(e)}")
             return None
 
-    def _validate_solution_data(self, func: str, method: str, root: float, table: List[Dict[str, Any]]) -> bool:
+    def _validate_solution_data(self, func: str, method: str, root: Union[float, List[float]], table: List[Dict[str, Any]]) -> bool:
         """Validate the solution data before saving."""
         if not isinstance(func, str) or not func:
             self.logger.error("Invalid function: must be a non-empty string")
@@ -52,9 +52,23 @@ class HistoryManager:
             self.logger.error("Invalid method: must be a non-empty string")
             return False
             
-        if not isinstance(root, (int, float)):
-            self.logger.error(f"Invalid root value: {root}")
-            return False
+        # Check if the method is a linear system method
+        if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", 
+                     "LU Decomposition", "LU Decomposition (Partial Pivoting)",
+                     "Gauss-Jordan", "Gauss-Jordan (Partial Pivoting)"]:
+            # For linear system methods, root should be a list of floats
+            if not isinstance(root, list):
+                self.logger.error(f"Invalid root value for linear system method: {root}")
+                return False
+            
+            if not all(isinstance(val, (int, float)) for val in root):
+                self.logger.error(f"Invalid root values in list: {root}")
+                return False
+        else:
+            # For other methods, root should be a single float
+            if not isinstance(root, (int, float)):
+                self.logger.error(f"Invalid root value: {root}")
+                return False
             
         if not isinstance(table, list):
             self.logger.error("Invalid table: must be a list")
@@ -66,7 +80,7 @@ class HistoryManager:
             
         return True
 
-    def save_solution(self, func: str, method: str, root: float, table: List[Dict[str, Any]]) -> bool:
+    def save_solution(self, func: str, method: str, root: Union[float, List[float]], table: List[Dict[str, Any]]) -> bool:
         """
         Save a solution to the history with validation and backup.
         

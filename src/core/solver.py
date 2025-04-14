@@ -1,10 +1,15 @@
-from typing import Tuple, List, Dict, Optional
+from typing import Tuple, List, Dict, Optional, Any, Union
 from src.core.methods import (BisectionMethod, FalsePositionMethod, 
-                              FixedPointMethod, NewtonRaphsonMethod, SecantMethod)
+                              FixedPointMethod, NewtonRaphsonMethod, SecantMethod,
+                              GaussEliminationMethod, GaussEliminationPartialPivoting,
+                              LUDecompositionMethod, LUDecompositionPartialPivotingMethod,
+                              GaussJordanMethod, GaussJordanPartialPivotingMethod)
+from src.core.history import HistoryManager
 import sympy as sp
 import numpy as np
 import logging
 import re
+import ast
 
 class Solver:
     def __init__(self):
@@ -14,7 +19,13 @@ class Solver:
             "False Position": FalsePositionMethod(),
             "Fixed Point": FixedPointMethod(),
             "Newton-Raphson": NewtonRaphsonMethod(),
-            "Secant": SecantMethod()
+            "Secant": SecantMethod(),
+            "Gauss Elimination": GaussEliminationMethod(),
+            "Gauss Elimination (Partial Pivoting)": GaussEliminationPartialPivoting(),
+            "LU Decomposition": LUDecompositionMethod(),
+            "LU Decomposition (Partial Pivoting)": LUDecompositionPartialPivotingMethod(),
+            "Gauss-Jordan": GaussJordanMethod(),
+            "Gauss-Jordan (Partial Pivoting)": GaussJordanPartialPivotingMethod()
         }
         self.MAX_EPS = 100.0  # Maximum allowed epsilon value
         self.settings = {
@@ -30,6 +41,9 @@ class Solver:
         self.eps = 0.0001
         self.max_eps = 100.0  # Maximum allowed epsilon value
         self.stop_by_eps = True
+        
+        # Initialize history manager
+        self.history_manager = HistoryManager()
 
     def validate_function(self, func: str) -> Optional[str]:
         """Validate the mathematical function expression."""
@@ -66,6 +80,39 @@ class Solver:
             else:
                 return f"Error in function expression: {str(e)}"
 
+    def validate_matrix_vector(self, matrix_str: str, vector_str: str) -> Optional[str]:
+        """Validate the matrix and vector inputs for Gauss Elimination."""
+        try:
+            # Parse matrix and vector strings
+            matrix = ast.literal_eval(matrix_str)
+            vector = ast.literal_eval(vector_str)
+            
+            # Convert to numpy arrays for validation
+            A = np.array(matrix, dtype=float)
+            b = np.array(vector, dtype=float)
+            
+            # Check if matrix is square
+            if A.shape[0] != A.shape[1]:
+                return "Matrix must be square"
+            
+            # Check if dimensions match
+            if A.shape[0] != len(b):
+                return "Matrix and vector dimensions do not match"
+            
+            # Check for NaN or Inf values
+            if np.any(np.isnan(A)) or np.any(np.isinf(A)):
+                return "Matrix contains invalid values (NaN or Inf)"
+            if np.any(np.isnan(b)) or np.any(np.isinf(b)):
+                return "Vector contains invalid values (NaN or Inf)"
+            
+            return None
+        except Exception as e:
+            self.logger.error(f"Matrix/vector validation error: {str(e)}")
+            if "could not parse" in str(e):
+                return "Invalid matrix or vector format. Please use proper Python list syntax."
+            else:
+                return f"Error in matrix/vector input: {str(e)}"
+
     def validate_parameters(self, method_name: str, params: dict) -> Optional[str]:
         """Validate the parameters for the specific method."""
         try:
@@ -88,13 +135,21 @@ class Solver:
                     return "xi_minus_1 and xi must be numbers"
                 if params["xi_minus_1"] == params["xi"]:
                     return "xi_minus_1 must be different from xi"
+            elif method_name == "Gauss Elimination":
+                if not all(k in params for k in ["matrix", "vector"]):
+                    return "Missing parameters: matrix and vector required"
+                if not isinstance(params["matrix"], str) or not isinstance(params["vector"], str):
+                    return "matrix and vector must be strings"
+                matrix_error = self.validate_matrix_vector(params["matrix"], params["vector"])
+                if matrix_error:
+                    return matrix_error
             return None
         except Exception as e:
             self.logger.error(f"Parameter validation error: {str(e)}")
             return f"Parameter validation error: {str(e)}"
 
     def solve(self, method_name: str, func: str, params: dict, eps: float = None, eps_operator: str = "<=", max_iter: int = None, 
-             stop_by_eps: bool = None, decimal_places: int = None) -> Tuple[Optional[float], List[Dict]]:
+             stop_by_eps: bool = None, decimal_places: int = None) -> Tuple[Union[float, List[float], None], List[Dict]]:
         """
         Solve the equation using the specified method with enhanced error handling.
         
@@ -123,45 +178,61 @@ class Solver:
             if method_name not in self.methods:
                 return None, [{"Error": f"Unknown method: {method_name}"}]
                 
-            func_error = self.validate_function(func)
-            if func_error:
-                return None, [{"Error": func_error}]
+            # Special handling for linear system methods
+            if method_name in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", 
+                              "LU Decomposition", "LU Decomposition (Partial Pivoting)",
+                              "Gauss-Jordan", "Gauss-Jordan (Partial Pivoting)"]:
+                # Extract matrix and vector from params
+                matrix = params.get("matrix")
+                vector = params.get("vector")
                 
-            param_error = self.validate_parameters(method_name, params)
-            if param_error:
-                return None, [{"Error": param_error}]
+                if not matrix or not vector:
+                    return None, [{"Error": "Matrix and vector are required for linear system methods"}]
+                    
+                # Validate matrix and vector
+                validation_error = self.validate_matrix_vector(matrix, vector)
+                if validation_error:
+                    return None, [{"Error": validation_error}]
                 
-            if not isinstance(eps, (int, float)) or eps <= 0:
-                return None, [{"Error": "Error tolerance must be a positive number"}]
+                # Call the method
+                result, table = self.methods[method_name].solve(matrix, vector, decimal_places)
                 
-            if eps_operator not in ["<=", ">=", "<", ">", "="]:
-                return None, [{"Error": "Invalid epsilon operator"}]
+                # Save to history with a placeholder function name
+                if result is not None:
+                    # For linear system methods, use "System of Linear Equations" as the function name
+                    self.history_manager.save_solution(
+                        "System of Linear Equations",
+                        method_name,
+                        result,
+                        table
+                    )
                 
-            # Check epsilon against max_eps based on operator
-            if eps_operator == "<=" and eps > self.max_eps:
-                return None, [{"Error": f"Error tolerance must be less than or equal to {self.max_eps}"}]
-            elif eps_operator == ">=" and eps < self.max_eps:
-                return None, [{"Error": f"Error tolerance must be greater than or equal to {self.max_eps}"}]
-            elif eps_operator == "<" and eps >= self.max_eps:
-                return None, [{"Error": f"Error tolerance must be less than {self.max_eps}"}]
-            elif eps_operator == ">" and eps <= self.max_eps:
-                return None, [{"Error": f"Error tolerance must be greater than {self.max_eps}"}]
-            elif eps_operator == "=" and eps > self.max_eps:
-                return None, [{"Error": f"Error tolerance must be less than or equal to {self.max_eps}"}]
+                return result, table
+            else:
+                # Validate function
+                func_error = self.validate_function(func)
+                if func_error:
+                    return None, [{"Error": func_error}]
                 
-            if not isinstance(max_iter, int) or max_iter <= 0:
-                return None, [{"Error": "Maximum iterations must be a positive integer"}]
-
-            # Log the epsilon value and operator being used
-            self.logger.info(f"Using epsilon value: {eps} with operator {eps_operator}")
-
-            method = self.methods[method_name]
-            if method_name in ["Bisection", "False Position"]:
-                return method.solve(func, params["xl"], params["xu"], eps, eps_operator, max_iter, stop_by_eps, decimal_places)
-            elif method_name in ["Fixed Point", "Newton-Raphson"]:
-                return method.solve(func, params["xi"], eps, eps_operator, max_iter, stop_by_eps, decimal_places)
-            elif method_name == "Secant":
-                return method.solve(func, params["xi_minus_1"], params["xi"], eps, eps_operator, max_iter, stop_by_eps, decimal_places)
+                # Validate parameters
+                param_error = self.validate_parameters(method_name, params)
+                if param_error:
+                    return None, [{"Error": param_error}]
+                
+                # Call the method
+                result, table = self.methods[method_name].solve(func, params, eps, max_iter, stop_by_eps, decimal_places)
+                
+                # Save to history
+                if result is not None:
+                    self.history_manager.save_solution(
+                        func,
+                        method_name,
+                        result,
+                        table
+                    )
+                
+                return result, table
+                
         except Exception as e:
-            self.logger.error(f"Error in solve method: {str(e)}")
-            return None, [{"Error": f"Error during solution: {str(e)}"}]
+            self.logger.error(f"Solver error: {str(e)}")
+            return None, [{"Error": f"Solver error: {str(e)}"}]

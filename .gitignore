@@ -78,16 +78,19 @@ $RECYCLE.BIN/
 *.seed
 *.pid.lock
 
-# Project specific
+# Application specific
+*.log
+app.log
+logs/
+backups/
 history.json
+data/generated/
+*.pdf
+*.png
 secant_history.json
 user_preferences.json
 settings.json
-*.log
-*.pdf
 !docs/*.pdf
-backups/
-logs/
 data/
 *.db
 *.sqlite3
@@ -129,4 +132,4 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST 
+MANIFEST

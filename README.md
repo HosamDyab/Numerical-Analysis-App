@@ -1,16 +1,24 @@
 # Numerical Analysis Application
 
-A comprehensive Python application for solving numerical analysis problems, featuring multiple root-finding methods with a modern GUI interface.
+A comprehensive Python application for solving numerical analysis problems, featuring multiple root-finding methods and linear system solvers with a modern GUI interface.
 
 
 ## Features
 
-- **Multiple Numerical Methods**:
+- **Root-Finding Methods**:
   - Bisection Method
   - False Position Method
   - Fixed Point Method
   - Newton-Raphson Method
   - Secant Method
+
+- **Linear System Solvers**:
+  - Gauss Elimination
+  - Gauss Elimination with Partial Pivoting
+  - LU Decomposition
+  - LU Decomposition with Partial Pivoting
+  - Gauss-Jordan Method
+  - Gauss-Jordan Method with Partial Pivoting
 
 - **Modern GUI Interface**:
   - Clean and intuitive design
@@ -20,6 +28,7 @@ A comprehensive Python application for solving numerical analysis problems, feat
 
 - **Advanced Features**:
   - Detailed iteration tables
+  - Step-by-step solution process
   - Error analysis
   - Export to PDF
   - History tracking
@@ -52,42 +61,38 @@ python main.py
 ```
 
 2. Select a numerical method from the dropdown menu
-3. Enter your function (e.g., "x**2 - 4")
-4. Input the required parameters
-5. Click "Solve" to get results
+3. Enter the required parameters:
+   - For root-finding methods: function, bounds/initial values, and convergence criteria
+   - For linear systems: coefficient matrix and right-hand side vector
+4. Click "Solve" to compute the solution
+5. View the detailed solution steps and results
 
-## Development
+## Methods Implementation
 
-To contribute to this project:
+### Root-Finding Methods
+- **Bisection Method**: Finds roots by repeatedly bisecting an interval
+- **False Position Method**: Linear interpolation between function values
+- **Fixed Point Method**: Iterative application of a function until convergence
+- **Newton-Raphson Method**: Uses derivative information for faster convergence
+- **Secant Method**: Approximates derivatives using finite differences
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+### Linear System Solvers
+- **Gauss Elimination**: Forward elimination to create an upper triangular matrix, followed by back-substitution
+- **Gauss Elimination with Partial Pivoting**: Enhanced stability through row pivoting
+- **LU Decomposition**: Factorizes the coefficient matrix into lower and upper triangular matrices
+- **LU Decomposition with Partial Pivoting**: Improved numerical stability for LU factorization
+- **Gauss-Jordan Method**: Complete elimination to transform the coefficient matrix into the identity matrix
+- **Gauss-Jordan Method with Partial Pivoting**: Enhanced stability for the Gauss-Jordan method
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+## Contributing
 
-## Testing
-
-Run the test suite:
-```bash
-python -m unittest discover tests
-```
-
-## Documentation
-
-Detailed documentation is available in the [docs](docs/) directory.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
-- Built with Python and CustomTkinter
-- Inspired by numerical analysis courses
-- Thanks to all contributors
-
-## Contact
-
-For questions or suggestions, please open an issue on GitHub. 
+- Developed by Hosam Dyab
+- Based on numerical analysis algorithms and techniques
