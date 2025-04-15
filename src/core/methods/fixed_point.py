@@ -1,390 +1,251 @@
 from .base import NumericalMethodBase
-from typing import Tuple, List, Dict, Optional, Callable
-import sympy as sp
-import re
+from typing import Tuple, List, Dict
 import numpy as np
-import math
 
 class FixedPointMethod(NumericalMethodBase):
-    def derive_gx(self, fx_str: str, x0: Optional[float] = None) -> Tuple[Optional[Callable], Optional[str]]:
+    def solve(self, func_str: str, x0: float, eps: float, eps_operator: str, max_iter: int, stop_by_eps: bool, decimal_places: int = 6, 
+              stop_criteria: str = "absolute", consecutive_check: bool = False, consecutive_tolerance: int = 3) -> Tuple[float, List[Dict]]:
         """
-        Derive g(x) from f(x) = 0 for fixed point iteration by isolating the highest-degree term.
+        Solve for the root of a function using the Fixed Point Iteration method.
         
-        Algorithm:
-        1. Parse f(x) into a symbolic expression
-        2. Identify the highest-degree term and its coefficient
-        3. Isolate the highest-degree term and solve for x
-        4. Take the n-th root to derive g(x)
+        The Fixed Point method works by reformulating the equation f(x) = 0 as x = g(x),
+        then iterating using the formula:
+            x_{i+1} = g(x_i)
         
-        Args:
-            fx_str: The function f(x) as a string (e.g., "-x**3 + 7.89*x + 11")
-            x0: Initial guess (optional, for convergence checking)
-            
-        Returns:
-            Tuple containing the g(x) function and an error message (if any)
-        """
-        try:
-            # Parse f(x) into a symbolic expression
-            x = sp.Symbol('x')
-            fx_expr = sp.sympify(fx_str)
-            
-            # Special case handling for specific functions
-            if fx_str == "-0.9*x**2+1.7*x+2.5":
-                # For f(x) = -0.9x² + 1.7x + 2.5, we can derive g(x) = sqrt(1.9x + 2.8)
-                gx_str = "sqrt(1.9*x + 2.8)"
-                g = self._create_function(gx_str)
-                return g, None
-            
-            # Special case handling for cubic functions
-            # Pattern 1: -x^3 + ax + b -> g(x) = (ax + b)^(1/3)
-            cubic_pattern1 = re.match(r'^-x\*\*3\s*\+\s*([\d\.]+)\s*\*\s*x\s*\+\s*([\d\.]+)$', fx_str)
-            if cubic_pattern1:
-                a = float(cubic_pattern1.group(1))
-                b = float(cubic_pattern1.group(2))
-                gx_str = f"({a}*x + {b})**(1/3)"
-                g = self._create_function(gx_str)
-                return g, None
-            
-            # Pattern 2: ax^3 + bx^2 + cx + d -> g(x) = ((bx^2 + cx + d)/a)^(1/3)
-            cubic_pattern2 = re.match(r'^([\d\.]+)\s*\*\s*x\*\*3\s*\+\s*([\d\.]+)\s*\*\s*x\*\*2\s*\+\s*([\d\.]+)\s*\*\s*x\s*\+\s*([\d\.]+)$', fx_str)
-            if cubic_pattern2:
-                a = float(cubic_pattern2.group(1))
-                b = float(cubic_pattern2.group(2))
-                c = float(cubic_pattern2.group(3))
-                d = float(cubic_pattern2.group(4))
-                gx_str = f"(({b}*x**2 + {c}*x + {d})/{a})**(1/3)"
-                g = self._create_function(gx_str)
-                return g, None
-            
-            # Special case handling for higher-degree polynomials
-            # Pattern: x^n + ax + b -> g(x) = (ax + b)^(1/n)
-            higher_degree_pattern = re.match(r'^x\*\*(\d+)\s*\+\s*([\d\.]+)\s*\*\s*x\s*\+\s*([\d\.]+)$', fx_str)
-            if higher_degree_pattern:
-                n = int(higher_degree_pattern.group(1))
-                a = float(higher_degree_pattern.group(2))
-                b = float(higher_degree_pattern.group(3))
-                gx_str = f"({a}*x + {b})**(1/{n})"
-                g = self._create_function(gx_str)
-                return g, None
-            
-            # Main algorithm: Isolate the highest-degree term and take its n-th root
-            if fx_expr.is_polynomial():
-                # Step 1: Identify the highest-degree term
-                coeffs = fx_expr.as_coefficients_dict()
-                
-                # Find the highest degree term
-                highest_degree = 0
-                highest_term = None
-                highest_coeff = None
-                
-                for term, coeff in coeffs.items():
-                    if term == 1:  # Constant term
-                        continue
-                    
-                    degree = sp.degree(term)
-                    if degree > highest_degree:
-                        highest_degree = degree
-                        highest_term = term
-                        highest_coeff = coeff
-                
-                if highest_degree > 0 and highest_coeff != 0:
-                    # Step 2: Isolate the highest-degree term
-                    # Move all other terms to the other side
-                    other_terms = fx_expr - highest_coeff * highest_term
-                    
-                    # Step 3: Solve for x
-                    # x^n = -other_terms/highest_coeff
-                    # x = (-other_terms/highest_coeff)^(1/n)
-                    
-                    # Step 4: Handle real roots
-                    # For odd n, use the real n-th root directly
-                    # For even n, ensure the expression under the root is non-negative
-                    if highest_degree % 2 == 0 and x0 is not None:
-                        # For even degree, check if the expression might be negative
-                        expr_value = float((-other_terms/highest_coeff).subs(x, x0))
-                        if expr_value < 0:
-                            # Use absolute value to ensure real root
-                            gx_expr = sp.root(abs(-other_terms/highest_coeff), highest_degree)
-                        else:
-                            gx_expr = sp.root(-other_terms/highest_coeff, highest_degree)
-                    else:
-                        # For odd degree or no x0 provided, use the real root directly
-                        gx_expr = sp.root(-other_terms/highest_coeff, highest_degree)
-                    
-                    gx_str = str(gx_expr)
-                    g = self._create_function(gx_str)
-                    
-                    # Check convergence if x0 is provided
-                    if x0 is not None:
-                        if self._check_convergence(g, x0):
-                            return g, None
-                    else:
-                        return g, None
-            
-            # If the main algorithm fails, try alternative strategies
-            
-            # Strategy 1: Direct Isolation via Solve
-            try:
-                solutions = sp.solve(fx_expr, x)
-                
-                # Choose a suitable g(x) from the solutions
-                for sol in solutions:
-                    # Skip constants (we want x on RHS)
-                    if sol.is_real or not sol.has(x):
-                        continue
-                    
-                    # Try to convert to a numerical function
-                    try:
-                        gx_str = str(sol)
-                        g = self._create_function(gx_str)
-                        
-                        # Check convergence if x0 is provided
-                        if x0 is not None:
-                            if self._check_convergence(g, x0):
-                                return g, None
-                        else:
-                            return g, None
-                    except:
-                        pass
-            except:
-                pass
-            
-            # Strategy 2: Add x to Both Sides
-            try:
-                # Rewrite f(x) = 0 as x = x - f(x)
-                gx_expr = x - fx_expr
-                gx_str = str(gx_expr)
-                g = self._create_function(gx_str)
-                
-                # Check convergence if x0 is provided
-                if x0 is not None:
-                    if self._check_convergence(g, x0):
-                        return g, None
-                else:
-                    return g, None
-            except:
-                pass
-            
-            # Strategy 3: Isolate Linear Term
-            try:
-                if fx_expr.is_polynomial():
-                    # Get the linear term
-                    terms = fx_expr.as_coefficients_dict()
-                    linear_term = None
-                    linear_coeff = None
-                    
-                    for term, coeff in terms.items():
-                        if sp.degree(term) == 1:
-                            linear_term = term
-                            linear_coeff = coeff
-                            break
-                    
-                    if linear_term and linear_coeff != 0:
-                        # Move all other terms to the other side
-                        other_terms = fx_expr - linear_coeff * linear_term
-                        # Solve for x: linear_term = -other_terms/linear_coeff
-                        gx_expr = -other_terms/linear_coeff
-                        gx_str = str(gx_expr)
-                        g = self._create_function(gx_str)
-                        
-                        # Check convergence if x0 is provided
-                        if x0 is not None:
-                            if self._check_convergence(g, x0):
-                                return g, None
-                        else:
-                            return g, None
-            except:
-                pass
-            
-            # Strategy 4: Inverse Function Approach
-            try:
-                # Check for common invertible functions
-                if fx_expr.has(sp.exp):
-                    # For e^x - h(x) = 0, we can use x = ln(h(x))
-                    h_expr = fx_expr + sp.exp(x)
-                    if h_expr != 0:
-                        gx_expr = sp.log(h_expr)
-                        gx_str = str(gx_expr)
-                        g = self._create_function(gx_str)
-                        
-                        # Check convergence if x0 is provided
-                        if x0 is not None:
-                            if self._check_convergence(g, x0):
-                                return g, None
-                        else:
-                            return g, None
-                
-                if fx_expr.has(sp.sin):
-                    # For sin(x) - h(x) = 0, we can use x = arcsin(h(x))
-                    h_expr = fx_expr + sp.sin(x)
-                    if h_expr != 0:
-                        gx_expr = sp.asin(h_expr)
-                        gx_str = str(gx_expr)
-                        g = self._create_function(gx_str)
-                        
-                        # Check convergence if x0 is provided
-                        if x0 is not None:
-                            if self._check_convergence(g, x0):
-                                return g, None
-                        else:
-                            return g, None
-                
-                if fx_expr.has(sp.cos):
-                    # For cos(x) - h(x) = 0, we can use x = arccos(h(x))
-                    h_expr = fx_expr + sp.cos(x)
-                    if h_expr != 0:
-                        gx_expr = sp.acos(h_expr)
-                        gx_str = str(gx_expr)
-                        g = self._create_function(gx_str)
-                        
-                        # Check convergence if x0 is provided
-                        if x0 is not None:
-                            if self._check_convergence(g, x0):
-                                return g, None
-                        else:
-                            return g, None
-            except:
-                pass
-            
-            # Strategy 5: Fallback - Add a parameter k
-            # g(x) = x + k*f(x), where k is a small constant
-            try:
-                k = 0.1  # Small constant
-                gx_expr = x + k * fx_expr
-                gx_str = str(gx_expr)
-                g = self._create_function(gx_str)
-                
-                # Check convergence if x0 is provided
-                if x0 is not None:
-                    if self._check_convergence(g, x0):
-                        return g, None
-                else:
-                    return g, None
-            except:
-                pass
-            
-            # If all strategies fail, return an error message
-            return None, "Could not derive a suitable g(x) from f(x). Try a different form of f(x) or a different initial guess."
-            
-        except Exception as e:
-            return None, f"Error deriving g(x): {str(e)}"
-    
-    def _check_convergence(self, g: Callable, x0: float) -> bool:
-        """
-        Check if g(x) is likely to converge at x0.
+        For convergence, the function g(x) must satisfy |g'(x)| < 1 near the root.
+        If this condition is met, the method will converge linearly to the fixed point.
+        
+        The algorithm follows these steps:
+        1. Start with an initial guess x0
+        2. Compute x1 = g(x0)
+        3. Calculate the approximate relative error: |x1 - x0|/|x1| * 100%
+        4. Check if error satisfies the stopping criterion
+        5. If not, set x0 = x1 and repeat from step 2
+        
+        Key considerations:
+        1. The choice of g(x) is critical - different reformulations can lead to
+           different convergence behaviors
+        2. If |g'(x)| >= 1 near the root, the method may diverge
+        3. The method is simple to implement but may converge slowly
         
         Args:
-            g: The g(x) function
-            x0: Initial guess
-            
-        Returns:
-            True if g(x) is likely to converge, False otherwise
-        """
-        try:
-            # Compute g'(x) symbolically
-            x = sp.Symbol('x')
-            gx_str = str(g(x0))
-            gx_expr = sp.sympify(gx_str)
-            g_prime = sp.diff(gx_expr, x)
-            
-            # Evaluate |g'(x)| at x0
-            g_prime_value = abs(float(g_prime.subs(x, x0)))
-            
-            # If |g'(x)| < 1, g(x) is likely to converge
-            return g_prime_value < 1
-        except:
-            # If we can't check convergence, assume it might converge
-            return True
-    
-    def _is_nan(self, value):
-        """Check if a value is NaN."""
-        return isinstance(value, float) and math.isnan(value)
-    
-    def _round_values(self, value, decimal_places):
-        """Round a value to the specified number of decimal places."""
-        if isinstance(value, (int, float)):
-            return round(value, decimal_places)
-        return value
-    
-    def _format_error(self, error, decimal_places):
-        """Format the error value with the specified number of decimal places."""
-        if isinstance(error, (int, float)):
-            return f"{error:.{decimal_places}f}"
-        return str(error)
-    
-    def solve(self, func_str: str, x0: float, eps: float, eps_operator: str, max_iter: int, stop_by_eps: bool, decimal_places: int = 6) -> Tuple[Optional[float], List[Dict]]:
-        """
-        Solve for the root of a function using the Fixed Point method.
-        
-        The Fixed Point method transforms f(x) = 0 into x = g(x) and iteratively computes:
-        x_{i+1} = g(x_i)
-        
-        Args:
-            func_str: The function f(x) as a string (e.g., "x**2 - 4")
+            func_str: The function g(x) as a string (e.g., "sqrt(2-x)")
             x0: Initial guess
             eps: Error tolerance (used if stop_by_eps is True)
             eps_operator: Comparison operator for epsilon check ("<=", ">=", "<", ">", "=")
             max_iter: Maximum number of iterations
             stop_by_eps: Whether to stop when error satisfies epsilon condition
             decimal_places: Number of decimal places for rounding
+            stop_criteria: Stopping criteria type ("absolute", "relative", "function")
+                - "absolute": Stop based on absolute error |x_{i+1} - x_i|
+                - "relative": Stop based on relative error |x_{i+1} - x_i|/|x_{i+1}| * 100%
+                - "function": Stop based on function value |g(x_i) - x_i|
+            consecutive_check: Whether to also check for convergence over consecutive iterations
+            consecutive_tolerance: Number of consecutive iterations within tolerance to confirm convergence
             
         Returns:
             Tuple containing the root and a list of dictionaries with iteration details
         """
-        try:
-            # Derive g(x) from f(x)
-            g, error_msg = self.derive_gx(func_str, x0)
-            if error_msg is not None:
-                return None, [{"Error": error_msg}]
-            
-            # Initialize variables
-            table = []
-            xi = x0
-            iter_count = 0
-            error = 100.0  # Initial error value
-            
-            # Main iteration loop
-            while True:
-                try:
-                    # Calculate g(x_i)
-                    g_xi = float(g(xi))
-                    
-                    # Check for NaN values
-                    if math.isnan(g_xi):
-                        return None, [{"Error": "NaN value encountered. The fixed point method failed to converge. Try a different initial guess or function."}]
-                    
-                    # Calculate the next approximation
-                    xi_plus_1 = g_xi
-            
-                    # Calculate error percentage (only after first iteration)
-                    if iter_count > 0:
-                        error = abs((xi_plus_1 - xi) / xi_plus_1) * 100
-            
-                    # Create row for the iteration table
-                    row = {
-                        "Iteration": iter_count,
-                        "Xi": self._round_value(xi, decimal_places),
-                        "g(Xi)": self._round_value(float(g(xi)), decimal_places),
-                        "Xi+1": self._round_value(xi_plus_1, decimal_places),
-                        "Error %": "---" if iter_count == 0 else self._format_value(error, decimal_places)
-                    }
-                    table.append(row)
-                    
-                    # Update value for next iteration
-                    xi = xi_plus_1
-                    iter_count += 1
+        g = self._create_function(func_str)
+        table = []
+        error = "---"  # Initial error value
+        x_current = x0
+        
+        # Check if initial guess is already a fixed point
+        g_x0 = float(g(x0))
+        if abs(g_x0 - x0) < 1e-10:
+            return x0, [{"Message": f"Initial guess {x0} is already a fixed point"}]
 
-                    # Check convergence criteria
-                    # Continue if error > eps OR if it's the first iteration (iter_count == 1)
-                    if not (error > eps or iter_count == 1) or iter_count >= max_iter:
-                        break
+        # Store the previous iterations to detect cycles
+        previous_values = []
+        
+        # For consecutive iterations check
+        consecutive_count = 0
+        previous_error = float('inf')
+
+        for i in range(max_iter):
+            # Calculate next approximation using Fixed Point formula: x_{i+1} = g(x_i)
+            # In fixed point iteration, we directly apply the function g(x) to find the next approximation
+            # For convergence, |g'(x)| < 1 should be satisfied near the root
+            try:
+                x_next = float(g(x_current))
+                
+                # Check for NaN or infinity results
+                if np.isnan(x_next) or np.isinf(x_next):
+                    return x_current, table + [{"Error": f"Numerical instability detected at iteration {i}. The function g(x) may not be suitable for fixed point iteration."}]
+                
+                # Calculate absolute difference for convergence check
+                abs_diff = abs(x_next - x_current)
+                
+                # Calculate function value error
+                func_error = abs(x_next - x_current)
+                
+                # Calculate error based on selected criteria
+                if stop_criteria == "absolute":
+                    error_value = abs_diff
+                elif stop_criteria == "relative":
+                    if abs(x_next) < 1e-10:
+                        error_value = abs_diff  # Use absolute error for very small values
+                    else:
+                        error_value = abs_diff / abs(x_next) * 100  # Percentage relative error
+                elif stop_criteria == "function":
+                    error_value = func_error
+                else:
+                    error_value = abs_diff  # Default to absolute error
+                
+                # Calculate error for display - using the textbook formula
+                if i > 0:
+                    # Use relative error as in the textbook: |x_{i+1} - x_i|/|x_{i+1}| * 100%
+                    if abs(x_next) < 1e-10:
+                        error = abs_diff  # Use absolute error for very small values
+                    else:
+                        error = abs_diff / abs(x_next) * 100  # Percentage relative error
+                
+                # Create row for the iteration table
+                row = {
+                    "Iteration": i,
+                    "Xi": self._round_value(x_current, decimal_places),
+                    "g(Xi)": self._round_value(x_next, decimal_places),
+                    "Error %": self._format_error(error, decimal_places)
+                }
+                table.append(row)
+                
+                # Check if we found a fixed point (within numerical precision)
+                if abs_diff < 1e-10:
+                    table.append({"Message": "Exact fixed point found (within numerical precision)"})
+                    return x_next, table
+                
+                # Check convergence criteria
+                if i > 0 and stop_by_eps:
+                    # For percentage-based epsilon (when eps > 1), use relative error
+                    if eps > 1:
+                        # Calculate relative error as percentage
+                        rel_error = abs_diff / abs(x_next) * 100 if abs(x_next) > 1e-10 else abs_diff
                         
-                except Exception as e:
-                    # Handle any errors during iteration
-                    return None, [{"Error": f"Error during iteration: {str(e)}"}]
+                        # Direct comparison for relative error
+                        if eps_operator == "<=":
+                            if rel_error <= eps:
+                                table.append({"Message": f"Stopped by Epsilon: Relative Error {rel_error:.6f}% <= {eps}%"})
+                                return x_next, table
+                        elif eps_operator == ">=":
+                            if rel_error >= eps:
+                                table.append({"Message": f"Stopped by Epsilon: Relative Error {rel_error:.6f}% >= {eps}%"})
+                                return x_next, table
+                        elif eps_operator == "<":
+                            if rel_error < eps:
+                                table.append({"Message": f"Stopped by Epsilon: Relative Error {rel_error:.6f}% < {eps}%"})
+                                return x_next, table
+                        elif eps_operator == ">":
+                            if rel_error > eps:
+                                table.append({"Message": f"Stopped by Epsilon: Relative Error {rel_error:.6f}% > {eps}%"})
+                                return x_next, table
+                        elif eps_operator == "=":
+                            if abs(rel_error - eps) < 1e-10:
+                                table.append({"Message": f"Stopped by Epsilon: Relative Error {rel_error:.6f}% = {eps}%"})
+                                return x_next, table
+                    else:
+                        # Direct comparison for absolute error - this is the most reliable approach
+                        if eps_operator == "<=":
+                            if abs_diff <= eps:
+                                table.append({"Message": f"Stopped by Epsilon: |x{i+1} - x{i}| <= {eps}"})
+                                return x_next, table
+                        elif eps_operator == ">=":
+                            if abs_diff >= eps:
+                                table.append({"Message": f"Stopped by Epsilon: |x{i+1} - x{i}| >= {eps}"})
+                                return x_next, table
+                        elif eps_operator == "<":
+                            if abs_diff < eps:
+                                table.append({"Message": f"Stopped by Epsilon: |x{i+1} - x{i}| < {eps}"})
+                                return x_next, table
+                        elif eps_operator == ">":
+                            if abs_diff > eps:
+                                table.append({"Message": f"Stopped by Epsilon: |x{i+1} - x{i}| > {eps}"})
+                                return x_next, table
+                        elif eps_operator == "=":
+                            if abs(abs_diff - eps) < 1e-10:
+                                table.append({"Message": f"Stopped by Epsilon: |x{i+1} - x{i}| = {eps}"})
+                                return x_next, table
+                
+                # Store previous error for consecutive check
+                previous_error = error_value
+                
+                # Check for divergence (if values are getting too large)
+                if abs(x_next) > 1e10:
+                    return None, table + [{"Error": f"Method is diverging. The function g(x) may not satisfy the convergence criteria for fixed point iteration."}]
+                
+                # Check for cycles (oscillation)
+                if len(previous_values) > 2:
+                    for prev_x in previous_values:
+                        if abs(x_next - prev_x) < 1e-6:
+                            return x_next, table + [{"Warning": f"Method appears to be oscillating. The function g(x) may not be suitable for fixed point iteration."}]
+                
+                # Store current value to detect cycles
+                previous_values.append(x_next)
+                if len(previous_values) > 5:  # Keep only the last 5 values
+                    previous_values.pop(0)
+                
+                # Update value for next iteration
+                x_current = x_next
+            except Exception as e:
+                return None, table + [{"Error": f"Error in iteration {i}: {str(e)}"}]
+
+        # Add a message to the table indicating we stopped by max iterations
+        table.append({"Message": f"Stopped by reaching maximum iterations: {max_iter}"})
+        return x_current, table
+
+    def _check_convergence(self, error: float, eps: float, eps_operator: str) -> bool:
+        """
+        Check if the error satisfies the convergence criteria.
+        
+        Args:
+            error: The current error value
+            eps: The error tolerance
+            eps_operator: The comparison operator for epsilon check ("<=", ">=", "<", ">", "=")
             
-            # Return the final approximation
-            return xi, table
-            
+        Returns:
+            True if the error satisfies the convergence criteria, False otherwise
+        """
+        try:
+            if eps_operator == "<=":
+                return error <= eps
+            elif eps_operator == ">=":
+                return error >= eps
+            elif eps_operator == "<":
+                return error < eps
+            elif eps_operator == ">":
+                return error > eps
+            elif eps_operator == "=":
+                return abs(error - eps) < 1e-10  # Use a small tolerance for floating-point comparison
+            else:
+                raise ValueError(f"Invalid epsilon operator: {eps_operator}")
         except Exception as e:
-            return None, [{"Error": f"Error in fixed point method: {str(e)}"}]
+            self.logger.error(f"Error in convergence check: {str(e)}")
+            return False
+
+    def _round_value(self, value: float, decimal_places: int) -> float:
+        """
+        Round a value to the specified number of decimal places.
+        
+        Args:
+            value: The value to round
+            decimal_places: The number of decimal places
+            
+        Returns:
+            The rounded value
+        """
+        return round(value, decimal_places)
+
+    def _format_error(self, error, decimal_places: int) -> str:
+        """
+        Format the error value with the specified number of decimal places.
+        
+        Args:
+            error: The error value
+            decimal_places: The number of decimal places
+            
+        Returns:
+            The formatted error value
+        """
+        if isinstance(error, (int, float)):
+            return f"{error:.{decimal_places}f}"
+        return str(error)

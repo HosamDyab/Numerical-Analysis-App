@@ -189,27 +189,37 @@ class InputForm:
         
         # Epsilon and Max Iterations
         eps_frame = ctk.CTkFrame(self.settings_frame, fg_color=self.theme["bg"])
-        eps_frame.grid(row=0, column=0, columnspan=2, pady=5, sticky="ew")
+        eps_frame.grid(row=0, column=0, columnspan=4, pady=5, sticky="ew")
         
-        ctk.CTkLabel(eps_frame, text="Epsilon:", text_color=self.theme["text"]).pack(side="left", padx=10)
-        self.eps_entry = ctk.CTkEntry(eps_frame, width=100, placeholder_text="0.0001")
-        self.eps_entry.pack(side="left", padx=5)
+        # Create a more visible epsilon section with label, operator, and value
+        ctk.CTkLabel(eps_frame, text="Epsilon:", text_color=self.theme["text"], 
+                    font=("Helvetica", 12, "bold")).pack(side="left", padx=10)
         
-        # Add comparison operator dropdown
+        # Epsilon operator dropdown with better visibility
         self.eps_operator = ctk.CTkOptionMenu(
             eps_frame,
             values=["<=", ">=", "<", ">", "="],
             width=60,
             fg_color=self.theme["button"],
             button_color=self.theme["button_hover"],
-            button_hover_color=self.theme["accent"]
+            button_hover_color=self.theme["accent"],
+            font=("Helvetica", 12, "bold")
         )
         self.eps_operator.pack(side="left", padx=5)
         self.eps_operator.set("<=")  # Default operator
         
-        ctk.CTkLabel(self.settings_frame, text="Max Iterations:", text_color=self.theme["text"]).grid(row=0, column=2, pady=5, padx=10, sticky="e")
-        self.iter_entry = ctk.CTkEntry(self.settings_frame, width=150, placeholder_text="e.g., 50")
-        self.iter_entry.grid(row=0, column=3, pady=5)
+        # Epsilon value entry
+        self.eps_entry = ctk.CTkEntry(eps_frame, width=100, placeholder_text="0.0001")
+        self.eps_entry.pack(side="left", padx=5)
+        
+        # Max iterations in a separate row for clarity
+        iter_frame = ctk.CTkFrame(self.settings_frame, fg_color=self.theme["bg"])
+        iter_frame.grid(row=1, column=0, columnspan=4, pady=5, sticky="ew")
+        
+        ctk.CTkLabel(iter_frame, text="Max Iterations:", text_color=self.theme["text"],
+                    font=("Helvetica", 12, "bold")).pack(side="left", padx=10)
+        self.iter_entry = ctk.CTkEntry(iter_frame, width=150, placeholder_text="e.g., 50")
+        self.iter_entry.pack(side="left", padx=5)
         
         # Round Result checkbox and decimal places
         self.round_var = ctk.BooleanVar(value=True)
@@ -223,36 +233,50 @@ class InputForm:
             hover_color=self.theme["button_hover"],
             checkmark_color="#FFFFFF"
         )
-        self.round_checkbox.grid(row=1, column=0, columnspan=2, pady=5, padx=10, sticky="w")
+        self.round_checkbox.grid(row=2, column=0, columnspan=2, pady=5, padx=10, sticky="w")
         
-        ctk.CTkLabel(self.settings_frame, text="Decimal Places:", text_color=self.theme["text"]).grid(row=1, column=2, pady=5, padx=10, sticky="e")
+        ctk.CTkLabel(self.settings_frame, text="Decimal Places:", text_color=self.theme["text"]).grid(row=2, column=2, pady=5, padx=10, sticky="e")
         self.decimal_entry = ctk.CTkEntry(self.settings_frame, width=150, placeholder_text="e.g., 6")
-        self.decimal_entry.grid(row=1, column=3, pady=5)
+        self.decimal_entry.grid(row=2, column=3, pady=5)
         
-        # Stop condition
-        self.stop_frame = ctk.CTkFrame(self.frame, fg_color=self.theme["bg"])
-        self.stop_frame.grid(row=4, column=0, columnspan=2, pady=5)
+        # Stop condition - Make it more prominent
+        self.stop_frame = ctk.CTkFrame(self.frame, fg_color=self.theme["bg"], border_width=2, border_color=self.theme["accent"])
+        self.stop_frame.grid(row=4, column=0, columnspan=2, pady=10, padx=10, sticky="ew")
+        
+        # Add a title for the stop condition with larger font
+        ctk.CTkLabel(
+            self.stop_frame, 
+            text="Stop Condition:", 
+            text_color=self.theme["text"],
+            font=("Helvetica", 14, "bold")
+        ).pack(side="left", padx=10)
         
         self.stop_var = ctk.StringVar(value="Epsilon")
-        ctk.CTkRadioButton(
+        self.epsilon_radio = ctk.CTkRadioButton(
             self.stop_frame, 
             text="Stop by Epsilon", 
             variable=self.stop_var, 
             value="Epsilon", 
             text_color=self.theme["text"],
-            fg_color=self.theme["button"],
-            hover_color=self.theme["button_hover"]
-        ).pack(side="left", padx=20)
+            fg_color=self.theme.get("primary", self.theme["button"]),
+            hover_color=self.theme.get("primary_hover", self.theme["button_hover"]),
+            border_color=self.theme.get("primary_hover", self.theme["button_hover"]),
+            font=("Helvetica", 12)
+        )
+        self.epsilon_radio.pack(side="left", padx=20)
         
-        ctk.CTkRadioButton(
+        self.iterations_radio = ctk.CTkRadioButton(
             self.stop_frame, 
             text="Stop by Iterations", 
             variable=self.stop_var, 
             value="Iterations", 
             text_color=self.theme["text"],
-            fg_color=self.theme["button"],
-            hover_color=self.theme["button_hover"]
-        ).pack(side="left", padx=20)
+            fg_color=self.theme.get("primary", self.theme["button"]),
+            hover_color=self.theme.get("primary_hover", self.theme["button_hover"]),
+            border_color=self.theme.get("primary_hover", self.theme["button_hover"]),
+            font=("Helvetica", 12)
+        )
+        self.iterations_radio.pack(side="left", padx=20)
 
         # Solve button
         self.solve_button = ctk.CTkButton(
@@ -286,7 +310,9 @@ class InputForm:
                 font=("Helvetica", 12, "bold")
             ).grid(row=0, column=0, columnspan=2, pady=(0, 10), sticky="w")
             
-            if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", "LU Decomposition", "LU Decomposition (Partial Pivoting)", "Gauss-Jordan", "Gauss-Jordan (Partial Pivoting)"]:
+            if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", 
+                         "LU Decomposition", "LU Decomposition (Partial Pivoting)",
+                         "Gauss-Jordan", "Gauss-Jordan (Partial Pivoting)"]:
                 # Hide function input for linear system methods
                 self.func_label.pack_forget()
                 self.func_entry.pack_forget()
@@ -316,7 +342,7 @@ class InputForm:
                     controls_frame,
                     values=["Select Example"] + list(self.example_functions.get(method, {}).keys())[1:],
                     variable=self.matrix_example_var,
-                    command=self.load_matrix_example,
+                    command=self.load_example,
                     fg_color=self.theme["button"],
                     button_color=self.theme["button_hover"],
                     button_hover_color=self.theme["accent"]
@@ -327,31 +353,65 @@ class InputForm:
                 matrix_frame = ctk.CTkFrame(self.input_frame, fg_color=self.theme["bg"])
                 matrix_frame.grid(row=2, column=0, columnspan=2, pady=5)
                 
-                # Add [A|b] label
+                # Add [A|b] label on the left side
                 ctk.CTkLabel(
                     matrix_frame,
                     text="[A|b] =",
                     text_color=self.theme["text"],
                     font=("Helvetica", 12, "bold")
-                ).grid(row=0, column=0, padx=(0, 10), sticky="e")
+                ).grid(row=0, column=0, padx=(0, 10), sticky="e", rowspan=self.matrix_size)
                 
-                # Create matrix entries frame
+                # Create matrix entries frame with no padding
                 entries_frame = ctk.CTkFrame(matrix_frame, fg_color=self.theme["bg"])
-                entries_frame.grid(row=0, column=1, padx=5)
+                entries_frame.grid(row=0, column=1, padx=0, pady=0, rowspan=self.matrix_size)
                 
                 # Create matrix entries
                 self.matrix_entries = []
                 for i in range(self.matrix_size):
                     row_entries = []
                     for j in range(self.matrix_size + 1):  # +1 for the b vector
-                        entry = ctk.CTkEntry(entries_frame, width=60, placeholder_text=f"{'a' if j < self.matrix_size else 'b'}{i+1}{j+1 if j < self.matrix_size else ''}")
-                        entry.grid(row=i, column=j, padx=2, pady=2)
+                        # Add a vertical separator before the b column
+                        if j == self.matrix_size:
+                            separator = ctk.CTkFrame(entries_frame, width=4, fg_color=self.theme["accent"])
+                            separator.grid(row=0, column=j, sticky="ns", padx=3, pady=0, rowspan=self.matrix_size)
+                        
+                        # Calculate the actual column position considering the separator
+                        col_pos = j if j < self.matrix_size else j + 1
+                        
+                        # Create an entry with better size and styling
+                        entry = ctk.CTkEntry(
+                            entries_frame, 
+                            width=65, 
+                            height=25, 
+                            placeholder_text="0",
+                            text_color=self.theme["text"],
+                            fg_color=self.theme["table_bg"],
+                            border_color=self.theme["accent"],
+                            border_width=1
+                        )
+                        # Use better padding for improved layout
+                        entry.grid(row=i, column=col_pos, padx=3, pady=2, ipady=2)
+                        
+                        # Set font size for better readability
+                        entry.configure(font=("Helvetica", 10))
+                        
                         row_entries.append(entry)
                     self.matrix_entries.append(row_entries)
                 
-                # Add vertical line to separate A and b
-                separator = ctk.CTkFrame(entries_frame, width=2, fg_color=self.theme["accent"])
-                separator.grid(row=0, column=self.matrix_size, rowspan=self.matrix_size, sticky="ns", padx=5)
+                # Configure row spacing to be minimal
+                for i in range(self.matrix_size):
+                    entries_frame.grid_rowconfigure(i, minsize=10, pad=0)
+                    
+                # Set row weights to 0 to prevent expansion
+                for i in range(self.matrix_size):
+                    entries_frame.grid_rowconfigure(i, weight=0)
+                    
+                # Remove any internal padding in the frame
+                entries_frame.configure(corner_radius=0)
+                
+                # Remove the existing separator that was added after creating all entries
+                if hasattr(self, 'matrix_separator'):
+                    self.matrix_separator.grid_forget()
                 
                 # Hide settings and stop condition frames for matrix methods
                 self.settings_frame.grid_remove()
@@ -530,75 +590,159 @@ class InputForm:
                 vector = []
                 for i in range(self.matrix_size):
                     row = []
-                    for j in range(self.matrix_size + 1):
-                        value = float(self.matrix_entries[i][j].get() or "0")
-                        if j < self.matrix_size:
+                    # Get the matrix entries (A)
+                    for j in range(self.matrix_size):
+                        try:
+                            value = float(self.matrix_entries[i][j].get() or "0")
                             row.append(value)
-                        else:
-                            vector.append(value)
+                        except (ValueError, IndexError) as e:
+                            self.logger.error(f"Error getting matrix value at [{i}][{j}]: {str(e)}")
+                            messagebox.showerror("Input Error", f"Invalid value in matrix at position [{i+1}][{j+1}]")
+                            return
                     matrix.append(row)
+                    
+                    # Get the vector entry (b)
+                    try:
+                        b_value = float(self.matrix_entries[i][self.matrix_size].get() or "0")
+                        vector.append(b_value)
+                    except (ValueError, IndexError) as e:
+                        self.logger.error(f"Error getting vector value at [{i}]: {str(e)}")
+                        messagebox.showerror("Input Error", f"Invalid value in vector at position [{i+1}]")
+                        return
                 
                 # Call solve_callback with matrix and vector as strings
                 # Use fixed decimal places (6) for matrix methods
                 self.solve_callback("", method, {"matrix": str(matrix), "vector": str(vector)}, None, None, None, None, 6)
             else:
-                # For other methods, use the existing logic
+                # For other methods, use the existing logic with improved epsilon handling
                 func = self.func_entry.get().strip()
                 eps = float(self.eps_entry.get() or "0.0001")
                 eps_operator = self.eps_operator.get()
                 max_iter = int(self.iter_entry.get() or "50")
                 decimal_places = int(self.decimal_entry.get() or "6") if self.round_var.get() else 10
                 stop_by_eps = self.stop_var.get() == "Epsilon"
+                
+                # Log the stop condition and epsilon operator for debugging
+                self.logger.info(f"Stop by Epsilon: {stop_by_eps}, Epsilon: {eps}, Operator: {eps_operator}")
+                
+                # Pass parameters based on the method
                 params = {key: float(entry.get() or "0") for key, entry in self.entries.items()}
+                
+                # Call the solve callback with all parameters
                 self.solve_callback(func, method, params, eps, eps_operator, max_iter, stop_by_eps, decimal_places)
         except Exception as e:
             self.logger.error(f"Error in solve callback: {str(e)}")
             messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
     def update_theme(self, theme: dict):
+        """Update the theme for all elements in the input form."""
         self.theme = theme
+        
+        # Update main frame
         self.frame.configure(fg_color=theme["bg"])
         self.input_frame.configure(fg_color=theme["bg"])
         
-        # Update all widgets with enhanced styling
-        for w in self.frame.winfo_children():
-            if isinstance(w, ctk.CTkLabel):
-                w.configure(text_color=theme["text"])
-            elif isinstance(w, ctk.CTkButton):
-                w.configure(
-                    fg_color=theme["button"], 
-                    hover_color=theme["button_hover"],
-                    text_color="#FFFFFF"  # White text for better contrast
-                )
-            elif isinstance(w, ctk.CTkOptionMenu):
-                w.configure(
-                    fg_color=theme["button"], 
-                    button_color=theme["button_hover"],
-                    button_hover_color=self.theme["accent"],
-                    text_color="#FFFFFF"  # White text for better contrast
-                )
-            elif isinstance(w, ctk.CTkRadioButton):
-                w.configure(
+        # Update labels
+        for widget in self.frame.winfo_children():
+            if isinstance(widget, ctk.CTkLabel) and hasattr(widget, "winfo_exists") and widget.winfo_exists():
+                widget.configure(text_color=theme["text"])
+        
+        # Update method dropdown
+        if hasattr(self, "method_menu") and self.method_menu.winfo_exists():
+            self.method_menu.configure(
+                fg_color=theme["button"],
+                button_color=theme["button"],
+                button_hover_color=theme["button_hover"],
+                dropdown_fg_color=theme["bg"],
+                dropdown_hover_color=theme["button_hover"],
+                dropdown_text_color=theme["text"]
+            )
+        
+        # Update example dropdown
+        if hasattr(self, "example_menu") and self.example_menu.winfo_exists():
+            self.example_menu.configure(
+                fg_color=theme["button"],
+                button_color=theme["button"],
+                button_hover_color=theme["button_hover"],
+                dropdown_fg_color=theme["bg"],
+                dropdown_hover_color=theme["button_hover"],
+                dropdown_text_color=theme["text"]
+            )
+        
+        # Update matrix example dropdown if it exists
+        if hasattr(self, "matrix_example_menu") and self.matrix_example_menu.winfo_exists():
+            self.matrix_example_menu.configure(
+                fg_color=theme["button"],
+                button_color=theme["button"],
+                button_hover_color=theme["button_hover"],
+                dropdown_fg_color=theme["bg"],
+                dropdown_hover_color=theme["button_hover"],
+                dropdown_text_color=theme["text"]
+            )
+        
+        # Update matrix entries if they exist
+        if hasattr(self, "matrix_entries") and self.matrix_entries:
+            for row in self.matrix_entries:
+                for entry in row:
+                    if hasattr(entry, "winfo_exists") and entry.winfo_exists():
+                        entry.configure(
+                            text_color=theme["text"],
+                            fg_color=theme["table_bg"],
+                            border_color=theme["accent"]
+                        )
+        
+        # Update function entry
+        if hasattr(self, "func_entry") and self.func_entry.winfo_exists():
+            self.func_entry.configure(
+                text_color=theme["text"],
+                fg_color=theme["table_bg"],
+                border_color=theme["accent"]
+            )
+        
+        # Update other entries
+        for entry in self.entries.values():
+            if hasattr(entry, "winfo_exists") and entry.winfo_exists():
+                entry.configure(
                     text_color=theme["text"],
-                    fg_color=theme["button"],
-                    hover_color=theme["button_hover"],
-                    text_color_disabled=theme["text"]  # Keep text visible even when disabled
+                    fg_color=theme["table_bg"],
+                    border_color=theme["accent"]
                 )
-            elif isinstance(w, ctk.CTkEntry):
-                w.configure(
-                    border_color=theme["accent"],
-                    text_color=theme["text"],
-                    placeholder_text_color=theme["text"]  # Make placeholder text visible
-                )
-            elif isinstance(w, ctk.CTkFrame):
-                w.configure(fg_color=theme["bg"])
-            elif isinstance(w, ctk.CTkCheckBox):
-                w.configure(
-                    text_color=theme["text"],
-                    fg_color=theme["button"],
-                    hover_color=theme["button_hover"],
-                    checkmark_color="#FFFFFF"
-                )
+        
+        # Update epsilon entry
+        if hasattr(self, "eps_entry") and self.eps_entry.winfo_exists():
+            self.eps_entry.configure(
+                text_color=theme["text"],
+                fg_color=theme["table_bg"],
+                border_color=theme["accent"]
+            )
+        
+        # Update iterations entry
+        if hasattr(self, "iter_entry") and self.iter_entry.winfo_exists():
+            self.iter_entry.configure(
+                text_color=theme["text"],
+                fg_color=theme["table_bg"],
+                border_color=theme["accent"]
+            )
+        
+        # Update decimal places entry
+        if hasattr(self, "decimal_entry") and self.decimal_entry.winfo_exists():
+            self.decimal_entry.configure(
+                text_color=theme["text"],
+                fg_color=theme["table_bg"],
+                border_color=theme["accent"]
+            )
+        
+        # Update solve button
+        if hasattr(self, "solve_button") and self.solve_button.winfo_exists():
+            self.solve_button.configure(
+                fg_color=theme["button"],
+                hover_color=theme["button_hover"],
+                text_color=theme["table_bg"]
+            )
+        
+        # Update matrix separator if it exists
+        if hasattr(self, "matrix_separator") and self.matrix_separator.winfo_exists():
+            self.matrix_separator.configure(fg_color=theme["accent"])
 
     def toggle_decimal_entry(self):
         """Enable or disable the decimal places entry based on the round checkbox."""
@@ -620,7 +764,12 @@ class InputForm:
                 # Clear current matrix entries
                 for i in range(self.matrix_size):
                     for j in range(self.matrix_size + 1):
-                        self.matrix_entries[i][j].delete(0, "end")
+                        if j < self.matrix_size:
+                            # Matrix entries are at their original indices
+                            self.matrix_entries[i][j].delete(0, "end")
+                        else:
+                            # Vector entries are at the last position in each row
+                            self.matrix_entries[i][j].delete(0, "end")
                 
                 # Parse equations and fill matrix
                 matrix = []
@@ -683,92 +832,13 @@ class InputForm:
                 
                 # Fill the matrix entries
                 for i in range(min(len(matrix), self.matrix_size)):
+                    # Fill matrix entries (A)
                     for j in range(self.matrix_size):
                         self.matrix_entries[i][j].insert(0, str(matrix[i][j]))
-                    # Fill b vector
+                    
+                    # Fill vector entry (b)
                     if i < len(vector):
                         self.matrix_entries[i][self.matrix_size].insert(0, str(vector[i]))
             else:
                 self.func_entry.delete(0, "end")
                 self.func_entry.insert(0, self.example_functions[method][example_name])
-
-    def load_matrix_example(self, example_name: str):
-        """Load the selected example matrix into the input field."""
-        method = self.method_var.get()
-        if method in self.example_functions and example_name in self.example_functions[method]:
-            # Parse the system of equations into matrix form
-            equations = self.example_functions[method][example_name].split('\n')
-            if not equations or example_name == "Select Example":
-                return
-            
-            # Clear current matrix entries
-            for i in range(self.matrix_size):
-                for j in range(self.matrix_size + 1):
-                    self.matrix_entries[i][j].delete(0, "end")
-            
-            # Parse equations and fill matrix
-            matrix = []
-            vector = []
-            for eq in equations:
-                if not eq.strip() or ":" in eq:  # Skip empty lines or titles
-                    continue
-                # Split at '=' and get left and right sides
-                left, right = eq.split('=')
-                # Convert right side to float
-                b = float(right.strip())
-                vector.append(b)
-                
-                # Parse coefficients
-                coeffs = [0] * self.matrix_size
-                # Replace subscripts with regular x for parsing
-                left = left.replace("x₁", "x").replace("x₂", "y").replace("x₃", "z")
-                terms = left.replace('-', '+-').split('+')
-                for term in terms:
-                    term = term.strip()
-                    if not term:
-                        continue
-                    
-                    # Handle special cases
-                    if term.startswith('-'):
-                        term = term[1:]
-                        coef = -1
-                    else:
-                        coef = 1
-                        
-                    if 'x' in term:
-                        if term == 'x':
-                            coeffs[0] = coef
-                        elif term == '-x':
-                            coeffs[0] = -coef
-                        else:
-                            val = term.split('x')[0].strip()
-                            if val:
-                                coeffs[0] = float(val) * coef
-                    elif 'y' in term:
-                        if term == 'y':
-                            coeffs[1] = coef
-                        elif term == '-y':
-                            coeffs[1] = -coef
-                        else:
-                            val = term.split('y')[0].strip()
-                            if val:
-                                coeffs[1] = float(val) * coef
-                    elif 'z' in term:
-                        if term == 'z':
-                            coeffs[2] = coef
-                        elif term == '-z':
-                            coeffs[2] = -coef
-                        else:
-                            val = term.split('z')[0].strip()
-                            if val:
-                                coeffs[2] = float(val) * coef
-                
-                matrix.append(coeffs)
-            
-            # Fill the matrix entries
-            for i in range(min(len(matrix), self.matrix_size)):
-                for j in range(self.matrix_size):
-                    self.matrix_entries[i][j].insert(0, str(matrix[i][j]))
-                # Fill b vector
-                if i < len(vector):
-                    self.matrix_entries[i][self.matrix_size].insert(0, str(vector[i]))

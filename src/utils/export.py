@@ -4,7 +4,6 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 from typing import List, Dict, Any, Optional
-import logging
 import os
 import re
 from datetime import datetime
@@ -12,12 +11,6 @@ from datetime import datetime
 def sanitize_filename(filename: str) -> str:
     """
     Sanitize a filename to make it safe for all operating systems.
-    
-    Args:
-        filename: The original filename
-        
-    Returns:
-        A sanitized filename
     """
     # Remove invalid characters
     sanitized = re.sub(r'[\\/*?:"<>|]', "_", filename)
@@ -29,12 +22,6 @@ def sanitize_filename(filename: str) -> str:
 def format_table_data(table_data: List[Dict[str, Any]]) -> List[List[str]]:
     """
     Format table data for PDF export with proper handling of different data types.
-    
-    Args:
-        table_data: List of dictionaries containing iteration details
-        
-    Returns:
-        Formatted table data as a list of lists
     """
     if not table_data:
         return [["Message"], ["No data available"]]
@@ -51,121 +38,97 @@ def format_table_data(table_data: List[Dict[str, Any]]) -> List[List[str]]:
         formatted_row = []
         for header in headers:
             value = row.get(header, "")
-            # Format numbers to a reasonable precision
+            # Convert various types to string representation
             if isinstance(value, (int, float)):
-                formatted_row.append(f"{value:.6f}")
+                formatted_row.append(str(value))
+            elif isinstance(value, dict):
+                formatted_row.append(str(value))
             else:
                 formatted_row.append(str(value))
         formatted_data.append(formatted_row)
-        
+    
     return formatted_data
 
-def export_to_pdf(filename: str, func: str, method: str, root: float, table_data: List[Dict[str, Any]]) -> bool:
+def export_to_pdf(filename: str, func: str, method: str, root: Any, table_data: List[Dict[str, Any]]) -> bool:
     """
-    Export solution to a PDF file with enhanced error handling and formatting.
-    
-    Args:
-        filename: Name of the output PDF file
-        func: The mathematical function
-        method: The numerical method used
-        root: The calculated root
-        table_data: List of dictionaries containing iteration details
-        
-    Returns:
-        bool: True if export was successful, False otherwise
+    Export solution to a PDF file.
     """
-    logger = logging.getLogger(__name__)
-    
     try:
-        # Sanitize and validate filename
-        sanitized_filename = sanitize_filename(filename)
-        if not sanitized_filename.endswith('.pdf'):
-            sanitized_filename += '.pdf'
+        # Sanitize filename
+        safe_filename = sanitize_filename(filename)
+        if not safe_filename.endswith(".pdf"):
+            safe_filename += ".pdf"
             
-        # Create directory if it doesn't exist
-        output_dir = os.path.dirname(sanitized_filename)
-        if output_dir:
-            os.makedirs(output_dir, exist_ok=True)
-            
-        # Create the PDF document
-        doc = SimpleDocTemplate(
-            sanitized_filename, 
-            pagesize=letter,
-            rightMargin=72,
-            leftMargin=72,
-            topMargin=72,
-            bottomMargin=72
-        )
-        
-        # Prepare elements for the PDF
+        # Create PDF document
+        doc = SimpleDocTemplate(safe_filename, pagesize=letter)
         elements = []
+        
+        # Get styles
         styles = getSampleStyleSheet()
-        
-        # Add custom styles
-        styles.add(ParagraphStyle(
-            name='CustomTitle',
-            parent=styles['Heading1'],
-            fontSize=16,
-            spaceAfter=30,
-            alignment=1  # Center alignment
-        ))
-        
-        styles.add(ParagraphStyle(
-            name='CustomBody',
-            parent=styles['Normal'],
-            fontSize=12,
-            spaceAfter=12
-        ))
+        title_style = styles["Title"]
+        heading_style = styles["Heading2"]
+        normal_style = styles["Normal"]
         
         # Add title
-        elements.append(Paragraph("Numerical Analysis Report", styles["CustomTitle"]))
-        elements.append(Spacer(1, 0.25*inch))
+        elements.append(Paragraph(f"Numerical Analysis Report: {method}", title_style))
+        elements.append(Spacer(1, 0.25 * inch))
         
-        # Add metadata
-        elements.append(Paragraph(f"<b>Function:</b> {func}", styles["CustomBody"]))
-        elements.append(Paragraph(f"<b>Method:</b> {method}", styles["CustomBody"]))
-        elements.append(Paragraph(f"<b>Root:</b> {root:.6f}", styles["CustomBody"]))
-        elements.append(Paragraph(f"<b>Date:</b> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", styles["CustomBody"]))
-        elements.append(Spacer(1, 0.25*inch))
+        # Add date
+        date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        elements.append(Paragraph(f"Generated on: {date_str}", normal_style))
+        elements.append(Spacer(1, 0.25 * inch))
         
-        # Add table
-        elements.append(Paragraph("Iteration Results", styles["Heading2"]))
-        elements.append(Spacer(1, 0.1*inch))
+        # Add function information
+        elements.append(Paragraph("Function Information", heading_style))
+        elements.append(Paragraph(f"Function: {func}", normal_style))
+        elements.append(Paragraph(f"Method: {method}", normal_style))
         
-        # Format and create table
-        data = format_table_data(table_data)
-        table = Table(data)
+        # Add root information
+        elements.append(Spacer(1, 0.25 * inch))
+        elements.append(Paragraph("Solution", heading_style))
         
-        # Style the table
-        table.setStyle(TableStyle([
-            # Header styling
-            ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-            ('FONTSIZE', (0, 0), (-1, 0), 12),
-            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        if isinstance(root, list):
+            # For linear system methods
+            root_text = ", ".join([f"x{i+1} = {val}" for i, val in enumerate(root)])
+            elements.append(Paragraph(f"Solution: {root_text}", normal_style))
+        elif root is not None:
+            # For root-finding methods
+            elements.append(Paragraph(f"Root: {root}", normal_style))
+        else:
+            # No solution found
+            elements.append(Paragraph("No solution found", normal_style))
+        
+        # Add iteration table
+        elements.append(Spacer(1, 0.25 * inch))
+        elements.append(Paragraph("Iteration Details", heading_style))
+        
+        # Format table data
+        formatted_data = format_table_data(table_data)
+        
+        # Create table
+        if formatted_data:
+            table = Table(formatted_data)
             
-            # Data styling
-            ('BACKGROUND', (0, 1), (-1, -1), colors.white),
-            ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
-            ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
-            ('FONTSIZE', (0, 1), (-1, -1), 10),
-            ('GRID', (0, 0), (-1, -1), 1, colors.black),
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-            ('LEFTPADDING', (0, 0), (-1, -1), 6),
-            ('RIGHTPADDING', (0, 0), (-1, -1), 6),
+            # Style the table
+            style = TableStyle([
+                ("BACKGROUND", (0, 0), (-1, 0), colors.grey),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.whitesmoke),
+                ("ALIGN", (0, 0), (-1, 0), "CENTER"),
+                ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                ("BOTTOMPADDING", (0, 0), (-1, 0), 12),
+                ("BACKGROUND", (0, 1), (-1, -1), colors.beige),
+                ("GRID", (0, 0), (-1, -1), 1, colors.black),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("ALIGN", (0, 0), (-1, -1), "CENTER")
+            ])
             
-            # Zebra striping for better readability
-            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.lightgrey])
-        ]))
+            table.setStyle(style)
+            elements.append(table)
         
-        elements.append(table)
-        
-        # Build the PDF
+        # Build PDF
         doc.build(elements)
-        logger.info(f"Successfully exported to {sanitized_filename}")
         return True
         
     except Exception as e:
-        logger.error(f"Error exporting to PDF: {str(e)}")
+        print(f"Error exporting to PDF: {str(e)}")
         return False

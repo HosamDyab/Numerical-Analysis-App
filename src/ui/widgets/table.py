@@ -271,7 +271,13 @@ class ResultTable:
                 
                 # Set row height
                 style = ttk.Style()
-                style.configure("Custom.Treeview", rowheight=200)  # Increase row height for better readability
+                # Check if this is a root-finding method by looking at the column names
+                if any(col in columns for col in ["Xl", "Xu", "Xr", "Xi", "Xi-1", "f(Xi)", "g(Xi)"]):
+                    # Root-finding methods need less row height
+                    style.configure("Custom.Treeview", rowheight=25)  # Smaller row height for root-finding methods
+                else:
+                    # Matrix methods need more space
+                    style.configure("Custom.Treeview", rowheight=200)  # Larger row height for matrix methods
             
             # Add new items
             for i, row in enumerate(data):
@@ -409,4 +415,3 @@ class ResultTable:
                 self.table.delete(item)
         except Exception as e:
             self.logger.error(f"Error clearing table: {str(e)}")
-

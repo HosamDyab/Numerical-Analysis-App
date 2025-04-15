@@ -10,6 +10,8 @@ class ThemeManager:
         "button": "#4C51BF",   # Darker blue (changed from light purple-blue)
         "button_hover": "#2D3748",  # Even darker blue on hover
         "accent": "#4C51BF",   # Deep blue for highlights
+        "primary": "#4C51BF",   # Primary color for buttons
+        "primary_hover": "#3C41AF",  # Hover color for primary buttons
         "table_bg": "#FFFFFF", # White for table background
         "table_fg": "#2D3748", # Dark gray for table text
         "table_heading_bg": "#E2E8F0", # Light gray for table headers
@@ -25,6 +27,8 @@ class ThemeManager:
         "button": "#3A86FF",   # Vibrant blue for buttons
         "button_hover": "#5A9AFF",  # Lighter blue on hover
         "accent": "#00B4D8",   # Cyan accent for highlights
+        "primary": "#3A86FF",   # Primary color for buttons
+        "primary_hover": "#1A66DF",  # Hover color for primary buttons
         "table_bg": "#0A0A0A", # Darker background for table
         "table_fg": "#FFFFFF", # White for table text for better visibility
         "table_heading_bg": "#1A1A1A", # Darker for table headers
@@ -40,6 +44,8 @@ class ThemeManager:
         "button": "#4299E1",   # Bright blue
         "button_hover": "#2B6CB0",  # Slightly darker blue
         "accent": "#FFFFFF",   # White for highlights
+        "primary": "#4299E1",   # Primary color for buttons
+        "primary_hover": "#2B6CB0",  # Hover color for primary buttons
         "table_bg": "#EBF8FF", # Very light blue for table background
         "table_fg": "#2C5282", # Dark blue for table text
         "table_heading_bg": "#4299E1", # Bright blue for table headers

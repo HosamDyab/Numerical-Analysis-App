@@ -32,24 +32,37 @@ class NumericalMethodBase:
             # Parse the function string into a sympy expression
             expr = sp.sympify(func_str)
             
-            # Create a callable function using lambdify with both numpy and math modules
-            # Add error handling for domain errors
+            # Create a lambda function for faster evaluation
+            f_lambda = sp.lambdify(self.x, expr, modules=['numpy', 'sympy'])
+            
+            # Create a callable function with comprehensive error handling
             def safe_eval(x):
                 try:
-                    # Ensure trigonometric functions use radians
-                    if "sin" in func_str or "cos" in func_str or "tan" in func_str:
-                        # Convert x to radians if it's in degrees
-                        x_rad = x * (math.pi / 180.0)
-                        return float(expr.subs(self.x, x_rad))
-                    else:
-                        return float(expr.subs(self.x, x))
-                except (ValueError, TypeError, ZeroDivisionError):
+                    # Suppress numpy warnings temporarily
+                    with np.errstate(all='ignore'):
+                        # Use the lambda function for faster evaluation
+                        result = f_lambda(x)
+                        
+                        # Check for complex results (e.g., sqrt of negative numbers)
+                        if isinstance(result, complex):
+                            self.logger.warning(f"Complex result at x={x}")
+                            return float('nan')
+                            
+                        # Check for NaN or infinity
+                        if result is None or (hasattr(np, 'isnan') and np.isnan(result)) or (hasattr(np, 'isinf') and np.isinf(result)):
+                            self.logger.warning(f"Invalid result at x={x}")
+                            return float('nan')
+                            
+                        # Convert to float to ensure consistent return type
+                        return float(result)
+                except (ValueError, TypeError, ZeroDivisionError, OverflowError, RuntimeWarning) as e:
+                    self.logger.warning(f"Function evaluation error at x={x}")
                     return float('nan')
             
             return safe_eval
         except Exception as e:
-            self.logger.error(f"Error creating function from {func_str}: {str(e)}")
-            raise ValueError(f"Invalid function: {func_str}. Error: {str(e)}")
+            self.logger.error(f"Error creating function from {func_str}")
+            raise ValueError(f"Invalid function: {func_str}")
 
     def _create_derivative(self, func_str: str) -> Callable:
         """
@@ -77,24 +90,37 @@ class NumericalMethodBase:
             # Compute the derivative
             derivative = sp.diff(expr, self.x)
             
-            # Create a callable function using lambdify with both numpy and math modules
-            # Add error handling for domain errors
+            # Create a lambda function for faster evaluation
+            f_prime_lambda = sp.lambdify(self.x, derivative, modules=['numpy', 'sympy'])
+            
+            # Create a callable function with comprehensive error handling
             def safe_eval(x):
                 try:
-                    # Ensure trigonometric functions use radians
-                    if "sin" in func_str or "cos" in func_str or "tan" in func_str:
-                        # Convert x to radians if it's in degrees
-                        x_rad = x * (math.pi / 180.0)
-                        return float(derivative.subs(self.x, x_rad))
-                    else:
-                        return float(derivative.subs(self.x, x))
-                except (ValueError, TypeError, ZeroDivisionError):
+                    # Suppress numpy warnings temporarily
+                    with np.errstate(all='ignore'):
+                        # Use the lambda function for faster evaluation
+                        result = f_prime_lambda(x)
+                        
+                        # Check for complex results (e.g., sqrt of negative numbers)
+                        if isinstance(result, complex):
+                            self.logger.warning(f"Complex derivative result at x={x}")
+                            return float('nan')
+                            
+                        # Check for NaN or infinity
+                        if result is None or (hasattr(np, 'isnan') and np.isnan(result)) or (hasattr(np, 'isinf') and np.isinf(result)):
+                            self.logger.warning(f"Invalid derivative result at x={x}")
+                            return float('nan')
+                            
+                        # Convert to float to ensure consistent return type
+                        return float(result)
+                except (ValueError, TypeError, ZeroDivisionError, OverflowError, RuntimeWarning) as e:
+                    self.logger.warning(f"Derivative evaluation error at x={x}")
                     return float('nan')
             
             return safe_eval
         except Exception as e:
-            self.logger.error(f"Error creating derivative from {func_str}: {str(e)}")
-            raise ValueError(f"Invalid function for derivative: {func_str}. Error: {str(e)}")
+            self.logger.error(f"Error creating derivative from {func_str}")
+            raise ValueError(f"Invalid function for derivative: {func_str}")
 
     def _round_value(self, value: Union[int, float], decimal_places: int) -> float:
         """
@@ -191,21 +217,25 @@ class NumericalMethodBase:
             eps_operator: The comparison operator ("<=", ">=", "<", ">", "=")
             
         Returns:
-            True if the error satisfies the criterion, False otherwise
+            True if the error satisfies the convergence criteria, False otherwise
         """
-        if eps_operator == "<=":
-            return error <= eps
-        elif eps_operator == ">=":
-            return error >= eps
-        elif eps_operator == "<":
-            return error < eps
-        elif eps_operator == ">":
-            return error > eps
-        elif eps_operator == "=":
-            return abs(error - eps) < 1e-10
-        else:
-            # Default to "<=" if the operator is not recognized
-            return error <= eps
+        try:
+            # For each operator, return True when the stopping condition is met
+            if eps_operator == "<=":
+                return error <= eps  # Stop when error <= epsilon
+            elif eps_operator == ">=":
+                return error >= eps  # Stop when error >= epsilon
+            elif eps_operator == "<":
+                return error < eps   # Stop when error < epsilon
+            elif eps_operator == ">":
+                return error > eps   # Stop when error > epsilon
+            elif eps_operator == "=":
+                return abs(error - eps) < 1e-10  # Stop when error = epsilon (within tolerance)
+            else:
+                raise ValueError(f"Invalid epsilon operator: {eps_operator}")
+        except Exception as e:
+            self.logger.error(f"Error in convergence check")
+            return False
 
     def solve(self, *args, **kwargs) -> Tuple[float, List[Dict]]:
         """

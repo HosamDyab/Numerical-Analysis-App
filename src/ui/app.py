@@ -194,8 +194,11 @@ class NumericalApp:
             if hasattr(self, "input_form") and hasattr(self.input_form, "frame") and self.input_form.frame.winfo_exists():
                 self.input_form.update_theme(self.theme)
             
-            if hasattr(self, "result_table") and self.result_table.winfo_exists():
-                self.result_table.update_theme(self.theme)
+            # Update result table if it exists
+            if hasattr(self, "result_table"):
+                # Check if it has winfo_exists method before calling it
+                if hasattr(self.result_table, "winfo_exists") and self.result_table.winfo_exists():
+                    self.result_table.update_theme(self.theme)
             
             if hasattr(self, "result_label") and self.result_label.winfo_exists():
                 self.result_label.configure(text_color=self.theme["text"])
@@ -326,8 +329,8 @@ class NumericalApp:
                 home_frame,
                 text="Export to PDF",
                 command=self.export_solution,
-                fg_color=self.theme.get("primary", "#3B82F6"),
-                hover_color=self.theme.get("primary_hover", "#2563EB"),
+                fg_color=self.theme.get("button", "#3B82F6"),
+                hover_color=self.theme.get("button_hover", "#2563EB"),
                 text_color="white",
                 font=ctk.CTkFont(size=14, weight="bold")
             )
@@ -377,12 +380,13 @@ class NumericalApp:
             # Display the results
             self.result_table.display(table_data)
             if root is not None:
-                if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", "LU Decomposition", "LU Decomposition (Partial Pivoting)"]:
-                    # Format the solution vector for display
+                if isinstance(root, list):
+                    # For methods that return a list (like linear system solvers)
                     solution_str = "[" + ", ".join(f"{x:.{decimal_places}f}" for x in root) + "]"
                     self.result_label.configure(text=f"Solution: {solution_str}")
                 else:
-                    self.result_label.configure(text=f"Root found: {round(root, decimal_places)}")
+                    # For methods that return a single value (like root-finding methods)
+                    self.result_label.configure(text=f"Root found: {root:.{decimal_places}f}")
                 
                 # Save to history
                 self.history_manager.save_solution(func, method, root, table_data)
@@ -1005,7 +1009,7 @@ class NumericalApp:
             # Credits
             credits_label = ctk.CTkLabel(
                 scrollable_frame,
-                text="Developed by Hosam Dyab using Python and CustomTkinter",
+                text="Developed by Hosam Dyab + Hazem Mohamed using Python and CustomTkinter",
                 font=ctk.CTkFont(size=14, weight="bold"),
                 text_color=self.theme.get("accent", "#0EA5E9")
             )

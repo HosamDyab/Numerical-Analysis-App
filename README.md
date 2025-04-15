@@ -94,5 +94,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Developed by Hosam Dyab
+- Developed by Hosam Dyab + Hazem Mohamed
 - Based on numerical analysis algorithms and techniques
