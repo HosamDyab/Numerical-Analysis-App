@@ -165,69 +165,43 @@ class NumericalApp:
         self.update_ui_theme()
 
     def update_ui_theme(self):
-        """Update the UI theme colors safely."""
+        """Update UI elements with the current theme."""
         try:
-            # Update main frame colors
-            if hasattr(self, "main_frame") and self.main_frame.winfo_exists():
-                self.main_frame.configure(fg_color=self.theme["bg"])
+            # Update the main window background
+            self.root.configure(fg_color=self.theme.get("bg", "#F0F4F8"))
             
-            if hasattr(self, "header") and self.header.winfo_exists():
-                self.header.configure(fg_color=self.theme["fg"])
+            # Update the sidebar
+            if hasattr(self, "sidebar"):
+                try:
+                    self.sidebar.update_theme(self.theme)
+                except Exception as sidebar_error:
+                    self.logger.error(f"Error updating sidebar theme: {str(sidebar_error)}")
             
-            if hasattr(self, "content_frame") and self.content_frame.winfo_exists():
-                self.content_frame.configure(fg_color=self.theme["bg"])
-            
-            if hasattr(self, "sidebar") and hasattr(self.sidebar, "widget") and self.sidebar.widget.winfo_exists():
-                self.sidebar.update_theme(self.theme)
-            
-            # Update table style
-            style = ttk.Style()
-            style.configure("Custom.Treeview",
-                          background=self.theme["table_bg"],
-                          foreground=self.theme["table_fg"],
-                          fieldbackground=self.theme["table_bg"])
-            style.configure("Custom.Treeview.Heading",
-                          background=self.theme["table_heading_bg"],
-                          foreground=self.theme["table_heading_fg"])
-            
-            # Update home screen widgets if they exist
-            if hasattr(self, "input_form") and hasattr(self.input_form, "frame") and self.input_form.frame.winfo_exists():
-                self.input_form.update_theme(self.theme)
-            
-            # Update result table if it exists
-            if hasattr(self, "result_table"):
-                # Check if it has winfo_exists method before calling it
-                if hasattr(self.result_table, "winfo_exists") and self.result_table.winfo_exists():
+            # Update tables if they exist
+            if hasattr(self, "result_table") and self.result_table is not None:
+                try:
                     self.result_table.update_theme(self.theme)
-            
-            if hasattr(self, "result_label") and self.result_label.winfo_exists():
-                self.result_label.configure(text_color=self.theme["text"])
-            
-            # Update history screen widgets if they exist
-            if hasattr(self, "history_table") and self.history_table.winfo_exists():
-                self.history_table.update_theme(self.theme)
-            
-            # Update any other widgets in the content frame
-            if hasattr(self, "content_frame") and self.content_frame.winfo_exists():
-                for widget in self.content_frame.winfo_children():
-                    if widget.winfo_exists():
-                        if isinstance(widget, ctk.CTkFrame):
-                            widget.configure(fg_color=self.theme["bg"])
-                            for child in widget.winfo_children():
-                                if child.winfo_exists():
-                                    if isinstance(child, (ctk.CTkButton, ctk.CTkLabel)):
-                                        if isinstance(child, ctk.CTkButton):
-                                            child.configure(
-                                                text_color=self.theme["text"],
-                                                fg_color=self.theme["button"],
-                                                hover_color=self.theme["button_hover"]
-                                            )
-                                        else:
-                                            child.configure(text_color=self.theme["text"])
+                except Exception as table_error:
+                    self.logger.error(f"Error updating result table theme: {str(table_error)}")
+                    
+            if hasattr(self, "history_table") and self.history_table is not None:
+                try:
+                    self.history_table.update_theme(self.theme)
+                except Exception as table_error:
+                    self.logger.error(f"Error updating history table theme: {str(table_error)}")
+                    
+            # Update forms if they exist
+            if hasattr(self, "input_form") and self.input_form is not None:
+                try:
+                    self.input_form.update_theme(self.theme)
+                except Exception as form_error:
+                    self.logger.error(f"Error updating input form theme: {str(form_error)}")
+                
+            # Configure the Table Style
+            self.configure_table_style()
                 
         except Exception as e:
             self.logger.error(f"Error updating UI theme: {str(e)}")
-            # Continue execution even if there's an error
 
     def show_home(self):
         """Display the home screen with input form and results table."""
@@ -265,29 +239,94 @@ class NumericalApp:
             
             # Add mousewheel scrolling
             def _on_mousewheel(event):
-                if event.num == 4 or event.delta > 0:
-                    canvas.yview_scroll(-1, "units")
-                elif event.num == 5 or event.delta < 0:
-                    canvas.yview_scroll(1, "units")
+                """Handle mouse wheel scrolling smoothly across platforms."""
+                try:
+                    # Check if canvas exists and is valid
+                    if not hasattr(event, "widget") or not event.widget.winfo_exists():
+                        return
+                        
+                    # Ensure the canvas still exists
+                    if not canvas.winfo_exists():
+                        return
+                    
+                    # Get the current scrollbar position
+                    current_pos = canvas.yview()
+                    
+                    # Calculate scroll amount based on platform
+                    scroll_amount = 0
+                    
+                    # Windows - uses delta attribute (typically multiples of 120)
+                    if hasattr(event, "delta") and event.delta != 0:
+                        # Normalize delta for smoother scrolling
+                        scroll_amount = -1 * (event.delta // 120)
+                    
+                    # macOS - uses delta with different values
+                    elif hasattr(event, "delta") and abs(event.delta) < 20:
+                        scroll_amount = -1 * event.delta
+                    
+                    # Linux - uses num attribute (4 is up, 5 is down)
+                    elif hasattr(event, "num"):
+                        if event.num == 4:
+                            scroll_amount = -1
+                        elif event.num == 5:
+                            scroll_amount = 1
+                    
+                    # Apply the scroll if we determined an amount
+                    if scroll_amount != 0:
+                        canvas.yview_scroll(int(scroll_amount), "units")
+                        
+                        # Check if the view actually changed (if not, we're at the beginning or end)
+                        new_pos = canvas.yview()
+                        if new_pos == current_pos and scroll_amount != 0:
+                            # At edge of scrolling, let the parent handle it if needed
+                            pass
+                        else:
+                            # Prevent further propagation if we scrolled successfully
+                            return "break"
+                except Exception as e:
+                    # Log the error but don't disrupt the user experience
+                    self.logger.debug(f"Scroll error (non-critical): {str(e)}")
+                
+                # Allow event to propagate if we didn't handle it
+                return
             
-            # Bind mousewheel events
-            canvas.bind_all("<MouseWheel>", _on_mousewheel)  # Windows
-            canvas.bind_all("<Button-4>", _on_mousewheel)    # Linux up
-            canvas.bind_all("<Button-5>", _on_mousewheel)    # Linux down
+            # Reference to store active bindings
+            self.active_bindings = []
             
-            # Unbind mousewheel events when leaving the window
-            def _unbind_mousewheel(event):
-                canvas.unbind_all("<MouseWheel>")
-                canvas.unbind_all("<Button-4>")
-                canvas.unbind_all("<Button-5>")
+            # Bind mousewheel events safely
+            def _bind_mousewheel():
+                """Bind all mousewheel events for different platforms."""
+                try:
+                    # Windows and macOS standard wheel
+                    self.active_bindings.append(canvas.bind_all("<MouseWheel>", _on_mousewheel))
+                    # Linux wheel
+                    self.active_bindings.append(canvas.bind_all("<Button-4>", _on_mousewheel))
+                    self.active_bindings.append(canvas.bind_all("<Button-5>", _on_mousewheel))
+                    # macOS with trackpad
+                    self.active_bindings.append(canvas.bind_all("<MouseWheelEvent>", _on_mousewheel))
+                except Exception as e:
+                    self.logger.error(f"Error binding mousewheel: {str(e)}")
             
-            def _bind_mousewheel(event):
-                canvas.bind_all("<MouseWheel>", _on_mousewheel)
-                canvas.bind_all("<Button-4>", _on_mousewheel)
-                canvas.bind_all("<Button-5>", _on_mousewheel)
+            # Unbind mousewheel events safely
+            def _unbind_mousewheel():
+                try:
+                    if canvas.winfo_exists():
+                        canvas.unbind_all("<MouseWheel>")
+                        canvas.unbind_all("<Button-4>")
+                        canvas.unbind_all("<Button-5>")
+                        canvas.unbind_all("<MouseWheelEvent>")
+                except Exception:
+                    # Silent failure for unbinding
+                    pass
             
-            canvas.bind("<Enter>", _bind_mousewheel)
-            canvas.bind("<Leave>", _unbind_mousewheel)
+            # Initial binding
+            _bind_mousewheel()
+            
+            # Bind/unbind on enter/leave
+            canvas.bind("<Enter>", lambda e: _bind_mousewheel())
+            canvas.bind("<Leave>", lambda e: _unbind_mousewheel())
+            home_frame.bind("<Enter>", lambda e: _bind_mousewheel())
+            home_frame.bind("<Leave>", lambda e: _unbind_mousewheel())
             
             # Create a label for the home screen
             home_label = ctk.CTkLabel(
@@ -299,6 +338,7 @@ class NumericalApp:
             home_label.pack(pady=(10, 10))
             
             # Create the input form with the correct parameters
+            from src.ui.widgets.input_form import InputForm
             self.input_form = InputForm(
                 home_frame, 
                 self.theme, 
@@ -307,26 +347,53 @@ class NumericalApp:
             )
             self.input_form.frame.pack(fill="x", padx=10, pady=10)
             
-            # Create a container frame for the table to ensure it expands properly
-            table_container = ctk.CTkFrame(home_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
-            table_container.pack(fill="both", expand=True, padx=5, pady=5)
+            # Create layout containers
+            main_content = ctk.CTkFrame(home_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
+            main_content.pack(fill="both", expand=True, padx=10, pady=5)
             
-            # Create the results table
-            self.result_table = ResultTable(table_container, self.theme)
+            # Create a container frame for the table that fills most of the screen
+            table_container = ctk.CTkFrame(main_content, fg_color=self.theme.get("bg", "#F0F4F8"), height=450)
+            table_container.pack(fill="both", expand=True, side="top", padx=5, pady=5)
+            table_container.pack_propagate(False)  # Prevent container from resizing
+            
+            # Create the results table with fixed_position=True
+            self.result_table = ResultTable(table_container, self.theme, height=450, fixed_position=True)
             self.result_table.table_frame.pack(fill="both", expand=True)
             
             # Create a label for displaying the result
             self.result_label = ctk.CTkLabel(
-                home_frame,
+                main_content,
                 text="",
-                font=ctk.CTkFont(size=16),
-                text_color=self.theme.get("text", "#1E293B")
+                font=ctk.CTkFont(size=16, weight="bold"),
+                text_color=self.theme.get("primary", "#3B82F6")
             )
             self.result_label.pack(pady=10)
             
+            # Add a frame for the plot with sufficient height
+            self.plot_frame = ctk.CTkFrame(main_content, fg_color=self.theme.get("bg", "#F0F4F8"), height=350)
+            self.plot_frame.pack(fill="both", expand=True, padx=5, pady=10)
+            self.plot_frame.pack_propagate(False)  # Prevent plot frame from shrinking
+            
+            # Add a placeholder label for the plot
+            self.plot_label = ctk.CTkLabel(
+                self.plot_frame,
+                text="Function plot will appear here after solving",
+                font=ctk.CTkFont(size=14),
+                text_color=self.theme.get("text", "#1E293B")
+            )
+            self.plot_label.pack(pady=20)
+            
+            # Handle plot frame mouse events
+            self.plot_frame.bind("<Enter>", lambda e: _unbind_mousewheel())
+            self.plot_frame.bind("<Leave>", lambda e: _bind_mousewheel())
+            
+            # Add buttons container
+            buttons_frame = ctk.CTkFrame(home_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
+            buttons_frame.pack(fill="x", padx=10, pady=5)
+            
             # Add an export button
             export_button = ctk.CTkButton(
-                home_frame,
+                buttons_frame,
                 text="Export to PDF",
                 command=self.export_solution,
                 fg_color=self.theme.get("button", "#3B82F6"),
@@ -334,11 +401,11 @@ class NumericalApp:
                 text_color="white",
                 font=ctk.CTkFont(size=14, weight="bold")
             )
-            export_button.pack(pady=10)
+            export_button.pack(side="left", padx=10, pady=10, expand=True)
             
         except Exception as e:
             self.logger.error(f"Error showing home screen: {str(e)}")
-            # Create error display
+            # Create a basic error display if the home frame creation fails
             error_frame = ctk.CTkFrame(self.content_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
             error_frame.pack(fill="both", expand=True, padx=10, pady=10)
             
@@ -350,52 +417,336 @@ class NumericalApp:
             )
             error_label.pack(pady=10)
 
-    def solve(self, func: str, method: str, params: dict, eps: float, eps_operator: str, max_iter: int, stop_by_eps: bool, decimal_places: int = 6):
+    def solve(self, **kwargs):
         """
-        Solve the numerical problem and display the results.
+        Solve the problem using the selected method
         
         Args:
-            func: The function to solve
-            method: The numerical method to use
-            params: Method-specific parameters
-            eps: Error tolerance
-            eps_operator: Comparison operator for epsilon check ("<=", ">=", "<", ">", "=")
-            max_iter: Maximum number of iterations
-            stop_by_eps: Whether to stop by error tolerance
-            decimal_places: Number of decimal places for rounding
+            **kwargs: Keyword arguments including:
+                - f_str: The function as a string
+                - method: The method name
+                - params: Additional parameters for the method
+                - eps: Error tolerance
+                - eps_operator: Comparison operator for epsilon check
+                - max_iter: Maximum iterations
+                - stop_by_eps: Whether to stop by epsilon
+                - decimal_places: Number of decimal places for rounding
         """
         try:
             # Clear previous results
-            self.result_table.clear()
-            self.result_label.configure(text="")
+            if hasattr(self, 'result_label'):
+                self.result_label.configure(text="")
+            
+            # Clear previous plot
+            if hasattr(self, 'plot_frame'):
+                # Remove any existing plot widgets
+                for widget in self.plot_frame.winfo_children():
+                    try:
+                        widget.destroy()
+                    except Exception:
+                        pass
+                
+                # Add a placeholder label
+                self.plot_label = ctk.CTkLabel(
+                    self.plot_frame,
+                    text="Solving...",
+                    font=ctk.CTkFont(size=14),
+                    text_color=self.theme.get("text", "#1E293B")
+                )
+                self.plot_label.pack(pady=20)
+                self.plot_frame.update()  # Force update to show the label
+            
+            # Extract parameters from kwargs
+            f_str = kwargs.get('f_str', '')
+            method = kwargs.get('method', '')
+            params = kwargs.get('params', {})
+            eps = kwargs.get('eps', None)
+            eps_operator = kwargs.get('eps_operator', "<=")
+            max_iter = kwargs.get('max_iter', None)
+            stop_by_eps = kwargs.get('stop_by_eps', None)
+            decimal_places = kwargs.get('decimal_places', None)
             
             # Solve the problem
-            root, table_data = self.solver.solve(method, func, params, eps, eps_operator, max_iter, stop_by_eps, decimal_places)
+            result, table_data = self.solver.solve(method, f_str, params, eps, eps_operator, max_iter, stop_by_eps, decimal_places)
             
-            # Check if there was an error
-            if len(table_data) == 1 and "Error" in table_data[0]:
-                self.result_label.configure(text=f"Error: {table_data[0]['Error']}")
-                return
+            if hasattr(self, 'result_table'):
+                # Display the result in the table
+                self.result_table.display(table_data)
+                
+                # Display the result
+                if hasattr(self, 'result_label'):
+                    # Get root value (handle different result types) and display it
+                    root_message = "No solution found"
+                    if result is not None:
+                        if hasattr(result, 'root') and result.root is not None:
+                            # Object with 'root' attribute (like FixedPointResult)
+                            root_message = f"Root found: {result.root}"
+                            # Include status if available
+                            if hasattr(result, 'status') and result.status:
+                                root_message += f" (Status: {result.status})"
+                        elif isinstance(result, (int, float)):
+                            # Direct numeric result
+                            root_message = f"Root found: {result}"
+                        elif isinstance(result, tuple) and len(result) > 0:
+                            # Tuple with root as first element (like in Bisection, False Position, etc.)
+                            if result[0] is not None and isinstance(result[0], (int, float)):
+                                root_message = f"Root found: {result[0]}"
+                        
+                        # Look for Status information in the table data for methods that return it
+                        method_status = None
+                        for row in table_data:
+                            if isinstance(row, dict) and "Status" in row:
+                                method_status = row.get("Status")
+                                if method_status and method_status not in ["Finding root...", "Completed"]:
+                                    # Found a meaningful status in the results
+                                    if "Root found" in root_message:
+                                        root_message += f" (Status: {method_status})"
+                                    else:
+                                        root_message = f"Status: {method_status}"
+                                    break
+                    
+                    self.result_label.configure(text=root_message)
+                
+                # Try to create a plot if we have a function
+                if hasattr(self, 'plot_frame'):
+                    # Clear the placeholder
+                    for widget in self.plot_frame.winfo_children():
+                        try:
+                            widget.destroy()
+                        except Exception:
+                            pass
+                    
+                    # Get root value (handle different result types)
+                    root_value = None
+                    if result:
+                        if hasattr(result, 'root'):
+                            root_value = result.root
+                        elif isinstance(result, (int, float)):
+                            root_value = result
+                        elif isinstance(result, tuple) and len(result) > 0 and isinstance(result[0], (int, float)):
+                            root_value = result[0]
+                    
+                    # Get the function string if available and we have a root
+                    if f_str and f_str != "System of Linear Equations" and root_value is not None:
+                        try:
+                            # Log before attempting to create plot
+                            self.logger.info(f"Attempting to create plot for function: {f_str} with root: {root_value}")
+                            
+                            import matplotlib.pyplot as plt
+                            import numpy as np
+                            import sympy as sp
+                            from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+                            
+                            # Create and solve the function
+                            x = sp.Symbol('x')
+                            f = sp.sympify(f_str)
+                            f_lambda = sp.lambdify(x, f, 'numpy')
+                            
+                            # Create a plot around the root
+                            root = float(root_value)
+                            plot_range = max(4, abs(root) * 2)  # Ensure reasonable plot range
+                            x_range = np.linspace(root - plot_range/2, root + plot_range/2, 1000)
+                            
+                            # Compute function values safely
+                            y_values = []
+                            x_filtered = []
+                            
+                            for x_val in x_range:
+                                try:
+                                    y_val = f_lambda(x_val)
+                                    # Check if the result is a valid number
+                                    if np.isfinite(y_val) and not np.isnan(y_val):
+                                        y_values.append(y_val)
+                                        x_filtered.append(x_val)
+                                except Exception:
+                                    pass
+                            
+                            if len(x_filtered) > 0 and len(y_values) > 0:
+                                # Create the plot
+                                fig, ax = plt.subplots(figsize=(8, 6), dpi=100)
+                                ax.plot(x_filtered, y_values, 'b-', label=f'f(x) = {f_str}')
+                                
+                                # Plot the root
+                                try:
+                                    root_y = f_lambda(root)
+                                    if np.isfinite(root_y) and not np.isnan(root_y):
+                                        ax.plot(root, root_y, 'ro', label=f'Root: {root:.6f}', markersize=8)
+                                except Exception:
+                                    pass
+                                
+                                # Extract iteration points from the table data if available
+                                iteration_x = []
+                                iteration_y = []
+                                
+                                try:
+                                    # Handle data based on the method
+                                    if method == "Bisection Method":
+                                        # Extract data from the table
+                                        for row in table_data:
+                                            if isinstance(row, dict) and "Iteration" in row and "Xr" in row:
+                                                if isinstance(row["Iteration"], int):  # Only plot numerical iterations
+                                                    x_val = float(row["Xr"])
+                                                    try:
+                                                        y_val = f_lambda(x_val)
+                                                        if np.isfinite(y_val) and not np.isnan(y_val):
+                                                            iteration_x.append(x_val)
+                                                            iteration_y.append(y_val)
+                                                    except Exception:
+                                                        pass
+                                    
+                                    elif method == "False Position Method":
+                                        # Extract data from the table
+                                        for row in table_data:
+                                            if isinstance(row, dict) and "Iteration" in row and "Xr" in row:
+                                                if isinstance(row["Iteration"], int):  # Only plot numerical iterations
+                                                    x_val = float(row["Xr"])
+                                                    try:
+                                                        y_val = f_lambda(x_val)
+                                                        if np.isfinite(y_val) and not np.isnan(y_val):
+                                                            iteration_x.append(x_val)
+                                                            iteration_y.append(y_val)
+                                                    except Exception:
+                                                        pass
+                                    
+                                    elif method == "Secant Method":
+                                        # Extract data from the table
+                                        for row in table_data:
+                                            if isinstance(row, dict) and "Iteration" in row and "Xi+1" in row:
+                                                if isinstance(row["Iteration"], int):  # Only plot numerical iterations
+                                                    x_val = float(row["Xi+1"])
+                                                    try:
+                                                        y_val = f_lambda(x_val)
+                                                        if np.isfinite(y_val) and not np.isnan(y_val):
+                                                            iteration_x.append(x_val)
+                                                            iteration_y.append(y_val)
+                                                    except Exception:
+                                                        pass
+                                    
+                                    elif method == "Fixed Point Method":
+                                        # Extract data from the table
+                                        for row in table_data:
+                                            if isinstance(row, dict) and "Iteration" in row and "xi" in row:
+                                                if isinstance(row["Iteration"], int):  # Only plot numerical iterations
+                                                    x_val = float(row["xi"])
+                                                    try:
+                                                        y_val = f_lambda(x_val)
+                                                        if np.isfinite(y_val) and not np.isnan(y_val):
+                                                            iteration_x.append(x_val)
+                                                            iteration_y.append(y_val)
+                                                    except Exception:
+                                                        pass
+                                    
+                                    # Plot iteration points if available
+                                    if iteration_x and iteration_y:
+                                        # Plot iteration points with connecting line to show convergence path
+                                        ax.plot(iteration_x, iteration_y, 'g--o', label='Iteration Points', 
+                                                alpha=0.7, markersize=6, markerfacecolor='white')
+                                        
+                                        # Annotate the first few points with iteration numbers
+                                        max_annotations = min(6, len(iteration_x))
+                                        for i in range(max_annotations):
+                                            ax.annotate(f"{i}", 
+                                                       (iteration_x[i], iteration_y[i]),
+                                                       textcoords="offset points", 
+                                                       xytext=(0,10), 
+                                                       ha='center')
+                                
+                                except Exception as e:
+                                    self.logger.warning(f"Error plotting iteration points: {str(e)}")
+                                
+                                # Add a horizontal line at y=0
+                                ax.axhline(y=0, color='k', linestyle='-', alpha=0.3)
+                                
+                                # Add labels and grid
+                                ax.set_xlabel('x')
+                                ax.set_ylabel('f(x)')
+                                ax.set_title(f'Plot of f(x) = {f_str}')
+                                ax.grid(True, alpha=0.3)
+                                ax.legend()
+                                
+                                # Adjust plot limits to show convergence more clearly
+                                if iteration_x and len(iteration_x) > 1:
+                                    # Get the range of iteration points
+                                    iter_min, iter_max = min(iteration_x), max(iteration_x)
+                                    # Extend the range by 20% on each side for better visibility
+                                    range_extension = (iter_max - iter_min) * 0.2
+                                    # Make sure we include the root
+                                    plot_min = min(iter_min - range_extension, root - range_extension)
+                                    plot_max = max(iter_max + range_extension, root + range_extension)
+                                    # Set the x-axis limits
+                                    ax.set_xlim(plot_min, plot_max)
+                                
+                                # Use FigureCanvasTkAgg
+                                plot_frame = ctk.CTkFrame(self.plot_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
+                                plot_frame.pack(fill="both", expand=True)
+                                
+                                canvas = FigureCanvasTkAgg(fig, master=plot_frame)
+                                canvas_widget = canvas.get_tk_widget()
+                                canvas_widget.pack(fill="both", expand=True)
+                                
+                                # Draw the canvas
+                                canvas.draw()
+                                
+                                # Store reference to avoid garbage collection
+                                self.current_plot = {
+                                    'figure': fig,
+                                    'canvas': canvas,
+                                    'frame': plot_frame
+                                }
+                                
+                                # Log that the plot was successfully created
+                                self.logger.info("Plot created successfully")
+                            else:
+                                self._show_plot_error("Could not generate valid function values for plotting")
+                        except Exception as e:
+                            self.logger.error(f"Error creating plot: {str(e)}")
+                            self._show_plot_error(f"Error creating plot: {str(e)}")
+                    else:
+                        reason = "No valid function provided" if not f_str or f_str == "System of Linear Equations" else "No root found"
+                        self._show_plot_error(f"Cannot create plot: {reason}")
             
-            # Display the results
-            self.result_table.display(table_data)
-            if root is not None:
-                if isinstance(root, list):
-                    # For methods that return a list (like linear system solvers)
-                    solution_str = "[" + ", ".join(f"{x:.{decimal_places}f}" for x in root) + "]"
-                    self.result_label.configure(text=f"Solution: {solution_str}")
-                else:
-                    # For methods that return a single value (like root-finding methods)
-                    self.result_label.configure(text=f"Root found: {root:.{decimal_places}f}")
-                
-                # Save to history
-                self.history_manager.save_solution(func, method, root, table_data)
-            else:
-                self.result_label.configure(text="No solution found")
-                
+            # Store the result for later export
+            if result is not None and f_str is not None and method is not None:
+                self.last_solution = (f_str, method, result, table_data)
+            
+            return result
+            
         except Exception as e:
             self.logger.error(f"Error solving problem: {str(e)}")
-            self.result_label.configure(text=f"Error: {str(e)}")
+            
+            # Display error in table and result label
+            if hasattr(self, 'result_table'):
+                self.result_table.display(f"Error: {str(e)}")
+            
+            if hasattr(self, 'result_label'):
+                self.result_label.configure(text=f"Error: {str(e)}")
+            
+            # Show error in plot area
+            self._show_plot_error(f"Error: {str(e)}")
+            
+            return None
+    
+    def _show_plot_error(self, message="Error generating plot"):
+        """Show an error message in the plot frame."""
+        try:
+            # Clear the plot frame
+            if hasattr(self, 'plot_frame'):
+                for widget in self.plot_frame.winfo_children():
+                    try:
+                        widget.destroy()
+                    except Exception:
+                        pass
+                
+                # Add an error label
+                error_label = ctk.CTkLabel(
+                    self.plot_frame,
+                    text=message,
+                    font=ctk.CTkFont(size=14),
+                    text_color="red"
+                )
+                error_label.pack(pady=20)
+        except Exception as e:
+            self.logger.error(f"Error showing plot error: {str(e)}")
 
     def export_solution(self):
         if hasattr(self, "last_solution"):
@@ -450,12 +801,13 @@ class NumericalApp:
             )
             history_label.pack(pady=(0, 10))
             
-            # Create a container frame for the table to ensure it expands properly
-            table_container = ctk.CTkFrame(history_frame, fg_color=self.theme.get("bg", "#F0F4F8"))
+            # Create a container frame for the table with fixed height
+            table_container = ctk.CTkFrame(history_frame, fg_color=self.theme.get("bg", "#F0F4F8"), height=400)
             table_container.pack(fill="both", expand=True, padx=5, pady=5)
+            table_container.pack_propagate(False)  # Prevent the frame from resizing based on its children
             
-            # Create the history table
-            self.history_table = ResultTable(table_container, self.theme)
+            # Create the history table with fixed height
+            self.history_table = ResultTable(table_container, self.theme, height=400, fixed_position=True)
             self.history_table.table_frame.pack(fill="both", expand=True)
             
             # Load and display history data
@@ -529,9 +881,14 @@ class NumericalApp:
                                 text_color=self.theme.get("text", "#1E293B")
                             ).pack(pady=(0, 10))
                             
-                            # Create a table for the solution data
-                            solution_table = ResultTable(solution_frame, self.theme)
-                            solution_table.table_frame.pack(fill="both", expand=True, padx=5, pady=5)
+                            # Create a container for the solution table with fixed height
+                            solution_table_container = ctk.CTkFrame(solution_frame, fg_color=self.theme.get("bg", "#F0F4F8"), height=400)
+                            solution_table_container.pack(fill="both", expand=True, padx=5, pady=5)
+                            solution_table_container.pack_propagate(False)  # Prevent container from resizing
+                            
+                            # Create the table with fixed position
+                            solution_table = ResultTable(solution_table_container, self.theme, height=400, fixed_position=True)
+                            solution_table.table_frame.pack(fill="both", expand=True)
                             solution_table.display(table_data)
                             
                             # Add a close button

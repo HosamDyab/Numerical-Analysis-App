@@ -228,7 +228,17 @@ class Solver:
                 elif method_name == "Fixed Point" or method_name == "Newton-Raphson":
                     xi = float(params.get("xi", 0))
                     # Pass stop_by_eps directly to control whether to stop by epsilon or iterations
-                    result, table = self.methods[method_name].solve(func, xi, eps, eps_operator, max_iter, stop_by_eps, decimal_places)
+                    if method_name == "Fixed Point":
+                        # Add auto_generate_g parameter for Fixed Point method
+                        auto_generate_g = params.get("auto_generate_g", False)
+                        result, table = self.methods[method_name].solve(
+                            func, xi, eps, eps_operator, max_iter, stop_by_eps, decimal_places, 
+                            auto_generate_g=auto_generate_g
+                        )
+                    else:
+                        result, table = self.methods[method_name].solve(
+                            func, xi, eps, eps_operator, max_iter, stop_by_eps, decimal_places
+                        )
                 elif method_name == "Secant":
                     xi_minus_1 = float(params.get("xi_minus_1", 0))
                     xi = float(params.get("xi", 0))

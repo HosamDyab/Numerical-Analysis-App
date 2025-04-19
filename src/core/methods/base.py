@@ -126,10 +126,11 @@ class NumericalMethodBase:
         """
         Round a numeric value to the specified number of decimal places.
         
-        This method implements a standardized rounding algorithm that:
-        1. Multiplies the value by 10^decimal_places
-        2. Rounds to the nearest integer
-        3. Divides by 10^decimal_places
+        This method implements an enhanced rounding algorithm that:
+        1. Handles special cases (NaN, Inf)
+        2. Uses banker's rounding for better numerical stability
+        3. Handles very small values near zero appropriately
+        4. Ensures consistent precision across all numerical methods
         
         Args:
             value: The number to round
@@ -145,9 +146,26 @@ class NumericalMethodBase:
         if math.isnan(value) or math.isinf(value):
             return value
             
-        # Apply the rounding algorithm
+        # Handle values very close to zero (avoid -0.0 results)
+        if abs(value) < 1e-15:
+            return 0.0
+            
+        # Special handling for very small values relative to decimal places
+        if 0 < abs(value) < 10**(-decimal_places) and decimal_places > 0:
+            # For very small values, use scientific notation internally
+            # but keep the specified decimal places for display consistency
+            magnitude = math.floor(math.log10(abs(value)))
+            if magnitude < -decimal_places:
+                # Round to significant figures instead of decimal places
+                sig_figs = max(1, decimal_places - abs(magnitude) - 1)
+                multiplier = 10 ** abs(magnitude+1)
+                rounded = round(value * multiplier, sig_figs) / multiplier
+                return rounded
+        
+        # Standard case: regular decimal rounding
         multiplier = 10 ** decimal_places
         rounded = round(value * multiplier) / multiplier
+        
         return rounded
 
     def _format_value(self, value: Union[int, float], decimal_places: int) -> str:
@@ -186,6 +204,12 @@ class NumericalMethodBase:
         """
         Format an error value for display.
         
+        This enhanced method:
+        1. Handles special cases like first iteration "---"
+        2. Ensures consistent display of error percentages
+        3. Provides clearer representation for very small and very large errors
+        4. Keeps the format appropriate for table display
+        
         Args:
             error: The error value or "---" for first iteration
             decimal_places: Number of decimal places to round to
@@ -193,19 +217,37 @@ class NumericalMethodBase:
         Returns:
             A formatted string representation of the error
         """
-        if error == "---":
-            return error
+        # Handle non-numeric error indicators
+        if error == "---" or error is None:
+            return "---"
             
-        # Round the error value
-        if decimal_places < 0:
-            return f"{error}%"
-            
-        # Format with up to 3 decimal places and remove trailing zeros
-        rounded = round(error, min(3, decimal_places))
-        str_value = f"{rounded:.{min(3, decimal_places)}f}"
-        str_value = str_value.rstrip('0').rstrip('.')
+        # Handle NaN and infinity cases
+        if not isinstance(error, (int, float)) or math.isnan(error) or math.isinf(error):
+            if math.isinf(error) if isinstance(error, float) else False:
+                return "∞%" if error > 0 else "-∞%"
+            return "NaN%"
         
-        return f"{str_value}%"
+        # Round the error value to appropriate precision
+        # Use more precision for small errors to show meaningful digits
+        if 0 < error < 0.001:
+            # For very small errors, use scientific notation
+            return f"{error:.2e}%"
+        elif error > 10000:
+            # For very large errors, use scientific notation
+            return f"{error:.2e}%"
+        else:
+            # Use the specified decimal places for normal ranges
+            digits = max(1, min(decimal_places, 6))  # Use between 1 and 6 digits
+            rounded = round(error, digits)
+            
+            # Format with appropriate decimal places and remove trailing zeros
+            if rounded == int(rounded):
+                # For whole numbers, show no decimal places
+                return f"{int(rounded)}%"
+            else:
+                # For fractional values, format with decimal places
+                str_value = f"{rounded:.{digits}f}".rstrip('0').rstrip('.')
+                return f"{str_value}%"
 
     def _check_convergence(self, error: float, eps: float, eps_operator: str) -> bool:
         """

@@ -444,6 +444,63 @@ class InputForm:
                     self.entries["xi"] = ctk.CTkEntry(self.input_frame, width=150, placeholder_text="e.g., 1")
                     self.entries["xi"].grid(row=1, column=1, pady=5)
                     
+                    # Add auto-generate g(x) checkbox for Fixed Point method only
+                    if method == "Fixed Point":
+                        self.auto_g_var = ctk.BooleanVar(value=False)
+                        auto_g_frame = ctk.CTkFrame(self.input_frame, fg_color=self.theme["bg"])
+                        auto_g_frame.grid(row=2, column=0, columnspan=2, pady=5, sticky="w")
+                        
+                        auto_g_check = ctk.CTkCheckBox(
+                            auto_g_frame, 
+                            text="Auto-generate optimal g(x) function", 
+                            variable=self.auto_g_var,
+                            text_color=self.theme["text"],
+                            fg_color=self.theme["accent"],
+                            hover_color=self.theme.get("accent_hover", self.theme["accent"])
+                        )
+                        auto_g_check.pack(side="left", padx=20)
+                        
+                        # Add an info label with tooltip-like explanation
+                        info_label = ctk.CTkLabel(
+                            auto_g_frame,
+                            text="ⓘ",
+                            text_color=self.theme["accent"],
+                            font=("Helvetica", 16, "bold")
+                        )
+                        info_label.pack(side="left", padx=5)
+                        
+                        # Add tooltip functionality (hover text)
+                        tooltip_text = "Automatically generates multiple g(x) candidates and selects the best one for convergence.\nThis will rearrange f(x) = 0 into x = g(x) using algebraic manipulation."
+                        
+                        def show_tooltip(event):
+                            tooltip = ctk.CTkToplevel(self.frame)
+                            tooltip.wm_overrideredirect(True)
+                            tooltip.wm_geometry(f"+{event.x_root+10}+{event.y_root+10}")
+                            tooltip.attributes('-topmost', True)
+                            
+                            # Create tooltip content
+                            tooltip_label = ctk.CTkLabel(
+                                tooltip,
+                                text=tooltip_text,
+                                text_color=self.theme["text"],
+                                fg_color=self.theme["fg"],
+                                corner_radius=5,
+                                font=("Helvetica", 10),
+                                wraplength=300,
+                                justify="left"
+                            )
+                            tooltip_label.pack(padx=10, pady=5)
+                            
+                            # Store the tooltip reference for later destruction
+                            info_label.tooltip = tooltip
+                            
+                        def hide_tooltip(event):
+                            if hasattr(info_label, "tooltip"):
+                                info_label.tooltip.destroy()
+                                
+                        info_label.bind("<Enter>", show_tooltip)
+                        info_label.bind("<Leave>", hide_tooltip)
+                
                 elif method == "Secant":
                     ctk.CTkLabel(self.input_frame, text="First Initial Value (X-1):", text_color=self.theme["text"]).grid(row=1, column=0, pady=5, padx=10, sticky="e")
                     self.entries["xi_minus_1"] = ctk.CTkEntry(self.input_frame, width=150, placeholder_text="e.g., 0")
@@ -476,7 +533,9 @@ class InputForm:
             method = self.method_var.get()
             
             # Validate matrix and vector for linear system methods
-            if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", "LU Decomposition", "LU Decomposition (Partial Pivoting)", "Gauss-Jordan", "Gauss-Jordan (Partial Pivoting)"]:
+            if method in ["Gauss Elimination", "Gauss Elimination (Partial Pivoting)", 
+                         "LU Decomposition", "LU Decomposition (Partial Pivoting)",
+                         "Gauss-Jordan", "Gauss-Jordan (Partial Pivoting)"]:
                 # Check if matrix entries are valid numbers
                 matrix = []
                 vector = []
@@ -610,9 +669,18 @@ class InputForm:
                         messagebox.showerror("Input Error", f"Invalid value in vector at position [{i+1}]")
                         return
                 
-                # Call solve_callback with matrix and vector as strings
+                # Call solve_callback with matrix and vector as params
                 # Use fixed decimal places (6) for matrix methods
-                self.solve_callback("", method, {"matrix": str(matrix), "vector": str(vector)}, None, None, None, None, 6)
+                self.solve_callback(
+                    f_str="System of Linear Equations",
+                    method=method,
+                    params={"matrix": str(matrix), "vector": str(vector)},
+                    eps=None,
+                    eps_operator=None,
+                    max_iter=None,
+                    stop_by_eps=None,
+                    decimal_places=6
+                )
             else:
                 # For other methods, use the existing logic with improved epsilon handling
                 func = self.func_entry.get().strip()
@@ -628,8 +696,21 @@ class InputForm:
                 # Pass parameters based on the method
                 params = {key: float(entry.get() or "0") for key, entry in self.entries.items()}
                 
-                # Call the solve callback with all parameters
-                self.solve_callback(func, method, params, eps, eps_operator, max_iter, stop_by_eps, decimal_places)
+                # Add auto_generate_g parameter for Fixed Point method
+                if method == "Fixed Point" and hasattr(self, 'auto_g_var'):
+                    params["auto_generate_g"] = self.auto_g_var.get()
+                
+                # Call the solve callback with all parameters using keyword arguments
+                self.solve_callback(
+                    f_str=func,
+                    method=method,
+                    params=params,
+                    eps=eps,
+                    eps_operator=eps_operator,
+                    max_iter=max_iter,
+                    stop_by_eps=stop_by_eps,
+                    decimal_places=decimal_places
+                )
         except Exception as e:
             self.logger.error(f"Error in solve callback: {str(e)}")
             messagebox.showerror("Error", f"An error occurred: {str(e)}")
